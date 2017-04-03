@@ -17,7 +17,10 @@ class CreateQuestionsTable extends Migration
             $table->increments('id');
             $table->unsignedInteger('exam_id');
             $table->foreign('exam_id')->references('id')->on('lesson_exams');
-            $table->tinyInteger('type')->default(\App\Models\Question::TYPE_SINGLE_CHOICE);
+            $table->string('name', 150)->nullable();
+            $table->tinyInteger('type')->default(\App\Models\Question::TYPE_QUESTION);
+            $table->boolean('is_show_media_first')->default(false);
+            $table->tinyInteger('answer_type')->default(\App\Models\Question::ANSWER_TYPE_SINGLE_CHOICE);
             $table->text('media')->nullable();
             $table->tinyInteger('media_type')->nullable();
             $table->string('content')->nullable();

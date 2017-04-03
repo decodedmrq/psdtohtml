@@ -33,6 +33,8 @@ class CreateUsersTable extends Migration
             $table->tinyInteger('type')->default(\App\Models\User::TYPE_FREE);
             $table->tinyInteger('role')->default(\App\Models\User::ROLE_MEMBER);
             $table->string('remember_token', 120)->nullable();
+            $table->string('email_token', 120)->nullable();
+            $table->boolean('is_activated')->default(false);
             $table->timestamps();
         });
     }
