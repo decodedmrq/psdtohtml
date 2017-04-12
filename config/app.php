@@ -13,6 +13,11 @@ return [
     */
 
     'name' => 'Laravel',
+    'version' => 1.0,
+    'description' => 'Tu hoc nhan tuong',
+    'keywords' => [
+        'tu-hoc-nhan-tuong'
+    ],
 
     /*
     |--------------------------------------------------------------------------
@@ -167,6 +172,10 @@ return [
          * Package Service Providers...
          */
         Laravel\Tinker\TinkerServiceProvider::class,
+        Barryvdh\LaravelIdeHelper\IdeHelperServiceProvider::class,
+        Intervention\Image\ImageServiceProvider::class,
+        Barryvdh\Debugbar\ServiceProvider::class,
+        Collective\Html\HtmlServiceProvider::class,
 
         /*
          * Application Service Providers...

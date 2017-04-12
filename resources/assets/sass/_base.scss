@@ -1,0 +1,27 @@
+//Side bar
+html, body {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  position: absolute;
+  height: 100%;
+  min-width: 100%;
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  background: #eceeef;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  color: #636b6f;
+}
+
+a {
+  @include hover-focus() {
+    text-decoration: none !important;
+  }
+}
+
+textarea {
+  resize: none;
+}
