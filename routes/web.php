@@ -10,7 +10,13 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
+Auth::routes();
 
-Route::get('/', function () {
-    return view('welcome');
+Route::get('/', 'HomeController@index');
+
+Route::group(['prefix' => 'admin-nhantuong', 'namespace' => 'Admin', 'as' => 'admin.', 'middleware' => ['auth']], function () {
+    Route::get('/', 'DashboardController@index')->name('dashboard');
 });
+
+
+

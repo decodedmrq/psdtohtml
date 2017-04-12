@@ -34,4 +34,17 @@ class User extends Authenticatable
 
     protected $guarded = ['id'];
 
+    /**
+     * @param int $role
+     * @return bool
+     */
+    public function hasRole(int $role): bool
+    {
+        if ($this->role === User::ROLE_ADMIN) {
+            return true;
+        }
+
+        return $this->role === $role;
+    }
+
 }
