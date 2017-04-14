@@ -2,9 +2,6 @@
 @push('css')
 {{ html()->style('/css/home.css') }}
 @endpush
-@push('js-head')
-<link rel="script" href="https://use.fontawesome.com/924fe83a96.js">
-@endpush
 @section('content')
     @include('home.slider.product')
     <div class="container">

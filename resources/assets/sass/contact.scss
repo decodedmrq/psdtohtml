@@ -1,0 +1,85 @@
+#main-body {
+  padding-top: 56px;
+}
+
+.contact {
+  padding: 3rem 0;
+
+  .contact-head {
+    .title {
+      font-size: 2rem;
+      margin-bottom: 2rem;
+    }
+  }
+
+  .contact-body {
+    .left {
+
+    }
+
+    .main {
+      font-size: 0.875rem;
+
+      .about-us, .contact-info, .feedback {
+        margin-bottom: 2rem;
+      }
+
+      .title {
+        margin-bottom: 1rem;
+      }
+
+      .contact-info {
+        .content {
+          .item {
+            margin-bottom: 1rem;
+          }
+        }
+      }
+
+      .feedback {
+        .title {
+
+        }
+
+        .feedback-form {
+          .form-body {
+            .btn-feedback-submit {
+              padding: 10px 60px;
+              background: #ff7077;
+              color: #ffffff;
+              cursor: pointer;
+              transition: background 0.5s;
+
+              &:hover, &:focus {
+                background: #ffaaac;
+
+              }
+
+              &.disabled {
+
+              }
+            }
+
+            ::-webkit-input-placeholder {
+              color: #999999;
+            }
+            ::-moz-placeholder {
+              color:#999999;
+            }
+            :-ms-input-placeholder {
+              color: #999999;
+            }
+            :-moz-placeholder {
+              color: #999999;
+            }
+
+            input, textarea {
+              background: #f0f0f0;
+              border: 0;
+            }
+          }
+        }
+      }
+    }
+  }
+}
