@@ -19,13 +19,17 @@ const publicJsDir = 'public/js/';
 const publicFontDir = 'public/fonts/';
 
 
-mix.sass(sourceSassFolder + 'home.scss', publicCssDir);
-
 mix
-    // .js(sourceJsFolder + 'app.js', publicJsDir)
-    // .sass(sourceSassFolder + 'library.scss', publicCssDir)
-    // .js(sourceJsFolder + 'bootstrap.js', publicJsDir)
-    .sass(sourceSassFolder + 'app.scss', publicCssDir);
+    // .sass(sourceSassFolder + 'home.scss', publicCssDir)
+    .sass(sourceSassFolder + 'contact.scss', publicCssDir)
+    .js(sourceJsFolder + 'contact.js', publicJsDir)
+;
+mix
+.js(sourceJsFolder + 'app.js', publicJsDir)
+// .sass(sourceSassFolder + 'library.scss', publicCssDir)
+// .js(sourceJsFolder + 'bootstrap.js', publicJsDir)
+    .sass(sourceSassFolder + 'app.scss', publicCssDir)
+;
 
 //Admin
 // const publicAdminDir = 'public/admin/';

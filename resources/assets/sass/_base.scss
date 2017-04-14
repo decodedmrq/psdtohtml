@@ -39,7 +39,7 @@ textarea {
 }
 
 #footer {
-  background-color: #cc4f55;
+  background: linear-gradient(to right, #ffaaac, #ff7077);
   color: #ffffff;
   padding: 40px 0;
   font-size: 0.875rem;
@@ -49,5 +49,15 @@ a {
   color: inherit;
   &:hover, &:focus {
     color: inherit;
+  }
+}
+
+.error-message {
+  color: #f0000c;
+}
+
+input, textarea {
+  &.error {
+    border: 1px solid #f0000c !important;
   }
 }

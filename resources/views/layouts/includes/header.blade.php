@@ -11,7 +11,7 @@
             <div class="collapse navbar-collapse justify-content-md-end" id="navbarToggler">
                 <ul class="navbar-nav">
                     <li class="nav-item">
-                        <a class="nav-link" href="#">{{ trans('string.product') }}</a>
+                        <a class="nav-link" href="#">{{ trans('string.about_product') }}</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#">{{ trans('string.knowledge') }}</a>
@@ -20,7 +20,7 @@
                         <a class="nav-link" href="#">{{ trans('string.news') }}</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">{{ trans('string.contact') }}</a>
+                        <a class="nav-link" href="/contact">{{ trans('string.contact') }}</a>
                     </li>
                 </ul>
             </div>

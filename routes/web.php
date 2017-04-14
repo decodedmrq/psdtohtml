@@ -13,6 +13,8 @@
 Auth::routes();
 
 Route::get('/', 'HomeController@index');
+Route::get('contact', 'ContactController@index');
+Route::resource('feedback', 'FeedbackController');
 
 Route::group(['prefix' => 'admin-nhantuong', 'namespace' => 'Admin', 'as' => 'admin.', 'middleware' => ['auth']], function () {
     Route::get('/', 'DashboardController@index')->name('dashboard');
