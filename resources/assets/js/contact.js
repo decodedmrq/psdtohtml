@@ -7,18 +7,20 @@ let url = form.attr('action');
 let inputFields = form.find('input, textarea');
 
 form.on('submit', function (event) {
-    inputFields.removeClass('error')
-        .parent().find('div.error-message').remove();
     event.preventDefault();
+    clearError();
+    let formData = form.serialize();
 
-    inputFields.attr('disabled', 'disabled');
+    disableInput(inputFields);
 
-    axios.post(url, form.serialize())
+    axios.post(url, formData)
         .then(function (response) {
-            if (response.success) {
-
+            if (response.data.success) {
+                let notify = response.data.message;
+                $('#notify').html(notify).removeClass('hidden-xs-up');
+                form[0].reset();
             } else {
-                let messages = response.data.messages;
+                let messages = response.data.message;
                 let keys = Object.keys(messages);
                 let values = Object.values(messages);
 
@@ -29,7 +31,7 @@ form.on('submit', function (event) {
                 });
             }
 
-            inputFields.removeAttr('disabled');
+            enableInput(inputFields);
         })
         .catch(function (error) {
             console.log('error: ' + error);
@@ -39,6 +41,18 @@ form.on('submit', function (event) {
 });
 
 inputFields.on('change keyup', function (event) {
-    $(this).removeClass('error');
-    $(this).parent().find('div.error-message').remove();
+    clearError($(this));
 });
+
+function clearError(input = inputFields) {
+    return input.removeClass('error').parent().find('div.error-message').remove();
+}
+
+// Object.prototype
+function disableInput(e) {
+    return e.attr('disabled', 'disabled');
+}
+
+function enableInput(e) {
+    return e.removeAttr('disabled');
+}

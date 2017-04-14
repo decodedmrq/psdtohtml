@@ -24,7 +24,7 @@ class StoreFeedbackRequest extends FormRequest
     public function rules()
     {
         return [
-            'name' => 'required|string|max:255',
+            'author' => 'required|string|max:255',
             'email' => 'required|email',
             'content' => 'required|string|max:5000',
         ];
@@ -32,6 +32,6 @@ class StoreFeedbackRequest extends FormRequest
 
     public function response(array $errors)
     {
-        return response()->json(['success' => false, 'messages' => $errors]);
+        return response_json(null, false, $errors);
     }
 }

@@ -9,11 +9,15 @@
         'id' => 'feedback-form'
     ]) }}
         <div class="form-body row">
+            <!-- Notify -->
+            <div class="col-sm-12 alert alert-success text-center hidden-xs-up" id="notify"></div>
+            <!-- /Notify -->
+
             <div class="col-sm-6">
                 <div class="row">
                     <div class="form-group col-sm-12">
-                        {{ Form::label('name', trans('string.full_name')) }}
-                        {{ Form::text('name', null, ['class' => 'form-control', 'placeholder' => trans('string.full_name'), 'autofocus']) }}
+                        {{ Form::label('author', trans('string.full_name')) }}
+                        {{ Form::text('author', null, ['class' => 'form-control', 'placeholder' => trans('string.full_name'), 'autofocus']) }}
                     </div>
                     <div class="form-group col-sm-12">
                         {{ Form::label('email', trans('string.email')) }}

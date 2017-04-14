@@ -26,9 +26,9 @@ class FeedbackController extends Controller
     public function store(StoreFeedbackRequest $request)
     {
         $feedback = Feedback::create($request->all());
-        if (!$feedback) return back()->with('message', trans('messages.failed'));
+        if (!$feedback) return response_json(null, false, ['notify' => trans('messages.failed')]);
 
-        return back()->with('message', trans('messages.sent'));
+        return response_json(null, true, trans('messages.sent'));
     }
 
     /**
