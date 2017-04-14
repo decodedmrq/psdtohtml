@@ -1,4 +1,39 @@
-@include('layouts.desktop')
+@extends('layouts.desktop')
+@push('css')
+{{ html()->style('/css/home.css') }}
+@endpush
+@push('js-head')
+<link rel="script" href="https://use.fontawesome.com/924fe83a96.js">
+@endpush
 @section('content')
-    <h1>Home</h1>
+    @include('home.slider.product')
+    <div class="container">
+        @include('home.story.product')
+        @include('home.feature.product')
+        @include('home.feedback.product')
+        @include('home.partner.product')
+    </div>
 @endsection
+
+@push('script')
+<script>
+    $('.feedback-image-wrapper').on('click', function (event) {
+        let index = $(this).attr('data-index');
+        $('.feedback-image-wrapper').removeClass('active');
+        $(this).addClass('active');
+        $('.feedback-content').removeClass('active');
+        $('#fb-content-' + index).addClass('active');
+    });
+
+    let bg = document.getElementById('bg-first-feature');
+    makeBgFullWidth(bg);
+
+    function makeBgFullWidth(element) {
+        let windowWidth = window.innerWidth - 25;
+        let parent = element.parentElement;
+        let pullWidth = "-" + (windowWidth - parent.offsetWidth) / 2 + 'px';
+        element.style.left = pullWidth;
+        element.style.right = pullWidth;
+    }
+</script>
+@endpush

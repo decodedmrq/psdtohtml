@@ -78,3 +78,9 @@ if (!function_exists('link_to_route_html')) {
         return '<a href="' . $url . '" ' . html()->attributes($attributes) . '>' . $html . '</a>';
     }
 }
+
+if (!function_exists('is_odd_number')) {
+    function is_odd_number($number) {
+        return $number % 2 == 1 ? true : false;
+    }
+}

@@ -5,7 +5,7 @@
 <div id="wrap">
     @include('layouts.includes.header')
     <div id="content">
-        <div class="container">
+        <div class="container-fluid px-0">
             @yield('content')
         </div>
     </div>
