@@ -3,8 +3,6 @@ html, body {
   margin: 0;
   padding: 0;
   border: 0;
-  position: absolute;
-  height: 100%;
   width: 100%;
 }
 
@@ -26,6 +24,32 @@ textarea {
   resize: none;
 }
 
+img {
+  max-width: 100%;
+}
+
+button {
+  display: inline-block;
+  font-weight: normal;
+  line-height: 1.25;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  font-size: 1rem;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  border: 0;
+
+  &:focus, &:hover {
+    outline: 0;
+    opacity: .5;
+  }
+}
+
 #navbar {
   color: #FFFFFF;
 
@@ -34,7 +58,37 @@ textarea {
   }
 
   .logo {
-    max-height: 40px;
+      max-height: 40px;
+  }
+
+  .nav-item {
+    position: relative;
+
+    &::after {
+      content: '';
+      display: block;
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      width: 0;
+      transition: width .5s, left .5s;
+      height: 2px;
+      background: #ffffff;
+    }
+
+    &:hover {
+      &::after {
+        left: 5%;
+        width: 90%;
+      }
+    }
+
+    &.active {
+      &::after {
+        left: 5%;
+        width: 90%;
+      }
+    }
   }
 }
 
@@ -59,5 +113,67 @@ a {
 input, textarea {
   &.error {
     border: 1px solid #f0000c !important;
+  }
+}
+
+//  Slider
+.fog {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.bg-cyan {
+  background-color: #efffcc;
+}
+
+.bg-full-width {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+}
+
+.slider {
+  position: relative;
+
+  .slider-bg-image {
+    width: 100%;
+  }
+
+  .slider-fog {
+    background: $slider-fog-bg;
+    opacity: 0.91;
+  }
+
+  .slider-body {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    color: #f0f0f0;
+    font-family: $fontRoboto;
+    height: 100%;
+
+    .slider-right {
+    }
+
+    .title {
+      font-family: $fontHelvetica;
+      font-size: 2rem;
+      line-height: 2.5rem;
+    }
+
+    .description {
+      font-size: 1rem;
+      line-height: 1.25rem;
+      font-weight: 300;
+      margin-bottom: 35px;
+    }
+
+    .btn-store-download {
+      width: 100%;
+    }
   }
 }

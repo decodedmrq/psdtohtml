@@ -1,80 +1,8 @@
-//  Slider
-.fog {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-}
-
-.bg-cyan {
-  background-color: #efffcc;
-}
-
-.bg-full-width {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-}
-
-.slider {
-  position: relative;
-
-  .slider-bg-image {
-    width: 100%;
-  }
-
-  .slider-fog {
-    background: $slider-fog-bg;
-    opacity: 0.91;
-  }
-
-  .slider-body {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    color: #f0f0f0;
-    font-family: $fontRoboto;
-    height: 100%;
-
-    .slider-right {
-    }
-
-    .title {
-      font-family: $fontHelvetica;
-      font-size: 2rem;
-      line-height: 2.5rem;
-    }
-
-    .description {
-      font-size: 1rem;
-      line-height: 1.25rem;
-      font-weight: 300;
-      margin-bottom: 35px;
-    }
-
-    .btn-store-download {
-      width: 100%;
-    }
-  }
-}
+@import "variables";
 
 //  Story
 .story {
   padding-top: 5rem;
-
-  .story-head {
-    font-family: $fontHelvetica;
-    margin-bottom: 3rem;
-
-    .title {
-      font-size: 2.5rem;
-    }
-
-    .description {
-    }
-  }
 
   .story-body {
     .btn-story-read-more {
@@ -95,9 +23,6 @@
 
   .title {
     font-size: 2.5rem;
-  }
-
-  .description {
   }
 }
 

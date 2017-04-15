@@ -8,8 +8,8 @@
     <!-- /Background image -->
 
     <div class="slider-body d-flex container">
-        @include('home.slider.left')
-        @include('home.slider.right')
+        @include('slider.left')
+        @include('slider.right')
     </div>
 </div>
 <!-- /Slider -->
