@@ -1,0 +1,81 @@
+@import "variables";
+
+.articles {
+  padding: 3rem 0 4rem;
+
+  .head {
+    margin-bottom: 1rem;
+    font-size: 3rem;
+    font-family: $fontHelveticaRegular;
+  }
+}
+
+.article-item {
+  font-family: $fontHelveticaRegular;
+  margin-bottom: 3rem;
+
+  .title {
+    font-size: 1.125rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+  }
+
+  .content {
+    color: #a0a0a0;
+    margin-bottom: 1rem;
+  }
+
+  .cover {
+    .article-date {
+      position: absolute;
+      top: 10px;
+      left: 25px;
+      padding: 0 5px;
+      background: #414142;
+      opacity: 0.8;
+      text-align: center;
+
+      .day {
+        font-size: 3rem;
+        line-height: 1;
+        color: #ffffff;
+      }
+
+      .month {
+        font-size: 1rem;
+        color: #ff7077;
+        text-transform: uppercase;
+      }
+    }
+  }
+
+  .tag {
+    display: inline-block;
+    padding: 10px 10px 10px 5px;
+    font-size: 0.875rem;
+    font-family: $fontHelveticaRegular;
+    text-transform: uppercase;
+    color: #ff7077;
+  }
+
+  .read-more {
+    text-align: right;
+  }
+
+  .btn-article-read-more {
+    background: #ffffff;
+    color: #ff7077;
+    border: 1px solid #d8d6d6;
+    border-radius: 20px;
+    padding: 9px 40px;
+    cursor: pointer;
+  }
+}
+
+.btn-article-load-more {
+  background: #ff7077;
+  color: #ffffff;
+  border-radius: 20px;
+  padding: 9px 40px;
+  cursor: pointer;
+}

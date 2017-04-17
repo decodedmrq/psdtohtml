@@ -12,9 +12,12 @@
 */
 Auth::routes();
 
-Route::get('/', 'HomeController@index');
-Route::get('contact', 'ContactController@index');
+Route::get('/', 'HomeController@index')->name('home');
+Route::get('contact', 'ContactController@index')->name('contact');
 Route::resource('feedback', 'FeedbackController');
+Route::resource('article', 'ArticleController');
+Route::post('article/load_more', 'ArticleController@loadMore')->name('article.load_more');
+Route::get('tag/{slug}', 'ArticleController@tag')->name('article.tag');
 
 Route::group(['prefix' => 'admin-nhantuong', 'namespace' => 'Admin', 'as' => 'admin.', 'middleware' => ['auth']], function () {
     Route::get('/', 'DashboardController@index')->name('dashboard');

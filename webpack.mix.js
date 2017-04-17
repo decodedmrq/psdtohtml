@@ -21,8 +21,9 @@ const publicFontDir = 'public/fonts/';
 
 mix
     // .sass(sourceSassFolder + 'home.scss', publicCssDir)
-    .sass(sourceSassFolder + 'contact.scss', publicCssDir)
-    .js(sourceJsFolder + 'contact.js', publicJsDir)
+    // .sass(sourceSassFolder + 'contact.scss', publicCssDir)
+    .sass(sourceSassFolder + 'article.scss', publicCssDir)
+    // .js(sourceJsFolder + 'contact.js', publicJsDir)
 ;
 mix
 .js(sourceJsFolder + 'app.js', publicJsDir)

@@ -3,7 +3,7 @@
 {{ html()->style('/css/home.css') }}
 @endpush
 @section('content')
-    @include('home.slider.product')
+    @include('slider.product')
     <div class="container">
         @include('home.story.product')
         @include('home.feature.product')
@@ -26,9 +26,9 @@
     makeBgFullWidth(bg);
 
     function makeBgFullWidth(element) {
-        let windowWidth = window.innerWidth - 25;
+        let bodyWidth = document.body.offsetWidth;
         let parent = element.parentElement;
-        let pullWidth = "-" + (windowWidth - parent.offsetWidth) / 2 + 'px';
+        let pullWidth = "-" + (bodyWidth - parent.offsetWidth) / 2 + 'px';
         element.style.left = pullWidth;
         element.style.right = pullWidth;
     }
