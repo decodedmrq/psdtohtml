@@ -6,9 +6,8 @@
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="main-nav">
-                <form class="form-inline mr-auto" id="search-form">
-                    <input class="form-control" type="text" placeholder="{{trans('labels.search')}}">
-                </form>
+
+                <div class="mr-auto"></div>
                 <ul class="navbar-nav">
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#"
@@ -20,7 +19,7 @@
                             <a class="dropdown-item" href="#">{{ trans('string.setting') }}</a>
                             <div class="dropdown-divider"></div>
                             <a class="dropdown-item" href="{{ url('/logout') }}" onclick="event.preventDefault();
-                                                 document.getElementById('logout-form').submit();">{{ trans('auth.logout') }}</a>
+                                             document.getElementById('logout-form').submit();">{{ trans('auth.logout') }}</a>
                             {!! form()->open(['url' => '/logout', 'method' => 'post', 'id' => 'logout-form']) !!}
                             {!! form()->close() !!}
                         </div>

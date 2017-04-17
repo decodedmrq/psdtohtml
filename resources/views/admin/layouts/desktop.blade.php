@@ -13,11 +13,11 @@
     </noscript>
     <div class="content-scrollable">
         <div class="container-fluid">
-            @include('admin.layouts.includes.breadcrumb')
             @yield('content')
         </div>
     </div>
 </div>
 @include('admin.layouts.includes.script')
+@stack('modals')
 </body>
 </html>

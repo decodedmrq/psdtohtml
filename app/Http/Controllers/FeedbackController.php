@@ -7,6 +7,7 @@ use App\Models\Feedback;
 
 class FeedbackController extends Controller
 {
+    protected $model = Feedback::class;
     /**
      * Store a newly created resource in storage.
      *
@@ -19,16 +20,5 @@ class FeedbackController extends Controller
         if (!$feedback) return response_json(null, false, ['notify' => trans('messages.failed')]);
 
         return response_json(null, true, trans('messages.sent'));
-    }
-
-    /**
-     * Display the specified resource.
-     *
-     * @param  int $id
-     * @return \Illuminate\Http\Response
-     */
-    public function show($id)
-    {
-        //
     }
 }

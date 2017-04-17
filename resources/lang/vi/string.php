@@ -39,4 +39,10 @@ return [
     'full_name' => 'Họ và tên',
     'name' => 'Tên',
     'submit' => 'Gửi',
+    'id' => 'ID',
+    'author' => 'Người gửi',
+    'updated_at' => 'Ngày cập nhật',
+    'created_at' => 'Ngày tạo',
+    'action' => 'Thực hiện',
+    'detail' => 'Chi tiết',
 ];

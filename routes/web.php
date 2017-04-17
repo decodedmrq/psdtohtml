@@ -21,6 +21,8 @@ Route::get('tag/{slug}', 'ArticleController@tag')->name('article.tag');
 
 Route::group(['prefix' => 'admin-nhantuong', 'namespace' => 'Admin', 'as' => 'admin.', 'middleware' => ['auth']], function () {
     Route::get('/', 'DashboardController@index')->name('dashboard');
+    Route::get('feedback', 'FeedbackController@index')->name('feedback');
+    Route::get('feedback/{id}', 'FeedbackController@show')->name('feedback.show');
 });
 
 
