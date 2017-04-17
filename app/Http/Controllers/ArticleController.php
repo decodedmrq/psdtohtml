@@ -27,13 +27,13 @@ class ArticleController extends RenderController
         $about->gg->button = '/images/btn_gg_play.png';
         $about->gg->greeting = 'Get it on';
         $about->gg->name = 'Google play';
-        $about->gg->link = 'https://translate.google.com/#vi/en/link%20%C4%91%C3%A2y%20th%C3%A2y!%20%3Av';
+        $about->gg->link = '#';
 
         $about->apple = new Collection();
         $about->apple->button = '/images/btn_app_store.svg';
         $about->apple->greeting = 'Download on the';
         $about->apple->name = 'App Store';
-        $about->apple->link = 'https://translate.google.com/#vi/en/link%20%C4%91%C3%A2y%20th%C3%A2y!%20%3Av';
+        $about->apple->link = '#';
 
         $articleApps = new Collection();
         $articlePromotions = new Collection();

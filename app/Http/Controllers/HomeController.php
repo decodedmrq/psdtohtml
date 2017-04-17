@@ -24,13 +24,13 @@ class HomeController extends RenderController
         $about->gg->button = '/images/btn_gg_play.png';
         $about->gg->greeting = 'Get it on';
         $about->gg->name = 'Google play';
-        $about->gg->link = 'https://translate.google.com/#vi/en/link%20%C4%91%C3%A2y%20th%C3%A2y!%20%3Av';
+        $about->gg->link = '#';
 
         $about->apple = new Collection();
         $about->apple->button = '/images/btn_app_store.svg';
         $about->apple->greeting = 'Download on the';
         $about->apple->name = 'App Store';
-        $about->apple->link = 'https://translate.google.com/#vi/en/link%20%C4%91%C3%A2y%20th%C3%A2y!%20%3Av';
+        $about->apple->link = '#';
 
         $story = new Collection();
         $story->image = '/images/story_cover.png';
@@ -41,7 +41,7 @@ class HomeController extends RenderController
         as opposed to using \'Content here, content here\', making it look like readable English.
          Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, 
          and a search for';
-        $story->read_more_link = 'https://translate.google.com/#vi/en/%C4%91%C3%A2y%20l%C3%A0%20trang%20C%C3%A2u%20chuy%E1%BB%87n';
+        $story->read_more_link = '#';
 
         $features = new Collection();
         foreach (range(1, 5) as $index) {
