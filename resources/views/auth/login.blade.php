@@ -11,9 +11,9 @@
     </noscript>
     <div class="content-scrollable">
         <div class="container-fluid">
-            <div class="container">
+            <div class="container login-container">
                 <div class="row">
-                    <div class="col-md-6 offset-md-1">
+                    <div class="col-md-6 offset-md-3">
                         <div class="card card-block">
                             <h3 class="card-title text-xs-center">{{ trans('auth.login') }}</h3>
                             <form class="form-horizontal card-text" role="form" method="POST" action="{{ url('/login') }}">

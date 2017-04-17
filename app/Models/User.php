@@ -30,8 +30,6 @@ class User extends Authenticatable
         'remember_token',
     ];
 
-    protected $appends = ['level'];
-
     protected $guarded = ['id'];
 
     /**

@@ -24,31 +24,32 @@ mix
     .sass(sourceSassFolder + 'home.scss', publicCssDir)
     .sass(sourceSassFolder + 'contact.scss', publicCssDir)
     .sass(sourceSassFolder + 'article.scss', publicCssDir)
-    .js(sourceJsFolder + 'contact.js', publicJsDir)
-;
-mix
-.js(sourceJsFolder + 'app.js', publicJsDir)
-.sass(sourceSassFolder + 'library.scss', publicCssDir)
-.js(sourceJsFolder + 'bootstrap.js', publicJsDir)
-    .sass(sourceSassFolder + 'app.scss', publicCssDir)
-;
 
-//  Admin
+    .js(sourceJsFolder + 'contact.js', publicJsDir);
+mix
+    .js(sourceJsFolder + 'app.js', publicJsDir)
+    .sass(sourceSassFolder + 'library.scss', publicCssDir)
+    .js(sourceJsFolder + 'bootstrap.js', publicJsDir)
+    .sass(sourceSassFolder + 'app.scss', publicCssDir);
+
+//Admin
 const publicAdminDir = 'public/admin/';
 mix.js(sourceJsFolder + 'admin/app.js', publicAdminDir + 'js/')
     .sass(sourceSassFolder + 'admin/library.scss', publicAdminDir + 'css/')
     .js(sourceJsFolder + 'admin/bootstrap.js', publicAdminDir + 'js/')
-    .sass(sourceSassFolder + 'admin/app.scss', publicAdminDir + 'css/');
+    .sass(sourceSassFolder + 'admin/app.scss', publicAdminDir + 'css/')
+    .sass(sourceSassFolder + 'admin/feedback.scss', publicAdminDir + 'css/');
+
 
 mix.copy(
-  sourceVendor + 'html5shiv/dist/html5shiv.min.js',
-  publicVendor + 'html5shiv/html5shiv.min.js'
+    sourceVendor + 'html5shiv/dist/html5shiv.min.js',
+    publicVendor + 'html5shiv/html5shiv.min.js'
 );
 mix.copy(
-  sourceVendor + 'respond/dest/respond.min.js',
-  publicVendor + 'respond/respond.min.js'
+    sourceVendor + 'respond/dest/respond.min.js',
+    publicVendor + 'respond/respond.min.js'
 );
 mix.copy(
-  sourceVendor + 'owl.carousel/dist/owl.carousel.min.js',
-  publicVendor + 'owl.carousel/owl.carousel.min.js'
+    sourceVendor + 'owl.carousel/dist/owl.carousel.min.js',
+    publicVendor + 'owl.carousel/owl.carousel.min.js'
 );
