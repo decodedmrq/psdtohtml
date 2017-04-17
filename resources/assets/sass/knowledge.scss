@@ -1,0 +1,52 @@
+.head-title {
+  margin-top: 56px;
+  position: relative;
+
+  .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    opacity: 0.4;
+    background: #000000;
+  }
+  .body {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    color: #FFFFFF;
+  }
+}
+
+.main-content {
+  margin: 4rem 0;
+
+  .photo {
+    figcaption {
+      padding-top: 1rem;
+      color: #cccccc;
+    }
+  }
+}
+
+.app-benefits {
+  margin-bottom: 68px;
+
+  .image {
+    height: 112px;
+  }
+  .item {
+    border: 3px solid #f6f6f6;
+    font-size: 1rem;
+    padding: 15px;
+    text-align: center !important;
+    margin: 0 0.5rem;
+    .title {
+      margin-top: 2.5rem;
+      font-weight: 700;
+    }
+  }
+}

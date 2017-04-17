@@ -16,6 +16,7 @@ Route::get('/', 'HomeController@index')->name('home');
 Route::get('contact', 'ContactController@index')->name('contact');
 Route::resource('feedback', 'FeedbackController');
 Route::resource('article', 'ArticleController');
+Route::resource('knowledge', 'KnowledgeController');
 Route::post('article/load_more', 'ArticleController@loadMore')->name('article.load_more');
 Route::get('tag/{slug}', 'ArticleController@tag')->name('article.tag');
 

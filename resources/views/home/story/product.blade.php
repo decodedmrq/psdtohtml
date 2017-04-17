@@ -12,7 +12,7 @@
                 <div>
                     <div class="title">{{ $story->name }}</div>
                     <div class="content">{{ $story->content }}</div>
-                    <a class="btn-story-read-more btn" href="{{ $story->read_more_link }}">
+                    <a class="btn-story-read-more btn" href="{{ route('knowledge.index') }}">
                         {{ trans('string.story.read_more') }}
                     </a>
                 </div>
