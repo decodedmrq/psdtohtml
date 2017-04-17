@@ -7,7 +7,7 @@
     </div>
     <!-- /Background image -->
 
-    <div class="slider-body d-flex container">
+    <div class="slider-body d-flex container py-5">
         @include('slider.left')
         @include('slider.right')
     </div>

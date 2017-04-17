@@ -11,9 +11,15 @@
                 <div class="row align-items-center h-100">
                     <div class="col-sm-9">
                         <div class="row">
-                            <div class="col-sm">{{ trans('fixed_data.work_opportunity') }}</div>
-                            <div class="col-sm">{{ trans('fixed_data.privacy_policy') }}</div>
-                            <div class="col-sm">{{ trans('fixed_data.term_of_service') }}</div>
+                            <div class="col-sm">
+                                <a href="#">{{ trans('fixed_data.work_opportunity') }}</a>
+                            </div>
+                            <div class="col-sm">
+                                <a href="#">{{ trans('fixed_data.privacy_policy') }}</a>
+                            </div>
+                            <div class="col-sm">
+                                <a href="#">{{ trans('fixed_data.term_of_service') }}</a>
+                            </div>
                         </div>
                     </div>
                     <div class="col-sm-3">

@@ -11,7 +11,7 @@
             <div class="collapse navbar-collapse justify-content-md-end" id="navbarToggler">
                 <ul class="navbar-nav">
                     <li class="{{ nav_item_class('fake') }}">
-                        <a class="nav-link" href="#">{{ trans('string.about_product') }}</a>
+                        <a class="nav-link" href="{{ route('home') }}">{{ trans('string.about_product') }}</a>
                     </li>
                     <li class="{{ nav_item_class('fake') }}">
                         <a class="nav-link" href="#">{{ trans('string.knowledge') }}</a>
