@@ -5,6 +5,9 @@
   padding-top: 5rem;
 
   .story-body {
+    .toggle-story {
+      display: none;
+    }
     .btn-story-read-more {
       color: #00dbff;
       border: 1px solid #d8d6d6;
@@ -15,6 +18,8 @@
     }
   }
 }
+
+
 
 //  Story & Feature
 .story-head, .features-head, .feedbacks-head, .partners-head {

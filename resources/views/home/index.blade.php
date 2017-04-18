@@ -32,5 +32,15 @@
         element.style.left = pullWidth;
         element.style.right = pullWidth;
     }
+
+    var rm = $(".btn-story-read-more"),
+        moreText = "Tìm hiểu thêm",
+        lessText = "Đóng";
+    rm.click(function () {
+        var $this = $(this);
+        $this.prev().slideToggle();
+        $this.text($this.text().trim() === moreText ? lessText : moreText);
+    });
+
 </script>
 @endpush
