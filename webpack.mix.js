@@ -29,15 +29,15 @@ mix
     .js(sourceJsFolder + 'contact.js', publicJsDir);
 mix
     .js(sourceJsFolder + 'app.js', publicJsDir)
-    // .sass(sourceSassFolder + 'library.scss', publicCssDir)
-    // .js(sourceJsFolder + 'bootstrap.js', publicJsDir)
+    .sass(sourceSassFolder + 'library.scss', publicCssDir)
+    .js(sourceJsFolder + 'bootstrap.js', publicJsDir)
     .sass(sourceSassFolder + 'app.scss', publicCssDir);
 
 //Admin
 const publicAdminDir = 'public/admin/';
 mix.js(sourceJsFolder + 'admin/app.js', publicAdminDir + 'js/')
-    // .sass(sourceSassFolder + 'admin/library.scss', publicAdminDir + 'css/')
-    // .js(sourceJsFolder + 'admin/bootstrap.js', publicAdminDir + 'js/')
+    .sass(sourceSassFolder + 'admin/library.scss', publicAdminDir + 'css/')
+    .js(sourceJsFolder + 'admin/bootstrap.js', publicAdminDir + 'js/')
     .sass(sourceSassFolder + 'admin/app.scss', publicAdminDir + 'css/')
     .sass(sourceSassFolder + 'admin/feedback.scss', publicAdminDir + 'css/');
 

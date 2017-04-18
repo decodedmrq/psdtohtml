@@ -34,26 +34,11 @@ class HomeController extends RenderController
 
         $story = new Collection();
         $story->image = '/images/story_cover.png';
-        $story->name = 'Why do we use it?';
-        $story->content = 'It is a long established fact that a reader will be distracted by the 
-        readable content of a page when looking at its layout. 
-        The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, 
-        as opposed to using \'Content here, content here\', making it look like readable English.
-         Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, 
-         and a search for';
+        $story->name = trans('string.story.reason');
+        $story->section_1 = 'Nhiều năm trước, trong quá trình tham vấn cho các doanh nghiệp, chúng tôi - một nhóm những nhà tư vấn chiến lược, nhân sự (và cả thầy bói) - nhận ra rằng: Cốt tuỷ của một doanh nghiệp không nằm ở sản phẩm, thương hiệu, hay những giá trị cao xa nào, mà nằm ở chính những nhân sự tạo nên doanh nghiệp đó. Nhân sự phải được tuyển chọn và sắp xếp, sao cho "đúng người - đúng việc - đúng thời điểm".';
         $story->read_more_link = '#';
 
-        $features = new Collection();
-        foreach (range(1, 5) as $index) {
-            $feature = new Collection();
-            $feature->image = '/images/feature_default.png';
-            $feature->name = 'Feature ' . $index;
-            $feature->content = 'This is sentence 1 of content of Feature ' . $index
-                . '. This is sentence 2 of content of Feature ' . $index
-                . '. This is sentence 3 of content of Feature ' . $index
-                . '. This is sentence 4 of content of Feature ' . $index;
-            $features->push($feature);
-        }
+        $features = trans('array.features');
 
         $feedbacks = new Collection();
         foreach (range(1, 3) as $index) {

@@ -17,14 +17,15 @@ return [
     'view_more' => 'Xem thêm',
 
     'story' => [
-        'description' => 'Tóm lược quá trình phát triển',
+        'description' => 'Cảm hứng để chúng tôi xây dựng ứng dụng này',
         'image' => 'Câu chuyện về chúng tôi',
         'read_more' => 'Tìm hiểu thêm',
         'title' => 'Câu chuyện',
+        'reason' => 'Tại sao ?'
     ],
     'feature' => [
-        'title' => 'Tính năng tuyệt vời',
-        'description' => 'Tóm lược quá trình phát triển',
+        'title' => 'Lợi ích',
+        'description' => 'Những gì chúng tôi đem tới cho bạn',
     ],
     'feedback' => [
         'title' => 'Cảm nhận người dùng',
