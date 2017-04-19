@@ -1,5 +1,5 @@
 <!-- Slider right -->
-<div class="slider-right col-sm-5">
+<div class="slider-right col-sm-5 offset-1">
     <div class="h-100 d-flex align-items-center">
         <div>
             <div class="row">

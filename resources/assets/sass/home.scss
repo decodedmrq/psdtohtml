@@ -68,7 +68,7 @@
         display: inline-block;
         width: 72px;
         height: 72px;
-        border: 2px solid #cccccc;
+        //border: 2px solid #cccccc;
         margin: 0 10px;
 
         .feedback-image {
@@ -80,7 +80,7 @@
         &.active {
           width: 96px !important;
           height: 96px !important;
-          border: 3px solid #ff7077 !important;
+          //border: 3px solid #ff7077 !important;
 
           .feedback-image {
             -webkit-filter: grayscale(0) !important; /* Safari 6.0 - 9.0 */

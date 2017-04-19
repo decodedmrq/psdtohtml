@@ -13,12 +13,12 @@
                     <li class="{{ nav_item_class('home') }}">
                         <a class="nav-link" href="{{ route('home') }}">{{ trans('string.about_product') }}</a>
                     </li>
-                    <li class="{{ nav_item_class('knowledge.index') }}">
-                        <a class="nav-link" href="{{route('knowledge.index')}}">{{ trans('string.knowledge') }}</a>
-                    </li>
-                    <li class="{{ nav_item_class('article.index') }}">
-                        <a class="nav-link" href="{{ route('article.index') }}">{{ trans('string.news') }}</a>
-                    </li>
+                    {{--<li class="{{ nav_item_class('knowledge.index') }}">--}}
+                        {{--<a class="nav-link" href="{{route('knowledge.index')}}">{{ trans('string.knowledge') }}</a>--}}
+                    {{--</li>--}}
+                    {{--<li class="{{ nav_item_class('article.index') }}">--}}
+                        {{--<a class="nav-link" href="{{ route('article.index') }}">{{ trans('string.news') }}</a>--}}
+                    {{--</li>--}}
                     <li class="{{ nav_item_class('contact') }}">
                         <a class="nav-link" href="{{ route('contact') }}">{{ trans('string.contact') }}</a>
                     </li>

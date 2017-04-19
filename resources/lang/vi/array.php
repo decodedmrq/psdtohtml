@@ -37,7 +37,7 @@ return [
         ],
         [
             'image' => '/images/feature_default.png',
-            'name' => 'Giải pháp học di động',
+            'name' => 'Cộng đồng tích cực',
             'contents' => [
                 'Bạn hỏi, chuyên gia trả lời.',
                 'Cùng trao đổi, bàn luận với những thành viên khác.',

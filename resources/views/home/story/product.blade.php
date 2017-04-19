@@ -8,9 +8,8 @@
     <div class="story-body row">
         <!-- Left -->
         <div class="col-sm">
-            <div class="h-100 d-flex align-items-center">
+            <div class="d-flex align-items-center">
                 <div>
-                    <div class="title">{{ $story->name }}</div>
                     <div class="content">{{ $story->section_1 }}</div>
                     <div class="content toggle-story">
                         <p>
