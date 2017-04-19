@@ -15,20 +15,20 @@
 @push('script')
 <script>
     $('.feedback-image-wrapper').on('click', function (event) {
-        let index = $(this).attr('data-index');
+        var index = $(this).attr('data-index');
         $('.feedback-image-wrapper').removeClass('active');
         $(this).addClass('active');
         $('.feedback-content').removeClass('active');
         $('#fb-content-' + index).addClass('active');
     });
 
-    let bg = document.getElementById('bg-first-feature');
+    var bg = document.getElementById('bg-first-feature');
     makeBgFullWidth(bg);
 
     function makeBgFullWidth(element) {
-        let bodyWidth = document.body.offsetWidth;
-        let parent = element.parentElement;
-        let pullWidth = "-" + (bodyWidth - parent.offsetWidth) / 2 + 'px';
+        var bodyWidth = document.body.offsetWidth;
+        var parent = element.parentElement;
+        var pullWidth = "-" + (bodyWidth - parent.offsetWidth) / 2 + 'px';
         element.style.left = pullWidth;
         element.style.right = pullWidth;
     }
