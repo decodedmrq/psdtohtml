@@ -6,9 +6,11 @@
     @include('slider.product')
     <div class="container">
         @include('home.story.product')
+        <hr>
         @include('home.feature.product')
-        @include('home.feedback.product')
-        @include('home.partner.product')
+        {{--<hr>--}}
+        {{--@include('home.feedback.product')--}}
+        {{--@include('home.partner.product')--}}
     </div>
 @endsection
 
@@ -33,14 +35,15 @@
         element.style.right = pullWidth;
     }
 
-    var rm = $(".btn-story-read-more"),
-        moreText = "Tìm hiểu thêm",
-        lessText = "Đóng";
-    rm.click(function () {
-        var $this = $(this);
-        $this.prev().slideToggle();
-        $this.text($this.text().trim() === moreText ? lessText : moreText);
-    });
+    var btnReadMoreStory = $(".btn-story-read-more");
+    var hiddenStory = $('#hidden-story');
+    var moreText = '{{ trans('string.story.read_more') }}';
+    var lessText = '{{ trans('string.minimize') }}';
 
+    btnReadMoreStory.on('click', function (e) {
+//        $(this).prev().slideToggle();
+        $(this).text($(this).text().trim() === moreText ? lessText : moreText);
+        hiddenStory.slideToggle();
+    });
 </script>
 @endpush

@@ -7,7 +7,7 @@ html, body {
 }
 
 body {
-  font-family: 'Open Sans', sans-serif;
+  font-family: "Helvetica Neue Light", sans-serif;
   background: $bg-body;
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
@@ -100,7 +100,6 @@ button {
   background: linear-gradient(to right, #ffaaac, #ff7077);
   color: #ffffff;
   padding: 40px 0;
-  font-size: 0.875rem;
 }
 
 a {

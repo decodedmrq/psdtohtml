@@ -7,11 +7,11 @@
  */
 
 return [
-    'company' => 'Công ty Giáo dục Tiềm chất',
+    'company' => 'Công ty Cổ phần Giáo dục Tiềm chất',
     'address' => 'Tầng 4, tòa nhà Số 137 Hoàng Quốc Việt, phường Nghĩa Đô, quận Cầu Giấy, Tp Hà Nội',
-    'website' => 'nhantuongsee.vn',
-    'phone' => '0168 958 8619    -     043 000 000',
-    'email' => 'lienhe@nhantuongsee.vn',
+    'website' => 'hocnhantuong.com',
+    'phone' => '0969 393 901',
+    'email' => 'lienhe@hocnhantuong.com',
     'work_opportunity' => 'Cơ hội nghề nghiệp',
     'privacy_policy' => 'Chính sách bảo mật',
     'term_of_service' => 'Điều khoản sử dụng',

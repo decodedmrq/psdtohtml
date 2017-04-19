@@ -3,19 +3,23 @@
 //  Story
 .story {
   padding-top: 5rem;
+  padding-bottom: 3rem;
+  text-align: justify;
 
   .story-body {
     .toggle-story {
       display: none;
     }
-    .btn-story-read-more {
-      color: #00dbff;
-      border: 1px solid #d8d6d6;
-      border-radius: 20px;
-      font-family: $fontRoboto;
-      font-size: 1rem;
-      padding: 10px 40px;
-    }
+  }
+
+  .btn-story-read-more {
+    color: #00dbff;
+    border: 1px solid #d8d6d6;
+    border-radius: 20px;
+    font-family: $fontRoboto;
+    font-size: 1rem;
+    padding: 10px 40px;
+    cursor: pointer;
   }
 }
 
@@ -45,7 +49,7 @@
 
 //  Feature
 .features {
-  padding-top: 5rem;
+  padding-top: 2rem;
 
   .features-body {
     .feature {

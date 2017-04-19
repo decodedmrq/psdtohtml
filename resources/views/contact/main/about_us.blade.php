@@ -1,11 +1,22 @@
 <!-- About Us -->
 <div class="about-us row">
-    <h5 class="title col-sm-12">Công ty Giáo dục Tiềm chất (Wikiedu)</h5>
+    <h4 class="title col-sm-12">{{ trans('string.about_us') }}</h4>
 
     <div class="content col-sm-12">
-        Lorem Ipsum chỉ đơn giản là một đoạn văn bản giả, được dùng vào việc trình bày và dàn trang phục vụ cho in ấn.
-        Lorem Ipsum đã được sử dụng như một văn bản chuẩn cho ngành công nghiệp in ấn từ những năm 1500,
-        khi một họa sĩ vô danh ghép nhiều đoạn văn bản với nhau để tạo thành một bản mẫu văn bản.
+        <p>
+            Được thành lập từ năm 2016, Công ty cổ phần Giáo dục Tiềm chất chuyên về nghiên cứu ứng dụng công nghệ vào Giáo
+            dục.
+        </p>
+
+        <p>
+            Với sự cố vấn của đội ngũ chuyên gia cổ học uy tín, chúng tôi đang từng bước xây dựng các sản phẩm, kết hợp giữa
+            kho tàng tinh hoa tri thức phương Đông và những trải nghiệm công nghệ mới mẻ.
+        </p>
+
+        <p>
+            Chúng tôi tin rằng: những sản phẩm này không chỉ có tính ứng dụng đặc biệt trong đời sống hiện đại, mà còn như
+            góp phần gìn giữ giá trị văn hoá việt.
+        </p>
     </div>
 </div>
 <!-- /About Us -->

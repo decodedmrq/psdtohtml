@@ -1,6 +1,5 @@
 <!-- Features -->
 <div class="features col-sm-12">
-    <hr>
     <div class="features-head row text-center">
         <div class="title col-sm-12">{{ trans('string.feature.title') }}</div>
         <small class="description col-sm-12">{{ trans('string.feature.description') }}</small>
@@ -11,6 +10,5 @@
             @include('home.feature.item', ['feature' => $feature, 'index' => $loop->index])
         @endforeach
     </div>
-    <hr>
 </div>
 <!-- /Features -->

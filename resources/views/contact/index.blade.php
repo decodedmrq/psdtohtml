@@ -9,16 +9,15 @@
     <div class="container">
         <div class="contact row">
             <div class="contact-head col-sm-12">
-                <div class="title text-center">{{ trans('string.about_us') }}</div>
             </div>
 
             <div class="contact-body col-sm-12">
                 <div class="row">
-                    <div class="px-4">
+                    {{--<div class="px-4">
                         @include('contact.left')
-                    </div>
+                    </div>--}}
 
-                    <div class="col-sm">
+                    <div class="col-sm-8 offset-2">
                         @include('contact.main.product')
                     </div>
                 </div>

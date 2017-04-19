@@ -10,8 +10,14 @@
         <div class="col-sm">
             <div class="d-flex align-items-center">
                 <div>
-                    <div class="content">{{ $story->section_1 }}</div>
-                    <div class="content toggle-story">
+                    <div class="content mb-0">
+                        <p>
+                            Nhiều năm trước, trong quá trình tham vấn cho các doanh nghiệp, chúng tôi - một nhóm những nhà
+                            tư vấn chiến lược, nhân sự (và cả thầy bói) - nhận ra rằng: Cốt tuỷ của một doanh nghiệp không
+                            nằm ở sản phẩm, thương hiệu, hay những giá trị cao xa nào, mà nằm ở chính những nhân sự tạo nên
+                            doanh nghiệp đó. Nhân sự phải được tuyển chọn và sắp xếp, sao cho "đúng người - đúng việc - đúng
+                            thời điểm".
+                        </p>
                         <p>
                             Nhu cầu đánh giá nhân sự vì thế càng trở nên xác đáng hơn bao giờ hết. Trên thực tế, doanh
                             nghiệp mới chỉ khảo sát được năng lực nghiệp vụ (thông qua CV, portfolio, kiểm tra chuyên
@@ -26,30 +32,7 @@
                             chọn lựa hiền tài từ hàng ngàn năm. Sau một thời gian nghiên cứu - ứng dụng, nhiều doanh
                             nghiệp đã phản hồi rất tích cực về hiệu quả của Nhân tướng học.
                         </p>
-                        <p>
-                            Cùng từ đó, với mong muốn phổ cập bộ công cụ này, hỗ trợ các tổ chức thực hiện hiệu quả hơn
-                            công tác quản trị nhân sự, chúng tôi quyết định đưa bộ môn này vào giảng dạy và đào tạo tại
-                            các doanh nghiệp và trường đại học.
-                        </p>
-                        <p>
-                            Trong quá trình này, nhiều vấn đề tiếp tục nảy sinh: học viên không bám lớp đầy đủ (do bận
-                            việc, đi lại khó khăn, mưa bão...), quá khó để tự học thêm ngoài giờ lên lớp (các sách vở
-                            truyền thống quá khô khan, thậm chí có sự sai lệch về kiến thức), không biết hỏi ai khi có
-                            thắc mắc... Bên cạnh đó, do lịch làm việc tương đối dày, bản thân chúng tôi cũng gặp nhiều
-                            khó khăn trong việc bảo đảm chất lượng và tiến trình học.
-                        </p>
-                        <p>
-                            Từ đây, ý tưởng về việc xây dựng một ứng dụng di động Tự học Nhân tướng ra đời. Chúng tôi
-                            đặt tên cho sản phẩm này là S.E.E, viết tắt của Soul - Eye- Ear. Nghĩa là Tâm - Mắt - Tai,
-                            ba điểm trọng yếu cốt lõi đối với việc ứng dụng Nhân tướng. Chúng tôi tin rằng: phần mềm
-                            không chỉ giúp học viên giải quyết các vấn đề gặp phải, mà còn đưa Nhân tướng học phổ biến
-                            rộng rãi hơn nữa, trong cộng đồng người làm Nhân sự nói riêng, và những người có nhu cầu ứng
-                            dụng Nhân tướng học nói chung.
-                        </p>
                     </div>
-                    <a class="btn-story-read-more btn" href="javascript:void(0)">
-                        {{ trans('string.story.read_more') }}
-                    </a>
                 </div>
             </div>
         </div>
@@ -57,9 +40,58 @@
 
         <!-- Right -->
         <div class="col-sm">
-            <img src="{{ $story->image }}" alt="{{ trans('string.story.image') }}">
+            <div class="row align-items-center h-100 pb-5">
+                <div class="col-sm-12">
+                    <img src="/images/home/img_story_1.png" alt="{{ trans('string.story.image') }}">
+                </div>
+            </div>
         </div>
         <!-- /Right -->
+    </div>
+
+    <!-- Hidden story -->
+    <div class="row" style="display: none;" id="hidden-story">
+        <div class="col-sm">
+            <div class="row align-items-center h-100 pb-5">
+                <div class="col-sm-12">
+                    <img src="/images/home/img_story_2.png" alt="Ảnh câu chuyện 2">
+                </div>
+            </div>
+        </div>
+
+        <div class="col-sm">
+            <div class="content toggle-story mb-0">
+                <p>
+                    Cùng từ đó, với mong muốn phổ cập bộ công cụ này, hỗ trợ các tổ chức thực hiện hiệu quả hơn
+                    công tác quản trị nhân sự, chúng tôi quyết định đưa bộ môn này vào giảng dạy và đào tạo tại
+                    các doanh nghiệp và trường đại học.
+                </p>
+                <p>
+                    Trong quá trình này, nhiều vấn đề tiếp tục nảy sinh: học viên không bám lớp đầy đủ (do bận
+                    việc, đi lại khó khăn, mưa bão...), quá khó để tự học thêm ngoài giờ lên lớp (các sách vở
+                    truyền thống quá khô khan, thậm chí có sự sai lệch về kiến thức), không biết hỏi ai khi có
+                    thắc mắc... Bên cạnh đó, do lịch làm việc tương đối dày, bản thân chúng tôi cũng gặp nhiều
+                    khó khăn trong việc bảo đảm chất lượng và tiến trình học.
+                </p>
+                <p>
+                    Từ đây, ý tưởng về việc xây dựng một ứng dụng di động Tự học Nhân tướng ra đời. Chúng tôi
+                    đặt tên cho sản phẩm này là S.E.E, viết tắt của Soul - Eye- Ear. Nghĩa là Tâm - Mắt - Tai,
+                    ba điểm trọng yếu cốt lõi đối với việc ứng dụng Nhân tướng. Chúng tôi tin rằng: phần mềm
+                    không chỉ giúp học viên giải quyết các vấn đề gặp phải, mà còn đưa Nhân tướng học phổ biến
+                    rộng rãi hơn nữa, trong cộng đồng người làm Nhân sự nói riêng, và những người có nhu cầu ứng
+                    dụng Nhân tướng học nói chung.
+                </p>
+            </div>
+        </div>
+    </div>
+    <!-- /Hidden story -->
+
+    <div class="row">
+        <div class="col-sm-12 text-center">
+            <div class="btn btn-story-read-more">
+                {{ trans('string.story.read_more') }}
+            </div>
+        </div>
     </div>
 </div>
 <!-- /Story -->

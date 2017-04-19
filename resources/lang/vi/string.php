@@ -3,18 +3,20 @@
 return [
     'month' => 'Tháng',
 
-    'about_us' => 'Về chúng tôi',
+    'about_us' => 'Về chúng tôi.',
     'about_product' => 'Về sản phẩm',
     'app' => 'Ứng dụng',
     'app_store' => 'App Store',
     'contact' => 'Liên hệ',
-    'contact_info' => 'Thông tin liên lạc:',
+    'contact_info' => 'Thông tin liên lạc.',
     'google_play' => 'Google Play',
     'knowledge' => 'Kiến thức',
     'news' => 'Tin tức',
     'read_more' => 'Tìm hiểu thêm',
     'load_more' => 'Tải thêm',
     'view_more' => 'Xem thêm',
+    'close' => 'Đóng',
+    'minimize' => 'Thu gọn',
 
     'story' => [
         'description' => 'Cảm hứng để chúng tôi xây dựng ứng dụng này',
