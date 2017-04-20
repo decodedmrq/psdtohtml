@@ -48,4 +48,5 @@ return [
     'created_at' => 'Ngày tạo',
     'action' => 'Thực hiện',
     'detail' => 'Chi tiết',
+    'coming_soon' => 'Sắp ra mắt',
 ];
