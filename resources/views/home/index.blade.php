@@ -3,11 +3,16 @@
 {{ html()->style('/css/home.css') }}
 @endpush
 @section('content')
-    @include('slider.product')
+    {{--@include('slider.product')--}}
+    @include('banner.product')
     <div class="container">
-        @include('home.story.product')
+        <div class="row">
+            @include('home.story.product')
+        </div>
         <hr>
-        @include('home.feature.product')
+        <div class="row">
+            @include('home.feature.product')
+        </div>
         {{--<hr>--}}
         {{--@include('home.feedback.product')--}}
         {{--@include('home.partner.product')--}}

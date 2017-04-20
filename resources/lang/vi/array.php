@@ -3,7 +3,7 @@
 return [
     'features' => [
         [
-            'image' => '/images/home/1.jpg',
+            'image' => '/images/home/1.png',
             'name' => 'Kiến thức cô đọng',
             'contents' => [
                 'Kiến thức tinh lọc, có căn bản.',
@@ -11,7 +11,7 @@ return [
             ],
         ],
         [
-            'image' => '/images/home/2.jpg',
+            'image' => '/images/home/2.png',
             'name' => 'Ứng dụng thực tiễn',
             'contents' => [
                 'Nhiều bài tập, câu hỏi giúp bạn rèn luyện khả năng "thực chiến".',
@@ -19,7 +19,7 @@ return [
             ],
         ],
         [
-            'image' => '/images/home/3.jpg',
+            'image' => '/images/home/3.png',
             'name' => 'Lối học hấp dẫn, dễ hiểu',
             'contents' => [
                 'Bài học chia nhỏ, luôn đi kèm ví dụ minh hoạ.',
@@ -28,7 +28,7 @@ return [
             ],
         ],
         [
-            'image' => '/images/home/4.jpg',
+            'image' => '/images/home/4.png',
             'name' => 'Giải pháp học di động',
             'contents' => [
                 'Học bất kỳ khi nào bạn muốn, tại bất cứ đâu, trong bao lâu tuỳ thích.',
@@ -36,7 +36,7 @@ return [
             ],
         ],
         [
-            'image' => '/images/home/5.jpg',
+            'image' => '/images/home/5.png',
             'name' => 'Cộng đồng tích cực',
             'contents' => [
                 'Bạn hỏi, chuyên gia trả lời.',
