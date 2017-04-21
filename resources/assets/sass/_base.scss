@@ -132,6 +132,18 @@ input, textarea {
     right: 0;
     bottom: 0;
     background: #FFD7DB;
+
+    .img-left {
+      position: absolute;
+      bottom: 0;
+      left: 1rem;
+    }
+
+    .img-right {
+      position: absolute;
+      bottom: 0;
+      right: 1rem;
+    }
   }
 
   .banner-main {
@@ -184,10 +196,9 @@ input, textarea {
   background-color: #efffcc;
 }
 
-.bg-full-width {
-  position: absolute;
-  top: 0;
-  bottom: 0;
+.bg-pink-light {
+  background-color: #FFD7DB;
+  opacity: .3;
 }
 
 .slider {

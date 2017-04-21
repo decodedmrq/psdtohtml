@@ -52,9 +52,17 @@
   padding-top: 2rem;
 
   .features-body {
+    position: relative;
+
     .feature {
       padding: 5rem 0;
       font-family: $fontRoboto;
+    }
+
+    #bg-feature {
+      position: absolute;
+      top: 0;
+      bottom: 0;
     }
   }
 }

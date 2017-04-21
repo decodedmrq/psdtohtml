@@ -1,6 +1,9 @@
 <!-- Banner -->
 <div class="banner">
-    <div class="banner-bg"></div>
+    <div class="banner-bg">
+        <img class="img-left" src="/images/home/banner/bg_left.png" alt="">
+        <img class="img-right" src="/images/home/banner/bg_right.png" alt="">
+    </div>
 
     <div class="banner-main">
         <div class="container">

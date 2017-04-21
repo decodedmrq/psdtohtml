@@ -1,7 +1,7 @@
 <!-- Feature item -->
 <div class="feature col-sm-12">
     @if($index == 0)
-        <div class="bg-cyan bg-full-width" id="bg-first-feature"></div>
+        <div class="bg-pink-light" id="bg-feature"></div>
     @endif
     <div class="row">
         <div class="col-sm-6 {{ is_odd_number($index) ? 'push-sm-6' : '' }}">
