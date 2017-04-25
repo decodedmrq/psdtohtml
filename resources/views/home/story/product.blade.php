@@ -22,18 +22,15 @@
                 <div>
                     <div class="content mb-0">
                         <p>
-                            Cùng từ đó, với mong muốn phổ cập bộ công cụ này, hỗ trợ các tổ chức thực hiện hiệu quả hơn
-                            công
+                            Với mong muốn phổ cập Nhân tướng học, nhằm hỗ trợ các tổ chức thực hiện hiệu quả hơn công
                             tác quản trị nhân sự, chúng tôi quyết định đưa bộ môn này vào giảng dạy và đào tạo tại các
-                            doanh
-                            nghiệp và trường đại học.
+                            doanh nghiệp và trường đại học.
                         </p>
                         <p>
-                            Trong quá trình này, nhiều vấn đề tiếp tục nảy sinh: học viên không bám lớp đầy đủ (do bận
+                            Trong quá trình đó, một số vấn đề đã nảy sinh như: học viên không bám lớp đầy đủ (do bận
                             việc, đi lại khó khăn, mưa bão...), quá khó để tự học thêm ngoài giờ lên lớp (các sách vở
                             truyền thống quá khô khan, thậm chí có sự sai lệch về kiến thức), không biết hỏi ai khi có
-                            thắc mắc... Bên cạnh đó, do lịch làm việc tương đối dày, bản thân chúng tôi cũng gặp nhiều
-                            khó khăn trong việc bảo đảm chất lượng và tiến trình học.
+                            thắc mắc...
                         </p>
                         <p>
                             Từ đây, ý tưởng về việc xây dựng một ứng dụng di động Tự học Nhân tướng ra đời. Chúng tôi
@@ -51,26 +48,26 @@
     </div>
 
     <!-- Hidden story -->
-    {{--<div class="row" style="display: none;" id="hidden-story">
-        <div class="col-sm">
-            <div class="row align-items-center h-100 pb-5">
-                <div class="col-sm-12">
-                    <img src="/images/home/img_story_2.png" alt="Ảnh câu chuyện">
-                </div>
+{{--<div class="row" style="display: none;" id="hidden-story">
+    <div class="col-sm">
+        <div class="row align-items-center h-100 pb-5">
+            <div class="col-sm-12">
+                <img src="/images/home/img_story_2.png" alt="Ảnh câu chuyện">
             </div>
         </div>
+    </div>
 
-        <div class="col-sm">
-            <div class="content toggle-story mb-0">
-                <p>
-                    Cùng từ đó, với mong muốn phổ cập bộ công cụ này, hỗ trợ các tổ chức thực hiện hiệu quả hơn
-                    công tác quản trị nhân sự, chúng tôi quyết định đưa bộ môn này vào giảng dạy và đào tạo tại
-                    các doanh nghiệp và trường đại học.
-                </p>
-            </div>
+    <div class="col-sm">
+        <div class="content toggle-story mb-0">
+            <p>
+                Cùng từ đó, với mong muốn phổ cập bộ công cụ này, hỗ trợ các tổ chức thực hiện hiệu quả hơn
+                công tác quản trị nhân sự, chúng tôi quyết định đưa bộ môn này vào giảng dạy và đào tạo tại
+                các doanh nghiệp và trường đại học.
+            </p>
         </div>
-    </div>--}}
-    <!-- /Hidden story -->
+    </div>
+</div>--}}
+<!-- /Hidden story -->
 
     <div class="row hidden-md-up">
         <div class="col-sm-12 text-center">
