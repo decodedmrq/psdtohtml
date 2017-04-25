@@ -17,7 +17,7 @@
                         @include('contact.left')
                     </div>--}}
 
-                    <div class="col-sm-8 offset-2">
+                    <div class="col-sm-8 offset-md-2">
                         @include('contact.main.product')
                     </div>
                 </div>
