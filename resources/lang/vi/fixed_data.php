@@ -11,6 +11,7 @@ return [
     'address' => 'Tầng 4, tòa nhà Số 137 Hoàng Quốc Việt, phường Nghĩa Đô, quận Cầu Giấy, Tp Hà Nội',
     'website' => 'hocnhantuong.com',
     'phone' => '0969 393 901',
+    'tel_phone' => '+84969393901',
     'email' => 'lienhe@hocnhantuong.com',
     'work_opportunity' => 'Cơ hội nghề nghiệp',
     'privacy_policy' => 'Chính sách bảo mật',

@@ -28,14 +28,16 @@
                 </div>
             </div>--}}
 
-            <div class="item col-sm-6">
+            <div class="item phone-number col-sm-6">
                 <div class="d-flex align-items-center">
                     <div>
                         <img src="/images/i_phone.png" alt="{{ trans('fixed_data.phone') }}">
 
                     </div>
                     <div class="col-sm">
-                        {{ trans('fixed_data.phone') }}
+                        <a href="tel:{{ trans('fixed_data.tel_phone') }}">
+                            {{ trans('fixed_data.phone') }}
+                        </a>
                     </div>
                 </div>
             </div>
