@@ -23,7 +23,11 @@
   }
 }
 
-
+@media (max-width: 575px) {
+  #hidden-story {
+    display: none;
+  }
+}
 
 //  Story & Feature
 .story-head, .features-head, .feedbacks-head, .partners-head {
@@ -55,7 +59,7 @@
     position: relative;
 
     .feature {
-      padding: 5rem 0;
+      padding: 5rem 15px;
       font-family: $fontRoboto;
     }
 
