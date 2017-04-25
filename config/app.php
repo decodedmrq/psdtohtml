@@ -18,6 +18,7 @@ return [
     'keywords' => [
         'tu-hoc-nhan-tuong'
     ],
+    'website' => 'HocNhanTuong.com',
 
     /*
     |--------------------------------------------------------------------------

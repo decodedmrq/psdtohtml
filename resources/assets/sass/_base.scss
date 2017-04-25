@@ -55,6 +55,7 @@ button {
 
   &.bg-navbar {
     background: linear-gradient(to right, #ff7077, #ffaaac); // #ffaaac #ff7077
+    box-shadow: 0 0 25px #ffaaac;
   }
 
   .logo {
@@ -80,17 +81,27 @@ button {
 
     &:hover {
       &::after {
-        left: 5%;
-        width: 90%;
+        left: 0;
+        width: 100%;
       }
     }
 
     &.active {
       &::after {
-        left: 5%;
-        width: 90%;
+        left: 0;
+        width: 100%;
       }
     }
+  }
+}
+
+@media (max-width: 576px) {
+  #navbar {
+    background: linear-gradient(to right, #ff7077, #ffaaac);
+  }
+
+  .main-body {
+
   }
 }
 
