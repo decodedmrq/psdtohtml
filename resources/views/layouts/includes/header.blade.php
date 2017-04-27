@@ -10,7 +10,7 @@
 
         <a href="{{ route('home') }}" class="navbar-brand">
             <div class="d-flex pull-left">
-                <img class="logo" src="{{ asset('images/logo.png') }}"/>
+                <img class="logo" src="{{ asset('/logo.png') }}"/>
                 <div class="col">
                     <div class="row align-items-center h-100">
                         <div class="col">
