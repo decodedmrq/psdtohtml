@@ -101,7 +101,7 @@ return [
     */
 
     'custom' => [
-        'name' => [
+        'author' => [
             'required' => 'Vui lòng nhập tên',
         ],
         'email' => [
