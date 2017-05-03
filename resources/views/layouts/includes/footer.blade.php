@@ -25,7 +25,7 @@
                     <div class="col-sm-3 mb-3">
                         <div class="d-flex align-items-center">
                             <div class="col-sm pr-0">
-                                <a class="fa fa-facebook-square fa-2x" href="https://facebook.com"></a>
+                                <a class="fa fa-facebook-square fa-2x" href="{{ config('app.facebook') }}" target="_blank"></a>
                             </div>
                         </div>
                     </div>

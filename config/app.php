@@ -19,6 +19,7 @@ return [
         'tu-hoc-nhan-tuong'
     ],
     'website' => 'HocNhanTuong.com',
+    'facebook' => 'https://www.facebook.com/SEE-T%E1%BB%B1-h%E1%BB%8Dc-Nh%C3%A2n-t%C6%B0%E1%BB%9Bng-174130296433321/',
 
     /*
     |--------------------------------------------------------------------------
