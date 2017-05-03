@@ -1,5 +1,5 @@
 <!-- Banner Right -->
-<div class="right row">
+<div class="right row text-center text-lg-left">
     <div class="image-people col-sm-12 mb-3">
         <img src="/images/home/banner/image_people.png" alt="{{ config('app.name') }}">
     </div>
