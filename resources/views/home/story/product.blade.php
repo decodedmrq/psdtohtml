@@ -34,7 +34,7 @@
                         </p>
                         <p>
                             Từ đây, ý tưởng về việc xây dựng một ứng dụng di động Tự học Nhân tướng ra đời. Chúng tôi
-                            đặt tên cho sản phẩm này là S.E.E, viết tắt của Soul - Eye- Ear. Nghĩa là Tâm - Mắt - Tai,
+                            đặt tên cho sản phẩm này là S.E.E, viết tắt của Soul - Eye - Ear. Nghĩa là Tâm - Mắt - Tai,
                             ba điểm trọng yếu cốt lõi đối với việc ứng dụng Nhân tướng. Chúng tôi tin rằng: phần mềm
                             không chỉ giúp học viên giải quyết các vấn đề gặp phải, mà còn đưa Nhân tướng học phổ biến
                             rộng rãi hơn nữa, trong cộng đồng người làm Nhân sự nói riêng, và những người có nhu cầu ứng
