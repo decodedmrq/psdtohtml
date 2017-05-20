@@ -25,6 +25,3 @@ Route::group(['prefix' => 'admin-nhantuong', 'namespace' => 'Admin', 'as' => 'ad
     Route::get('feedback', 'FeedbackController@index')->name('feedback');
     Route::get('feedback/{id}', 'FeedbackController@show')->name('feedback.show');
 });
-
-
-

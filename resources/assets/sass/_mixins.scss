@@ -1,3 +1,5 @@
+@import "variables";
+
 @mixin hover-focus() {
   &:hover, &:focus {
     @content
@@ -6,6 +8,48 @@
 
 @mixin hover-focus {
   &:focus,
+  &:hover {
+    @content
+  }
+}
+
+@mixin textGradient($from: $main-yellow, $to: $main-blue) {
+  display: inline-block;
+  background-image: -webkit-gradient(linear, left top, right top, from($from), to($to));
+  color: transparent;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  background-clip: text;
+}
+
+@mixin borderRadius($radius) {
+  -webkit-border-radius: $radius;
+  -moz-border-radius: $radius;
+  border-radius: $radius;
+}
+
+@mixin boxShadow($attributes) {
+  -webkit-box-shadow: $attributes;
+  -moz-box-shadow: $attributes;
+  box-shadow: $attributes;
+}
+
+@mixin bottomLineGradient($fromColor: $main-yellow, $toColor: $main-blue, $width: 100%) {
+  content: ' ';
+  position: absolute;
+  bottom: 0;
+  display: block;
+  width: $width;
+  height: 1px;
+  background-image: -webkit-linear-gradient(left, $fromColor 0%, $toColor 100%);
+  background-image: -moz-linear-gradient(left, $fromColor 0%, $toColor 100%);
+  background-image: -o-linear-gradient(left, $fromColor 0%, $toColor 100%);
+  background-image: linear-gradient(to right, $fromColor 0%, $toColor 100%);
+}
+
+@mixin hover-focus-active {
+  &:focus,
+  &:active,
   &:hover {
     @content
   }

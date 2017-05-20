@@ -93,3 +93,84 @@ if (!function_exists('nav_item_class')) {
         return Route::currentRouteName() == $routeName ? 'nav-item active' : 'nav-item';
     }
 }
+
+if (!function_exists('make_break_line')) {
+    function make_break_line(string $string = '', int $wordPerLine = 2, string $tagName = 'div', string $class = '')
+    {
+        $arr = explode(' ', $string);
+        $wordCount = count($arr);
+        $lineCount = ceil($wordCount / $wordPerLine);
+
+        $html = '';
+        foreach (range(0, $lineCount - 1) as $line) {
+            $words = array_slice($arr, $wordPerLine * $line, $wordPerLine);
+
+            $string = '';
+            foreach ($words as $word) {
+                $string .= $word . ' ';
+            }
+            $string = trim($string);
+
+            $html .= "<$tagName class='{$class}'>{$string}</$tagName>";
+        }
+
+        return $html;
+    }
+}
+
+if (!function_exists('make_a_tag')) {
+    function make_a_tag(string $href, string $content)
+    {
+        return "
+            <a href='$href' title='$content' hreflang='vi'>$content</a>
+        ";
+    }
+}
+
+if (!function_exists('facebook_sdk')) {
+    function facebook_sdk()
+    {
+        return "
+            <div id=\"fb-root\"></div>
+            <script>
+                window.fbAsyncInit = function() {
+                    FB.init({
+                      appId      : '309095902879405',
+                      xfbml      : true,
+                      version    : 'v2.9'
+                    });
+                    FB.AppEvents.logPageView();
+                };
+                
+                (function (d, s, id) {
+                    var js, fjs = d.getElementsByTagName(s)[0];
+                    if (d.getElementById(id)) { return; }
+                    js = d.createElement(s);
+                    js.id = id;
+                    js.src = \"//connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v2.9&appId=309095902879405\";
+                    fjs.parentNode.insertBefore(js, fjs);
+                }(document, 'script', 'facebook-jssdk'));
+            </script>
+        ";
+    }
+}
+
+if (!function_exists('js_structured_data')) {
+    function js_structured_data()
+    {
+        return '
+            <script type="application/ld+json">
+                {
+                  "@context": "http://schema.org",
+                  "@type": "Organization",
+                  "url": "http://www.your-company-site.com",
+                  "contactPoint": [{
+                    "@type": "ContactPoint",
+                    "telephone": "+1-401-555-1212",
+                    "contactType": "customer service"
+                  }]
+                }
+            </script>
+        ';
+    }
+}
