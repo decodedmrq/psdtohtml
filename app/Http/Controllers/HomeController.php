@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use Faker\Factory;
 use Illuminate\Support\Collection;
 
 class HomeController extends RenderController
@@ -61,5 +62,23 @@ class HomeController extends RenderController
         $this->viewData(compact('slider', 'about', 'story', 'features', 'feedbacks', 'partners'));
 
         return $this->renderView('home.index');
+    }
+
+    public function about()
+    {
+        $about = new Collection();
+        $about->introduce = new Collection();
+        $about->vision = new Collection();
+        $about->mission = new Collection();
+        $faker = Factory::create();
+        $about->introduce->title = $faker->sentence(10);
+        $about->introduce->body = $faker->text(10000);
+        $about->vision->title = $faker->sentence(10);
+        $about->vision->body = $faker->text(10000);
+        $about->mission->title = $faker->sentence(10);
+        $about->mission->body = $faker->text(10000);
+        $this->viewData['about'] = $about;
+
+        return view('about.index', $this->viewData);
     }
 }

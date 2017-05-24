@@ -54,3 +54,4 @@ mix.sass(sourceSassFolder + 'app.scss', publicCssDir).options({processCssUrls: f
 //     sourceVendor + 'owl.carousel/dist/owl.carousel.min.js',
 //     publicVendor + 'owl.carousel/owl.carousel.min.js'
 // );
+mix.sass(sourceSassFolder + 'about.scss', publicCssDir);
