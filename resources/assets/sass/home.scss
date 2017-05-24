@@ -2,7 +2,7 @@
 @import "mixins";
 
 @mixin forSmall() {
-  @media (max-width: 767px) {
+  @media (max-width: 575px) {
     @content;
   }
 }
@@ -182,6 +182,10 @@ body {
       .time-block {
         display: inline-block;
         color: $light-yellow;
+
+        @include forSmall {
+          padding: 0 0.5rem;
+        }
 
         .timer {
           @include borderRadius(4px);
