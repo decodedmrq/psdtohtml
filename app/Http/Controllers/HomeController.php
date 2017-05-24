@@ -2,10 +2,7 @@
 
 namespace App\Http\Controllers;
 
-<<<<<<< 8b46cf620292eb91f0175d0f11fcca8814de0e34
 use Carbon\Carbon;
-=======
->>>>>>> about page
 use Faker\Factory;
 use Illuminate\Support\Collection;
 
