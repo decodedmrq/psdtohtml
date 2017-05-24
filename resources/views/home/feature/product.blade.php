@@ -29,24 +29,24 @@
                 <li class="feature-item">
                     <h4 class="title">2. Cộng đồng </h4>
                     <p class="content">
-                        Nhiều khóa học thú vị phục vụ cho công tác quản trị bao gồm: Nhân tướng
-                        học, Tâm lý học, Kỹ năng quan sát, Quản trị nhân sự.
+                        Nơi giao lưu, trao đổi, hỏi đáp với bạn học và các chuyên gia trong lĩnh vực
+                        Nhân tướng học và Quản trị nhân sự.
                     </p>
                 </li>
                 <!-- Feature item -->
                 <li class="feature-item">
                     <h4 class="title">3. Kho bí kíp </h4>
                     <p class="content">
-                        Nhiều khóa học thú vị phục vụ cho công tác quản trị bao gồm: Nhân tướng
-                        học, Tâm lý học, Kỹ năng quan sát, Quản trị nhân sự.
+                        Ngoài những bài học chính, ứng dụng còn cung cấp một kho bí kíp những kiến
+                        thức bổ trợ hay và độc đáo.
                     </p>
                 </li>
                 <!-- Feature item -->
                 <li class="feature-item">
                     <h4 class="title">4. Thẻ ghi nhớ </h4>
                     <p class="content">
-                        Nhiều khóa học thú vị phục vụ cho công tác quản trị bao gồm: Nhân tướng
-                        học, Tâm lý học, Kỹ năng quan sát, Quản trị nhân sự.
+                        Giúp người học lưu trữ lại các kiến thức quan trọng để ôn lại bất cứ lúc
+                        nào.
                     </p>
                 </li>
 

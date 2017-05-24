@@ -118,6 +118,12 @@ if (!function_exists('make_break_line')) {
     }
 }
 
+if (!function_exists('make_string_time')) {
+    function make_string_time(int $time = 0) {
+        return $time >= 10 ? "{$time}" : "0{$time}";
+    }
+}
+
 if (!function_exists('make_a_tag')) {
     function make_a_tag(string $href, string $content)
     {
@@ -126,6 +132,9 @@ if (!function_exists('make_a_tag')) {
         ";
     }
 }
+
+
+//  Extend Services
 
 if (!function_exists('facebook_sdk')) {
     function facebook_sdk()

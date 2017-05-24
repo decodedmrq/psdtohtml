@@ -8,7 +8,7 @@ return [
     'sec' => 'Giây',
 
     'home_page' => 'Trang chủ',
-    'about_us' => 'Về chúng tôi.',
+    'about_us' => 'Về chúng tôi',
     'about_product' => 'Về sản phẩm',
     'app' => 'Ứng dụng',
     'app_store' => 'App Store',

@@ -29,7 +29,7 @@
                         phá sản, nhiều người tiền mất tật mang, khuynh gia bại sản chỉ vì NHÌN SAI NGƯỜI
                         và DÙNG NGƯỜI SAI VIỆC.
                         Nhân tướng học từ hàng nghìn năm nay là công cụ hiệu quả trong việc nhìn thấu
-                        cái tâm của con người. “Tướng tự tâm sinh – Tướng tùy tâm diệt”
+                        cái tâm của con người. “Tướng tự tâm sinh – Tướng tùy tâm diệt”.
                     </p>
                     <div class="toggle-content" id="info-tgl-content">
                         <p>

@@ -267,7 +267,7 @@ body {
         right: (100% - $hiddenWidth) / 2;
         top: 15%;
         z-index: 8;
-        opacity: 0.8;
+        opacity: 0.25;
         @include transition(width 1s, top 1s, left 1s, right 1s, z-index 1s);
 
         $activeWidth: 42%;
@@ -278,7 +278,7 @@ body {
           right: (100% - $activeWidth) / 2;
           z-index: 11;
           opacity: 1;
-          @include transition(width 1s, top 1s, left 1s, right 1s);
+          @include transition(width 1s, top 1s, left 1s, right 1s, opacity 0.25s);
 
         }
 
