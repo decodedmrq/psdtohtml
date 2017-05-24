@@ -60,5 +60,9 @@ return [
     'action' => 'Thực hiện',
     'detail' => 'Chi tiết',
     'coming_soon' => 'Sắp ra mắt',
-
+    'home' => 'Trang chủ',
+    'header_about_us' => 'Về chúng tôi',
+    'introduce' => 'Giới thiệu',
+    'vision' => 'Tầm nhìn',
+    'mission' => 'Xứ mệnh'
 ];

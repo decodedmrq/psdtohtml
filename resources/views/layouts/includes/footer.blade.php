@@ -30,11 +30,6 @@
                         </span>
                     </li>
                 </ul>
-
-                <div class="footer-licence hidden-xs-down">
-                    Bản quyền thuộc về công ty
-                    <strong>Wikiedu</strong>
-                </div>
             </div>
 
             <div class="col-sm-3">
@@ -46,7 +41,7 @@
                         {!! make_a_tag(route('home'), trans('string.home_page')) !!}
                     </li>
                     <li class="footer-link col-sm-12">
-                        {!! make_a_tag("#", trans('string.about_us')) !!}
+                        {!! make_a_tag(route('about_us'), trans('string.about_us')) !!}
                     </li>
                     <li class="footer-link col-sm-12">
                         {!! make_a_tag("#", trans('string.blog')) !!}

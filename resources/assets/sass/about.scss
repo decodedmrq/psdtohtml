@@ -1,0 +1,137 @@
+@import "variables";
+.header {
+  font-family: 'Source Sans Pro', sans-serif;
+  height: 80px;
+  background-color: #374957;
+  display: flex;
+  color: #e9d9c0;
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .logo {
+    flex: 0 0 80px;
+  }
+  .right-menu {
+    display: flex;
+    align-items: center;
+    .menu-item {
+      margin-right: 25px;
+      .fa-facebook {
+        color: #374957;
+      }
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+  @media screen and (max-width: $xs-width) {
+    height: 68px;
+    .container {
+      flex: 1 1 auto;
+    }
+    .menu-item {
+      margin-right: 15px !important;
+      &:last-child {
+        margin-right: 0 !important;
+      }
+    }
+  }
+}
+.content {
+  height: 780px;
+  background: url("/images/about-background.jpg");
+  padding-top: 90px;
+  padding-bottom: 90px;
+  .post-content {
+    background-color: #ffffff;
+    height: 600px;
+    border-radius: 5px;
+    padding: 50px 15px 50px 25px;
+    .nav-tabs {
+      border: 0;
+      .nav-link {
+        border: 0;
+        padding-left: 15px;
+        padding-right: 15px;
+        font-size: 36px;
+        text-transform: uppercase;
+        color: #dfdfdf;
+        font-weight: 900;
+      }
+      .active {
+        color: #364956;
+      }
+    }
+    .title {
+      font-size: 24px;
+      margin-bottom: 50px;
+    }
+    .tab-pane {
+      color: #696969;
+      margin-top: 30px;
+      margin-right: 30px;
+      height: 360px;
+      overflow-y: auto;
+      padding-right: 15px;
+      padding-left: 15px;
+      .body {
+        &:first-letter {
+          color: #333333;
+          float: left;
+          font-size: 49px;
+          line-height: 46px;
+          padding-top: 2px;
+          padding-right: 8px;
+          padding-left: 3px;
+        }
+      }
+    }
+  }
+}
+
+.custom-scroll {
+  &::-webkit-scrollbar-track {
+    background-color: #d4d4d4;
+  }
+
+  &::-webkit-scrollbar {
+    width: 4px;
+    background-color: #d4d4d4;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: #364956;
+    border: 1px solid #364956;
+  }
+}
+@media screen and(max-width: $xs-width) {
+  .content {
+    background-image: none;
+    padding-top: 0;
+    padding-bottom: 0;
+    height: auto;
+    .post-content {
+      padding: 40px 20px;
+      height: auto;
+      .title {
+        font-size: 18px;
+        margin-bottom: 30px;
+      }
+      .tab-pane {
+        padding-right: 10px;
+        height: auto;
+        overflow: visible;
+      }
+    }
+    .nav-link {
+      padding: 0;
+      margin-right: 10px !important;
+      font-size: 18px !important;
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+}
