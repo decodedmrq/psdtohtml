@@ -4,8 +4,9 @@
       xmlns:fb="http://ogp.me/ns/fb#">
 @include('layouts.includes.head')
 <body>
+{!! facebook_sdk() !!}
+{!! js_structured_data() !!}
 <div id="wrap">
-    @include('layouts.includes.header')
     <div id="main-body">
         <div class="container-fluid px-0">
             @yield('content')

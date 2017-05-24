@@ -17,5 +17,6 @@ return [
     'privacy_policy' => 'Chính sách bảo mật',
     'term_of_service' => 'Điều khoản sử dụng',
     'feedback_title' => 'Nếu bạn cần trợ giúp, hoặc có bất kỳ yêu cầu, góp ý nào, vui lòng để lại tin nhắn cho chúng tôi',
+    'slogan' => 'Nhìn đúng người, dùng đúng việc',
 
 ];

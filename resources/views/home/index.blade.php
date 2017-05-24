@@ -3,93 +3,73 @@
 {{ html()->style('/css/home.css') }}
 @endpush
 @section('content')
-    {{--@include('slider.product')--}}
-    @include('banner.product')
+    @include('home.banner.product')
     <div class="container">
-        <div class="row">
-            @include('home.story.product')
-        </div>
-        <hr>
-        <div class="row">
-            @include('home.feature.product')
-        </div>
-        {{--<hr>--}}
-        {{--@include('home.feedback.product')--}}
-        {{--@include('home.partner.product')--}}
+        @include('home.intro.product')
+        @include('home.feature.product')
+        @include('home.benefit.product')
     </div>
 @endsection
 
 @push('script')
 <script>
-    $(window).on('load', function () {
-        //  Story button read more
-        var btnReadMoreStory = $(".btn-story-read-more");
-        var hiddenStory = $('#hidden-story');
-        var moreText = '{{ trans('string.story.read_more') }}';
-        var lessText = '{{ trans('string.minimize') }}';
+    //  Toggle Info content
+    let btnTglContent = $('.btn-tgl-content');
+    btnTglContent.on('click', function () {
+        let contentId = $(this).attr('data-toggle');
+        let content = $(`#${contentId}`);
 
-        btnReadMoreStory.on('click', function (e) {
-            $(this).text($(this).text().trim() === moreText ? lessText : moreText);
-            hiddenStory.slideToggle();
-        });
-
-        //  Feedback Image
-        $('.feedback-image-wrapper').on('click', function (event) {
-            var index = $(this).attr('data-index');
-            $('.feedback-image-wrapper').removeClass('active');
-            $(this).addClass('active');
-            $('.feedback-content').removeClass('active');
-            $('#fb-content-' + index).addClass('active');
-        });
-
-        //  Feature background
-        var featureBg = $('#bg-feature');
-        var featureBgHeight = featureBg.outerHeight();
-        var featureItems = $('.feature');
-        var featureBgIsChanging = false;
-        var featureBgPreloadHeight = 300;
-        var animateSpeed = 150;
-
-        makeBgFullWidth(featureBg);
-        $(window).on('scroll', function () {
-            var windowOffsetTop = $(this).scrollTop();
-            featureItems.each(function (index, item) {
-                var currentTop = $(item).offset().top;
-                var preloadCurrentTop = currentTop - featureBgPreloadHeight;
-
-                if (index === featureItems.length - 1) {
-                    if (preloadCurrentTop < windowOffsetTop) makeFeatureBgAnimate($(item));
-
-                    return;
-                }
-
-                if (preloadCurrentTop < windowOffsetTop && windowOffsetTop < currentTop) {
-                    makeFeatureBgAnimate($(item));
-                }
-            });
-        });
-
-        function makeFeatureBgAnimate(currentItem) {
-            var top = currentItem.position().top;
-            if (featureBgIsChanging || top === featureBg.position().top) return;
-
-            featureBgIsChanging = true;
-            var bottom = -(currentItem.position().top - featureBgHeight + currentItem.outerHeight());
-            featureBg.animate({
-                'top': top,
-                'bottom': bottom
-            }, animateSpeed, function () {
-                featureBgIsChanging = false;
-            });
-        }
-
-        function makeBgFullWidth(element) {
-            var bodyWidth = $('body').outerWidth();
-            var parentWidth = element.parent().outerWidth();
-            var pullWidth = "-" + (bodyWidth - parentWidth) / 2 + 'px';
-            element.css('left', pullWidth);
-            element.css('right', pullWidth);
+        console.log(content,content.css('display'));
+        if (content.css('display') === "none") {
+            content.slideDown();
+            btnTglContent.html("{{ trans('string.minimize') }}");
+        } else {
+            content.slideUp();
+            btnTglContent.html("{{ trans('string.view_more') }}");
         }
     });
+
+    //  Slider
+    let slideItems = $('.slide-item');
+    let slideLength = slideItems.length;
+
+    //  generate navigator
+    let navigator = $('#slider-navigator');
+    for (let i = 0; i < slideLength; i++) {
+        navigator.append(`<div class="pointer" data-index="${i}">
+            <span class="content">${i + 1}</span>
+        </div>`);
+    }
+
+    let pointers = $('.navigator .pointer');
+    pointers.on('click', function () {
+        let index = $(this).attr('data-index');
+        clickSlide($(slideItems[index]));
+    });
+
+    //  animate slider
+    slideItems.on('click', function () {
+        clickSlide($(this));
+    });
+
+    function clickSlide(slide) {
+        let index = $(slideItems).index(slide);
+        let leftIndex = index - 1;
+        let rightIndex = index + 1;
+
+        leftIndex = leftIndex >= 0 ? leftIndex : slideLength + leftIndex;
+        rightIndex = rightIndex < slideLength ? rightIndex : rightIndex - slideLength;
+
+        slideItems.removeClass('active left right');
+        $(slideItems[leftIndex]).addClass('left');
+        $(slideItems[rightIndex]).addClass('right');
+        slide.addClass('active');
+
+        pointers.removeClass('active');
+        $(pointers[index]).addClass('active');
+    }
+
+    //  Run
+    clickSlide($(slideItems[0]));
 </script>
 @endpush

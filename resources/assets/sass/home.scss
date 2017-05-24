@@ -1,153 +1,490 @@
 @import "variables";
+@import "mixins";
+
+@mixin forSmall() {
+  @media (max-width: 767px) {
+    @content;
+  }
+}
+
+@mixin transition($attributes...) {
+  -webkit-transition: $attributes;
+  -moz-transition: $attributes;
+  -ms-transition: $attributes;
+  -o-transition: $attributes;
+  transition: $attributes;
+}
 
 body {
-  font-size: 1.25rem;
+  font-size: 1.125rem;
+  font-family: $sourceSansPro;
 }
 
-//  Story
-.story {
-  padding-top: 5rem;
-  padding-bottom: 3rem;
-  text-align: justify;
-
-  .story-body {
-    .toggle-story {
-      display: none;
-    }
-  }
-
-  .btn-story-read-more {
-    color: #00dbff;
-    border: 1px solid #d8d6d6;
-    border-radius: 20px;
-    font-family: $fontRoboto;
-    font-size: 1rem;
-    padding: 10px 40px;
-    cursor: pointer;
-  }
+.text-gradient {
+  @include textGradient;
 }
 
-@media (max-width: 575px) {
-  #hidden-story {
+.toggle-content {
+  @include forSmall {
     display: none;
   }
 }
 
-//  Story & Feature
-.story-head, .features-head, .feedbacks-head, .partners-head {
-  font-family: $fontHelvetica;
-  margin-bottom: 3rem;
+.btn-tgl-content {
+  display: none;
 
-  .title {
-    font-size: 2.5rem;
+  @include forSmall {
+    display: inline-block;
   }
 }
 
-.story-body, .features-body {
-  .title {
-    font-size: 2rem;
-    margin-bottom: 1rem;
-  }
+//  Banner
+.banner {
+  position: relative;
+  color: $main-white;
 
-  .content {
-    font-size: 1rem;
-    margin-bottom: 1.5rem;
-  }
-}
+  .banner-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
 
-//  Feature
-.features {
-  padding-top: 2rem;
-
-  .features-body {
-    position: relative;
-
-    .feature {
-      padding: 5rem 15px;
-      font-family: $fontRoboto;
-
-      .content-right {
-        padding-left: 30px;
+    img {
+      @include forSmall {
+        position: absolute;
+        right: 0;
+        max-width: none;
+        width: auto;
       }
+    }
+  }
 
-      ul {
-        list-style: none;
-        padding-left: 0;
+  .banner-main {
+    padding: 5.5rem 0;
+    text-align: center;
 
-        li {
-          margin-bottom: 0.75rem;
+    @include forSmall {
+      padding: 1.5rem 0;
+    }
+
+    .title-head {
+      margin-bottom: 4rem;
+
+      .app-name {
+        margin-bottom: 0.875rem;
+
+        .logo {
+          margin-right: 10px;
+          height: 45px;
+        }
+
+        .app-full-name {
+          font-family: $quickSand;
+          display: inline-block;
+          margin-bottom: 0;
+          font-size: 2rem;
         }
       }
+
+      .app-slogan {
+        font-family: $quickSand;
+        font-size: 1.125rem;
+        font-weight: 300;
+      }
     }
 
-    #bg-feature {
-      position: absolute;
-      top: 0;
-      bottom: 0;
-    }
-  }
-}
-
-//  Feedback
-.feedbacks {
-  padding-bottom: 2rem;
-
-  .feedbacks-body {
-    .feedback-images {
+    .app-badges {
       margin-bottom: 2rem;
 
-      .feedback-image-wrapper {
-        border-radius: 50px;
-        display: inline-block;
-        width: 72px;
-        height: 72px;
-        //border: 2px solid #cccccc;
-        margin: 0 10px;
+      .app-badge {
+        font-family: $sourceSansProBlack;
+        font-size: 3.25rem;
 
-        .feedback-image {
-          width: 100%;
-          -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
-          filter: grayscale(100%);
+        @include forSmall {
+          font-size: 1.5rem;
+        }
+      }
+    }
+
+    .download-btns {
+      margin-bottom: 5rem;
+
+      .btn-download-app {
+        padding-top: 0.5rem;
+        padding-bottom: 0.5rem;
+      }
+    }
+
+    .register-form {
+      margin-bottom: 7rem;
+
+      .title {
+        margin-bottom: 1.25rem;
+        font-size: 1.125rem;
+        font-family: $sourceSansProItalic;
+
+        .free-text {
+          font-family: $sourceSansProBlackItalic;
+          color: $light-blue;
+        }
+      }
+
+      .form-email {
+        display: inline-block;
+        position: relative;
+        height: 60px;
+        max-width: 100%;
+
+        .email-input {
+          height: 60px;
+          width: 550px;
+          max-width: 100%;
+          padding: 1.125rem 5.75rem 1rem 2rem;
+          border-radius: 5px;
+          border: 0;
+
+          &::placeholder {
+            font-family: $sourceSansProLightItalic;
+            font-style: italic;
+            font-size: 1.5rem;
+            color: #3d5660;
+          }
+
+          &:focus {
+            @include boxShadow(0 0 10px 0 $light-blue);
+          }
         }
 
-        &.active {
-          width: 96px !important;
-          height: 96px !important;
-          //border: 3px solid #ff7077 !important;
+        .btn-submit {
+          @include borderRadius(5px);
 
-          .feedback-image {
-            -webkit-filter: grayscale(0) !important; /* Safari 6.0 - 9.0 */
-            filter: grayscale(0) !important;
+          cursor: pointer;
+          position: absolute;
+          top: 0;
+          right: 0;
+          height: 60px;
+          width: 60px;
+          border: 0;
+          font-size: 2rem;
+          color: $dark-blue;
+          background-color: $light-yellow;
+        }
+      }
+    }
+
+    .time-remaining {
+      .title {
+        font-size: 1rem;
+        padding: 1.5rem 0;
+      }
+
+      .time-block {
+        display: inline-block;
+        color: $light-yellow;
+
+        .timer {
+          @include borderRadius(4px);
+
+          width: 100%;
+          padding: 1rem;
+          border: 1px solid $light-yellow;
+          font-size: 2rem;
+          line-height: 1;
+          margin-bottom: 0.75rem;
+
+          @include forSmall {
+            font-size: 1.5rem;
           }
         }
       }
     }
 
-    .feedback-contents {
+  }
+}
 
-      .feedback-content {
-        display: none;
+//  Intro
+.intro {
+  .part-body {
+    .title {
+      position: relative;
+      padding-bottom: 1rem;
+      font-size: 2.25rem;
+      font-family: $sourceSansProSemibold;
+      margin-bottom: 2.25rem;
+
+      @include forSmall {
+        font-size: 1.5rem;
+        margin-bottom: 1rem;
+      }
+
+      &::after {
+        @include bottomLineGradient($main-yellow, $main-blue, 65%);
+        @include forSmall {
+          height: 0;
+        }
+      }
+    }
+
+    .content {
+      text-align: justify;
+    }
+  }
+}
+
+//  Features
+.features {
+  color: $dark-blue;
+
+  .slider {
+    position: relative;
+    padding-bottom: 2rem;
+    text-align: center;
+
+    .list {
+      position: relative;
+
+      img {
+        width: 100%;
+      }
+
+      .slide-frame {
+        position: relative;
+        width: 61%;
+        left: 20%;
+        z-index: 10;
+      }
+
+      .slide-item {
+        $hiddenWidth: 35%;
+        position: absolute;
+        width: $hiddenWidth;
+        left: (100% - $hiddenWidth) / 2;
+        right: (100% - $hiddenWidth) / 2;
+        top: 15%;
+        z-index: 8;
+        opacity: 0.8;
+        @include transition(width 1s, top 1s, left 1s, right 1s, z-index 1s);
+
+        $activeWidth: 42%;
+        &.active {
+          width: $activeWidth;
+          top: 11%;
+          left: (100% - $activeWidth) / 2;
+          right: (100% - $activeWidth) / 2;
+          z-index: 11;
+          opacity: 1;
+          @include transition(width 1s, top 1s, left 1s, right 1s);
+
+        }
+
+        &.left {
+          left: 0;
+          right: 100% - $hiddenWidth;
+          z-index: 9;
+          @include transition(width 1s, top 1s, left 1s, right 1s, z-index 1.25s, opacity 1.25s);
+
+        }
+
+        &.right {
+          left: 100% - $hiddenWidth;
+          right: 0;
+          z-index: 9;
+          @include transition(width 1s, top 1s, left 1s, right 1s, z-index 1.25s, opacity 1.25s);
+
+        }
+      }
+    }
+
+    .navigator {
+      text-align: center;
+
+      .pointer {
+        display: inline-block;
+        margin: 0 0.5rem;
+        cursor: pointer;
 
         .content {
-          margin-top: 1.5rem;
-          font-weight: 700;
+          @include borderRadius(1rem);
+          display: table-cell;
+          vertical-align: middle;
+          width: 2rem;
+          height: 2rem;
+          border: 1px solid $dark-blue;
+          color: $dark-blue;
+          text-align: center;
         }
 
         &.active {
-          display: block !important;
+          .content {
+            background: $dark-blue;
+            color: $light-yellow;
+          }
+        }
+      }
+    }
+  }
+
+  .feature-list {
+    list-style: none;
+    font-size: 1.125rem;
+
+    .feature-item {
+      color: $dark-blue;
+      padding-bottom: 2rem;
+      text-align: justify;
+
+      .title {
+        font-family: $sourceSansProSemibold;
+        text-transform: uppercase;
+        font-size: 1.5rem;
+      }
+
+      &.active {
+        color: $dark-yellow;
+      }
+    }
+  }
+}
+
+//  Benefit
+.benefits {
+  .benefit-list {
+    .benefit-item {
+      margin-bottom: 2rem;
+
+      .wrapper {
+        @include boxShadow(10px 10px 30px 0px #eeeeee);
+        @include borderRadius(5px);
+        padding: 2.5rem 4.75rem;
+        height: 100%;
+
+        @include forSmall {
+          padding: 2rem 15px 0;
+          margin-top: 2rem;
+          border: 1px solid #ebe9e8;
+          height: auto;
+          @include boxShadow(none);
+        }
+
+        .cover {
+          margin-bottom: 2rem;
+
+          @include forSmall {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1;
+            margin-bottom: 0;
+            text-align: center;
+          }
+
+          img {
+            width: 3.5rem;
+
+            @include forSmall {
+              background-color: #fff;
+
+            }
+          }
+        }
+
+        .title {
+          color: #2e4a5d;
+          font-size: 2rem;
         }
       }
     }
   }
 }
 
-//  Partner
-.partners {
-  padding: 3rem 0;
+//  Part
+.container-part {
+  position: relative;
+  padding-bottom: 6rem;
 
-  .partners-body {
-    .partner {
-      padding: 1.5rem 2rem;
+  @include forSmall {
+    padding-bottom: 3rem;
+  }
+
+  .part-index {
+    padding-top: 3.75rem;
+    padding-bottom: 7.25rem;
+
+    @include forSmall {
+      padding-bottom: 3rem;
+    }
+
+    .number {
+      font-family: $sourceSansProBlack;
+      font-size: 12.5rem;
+      line-height: 80%;
+      color: #ebebeb;
+      padding-right: 2rem;
+
+      @include forSmall {
+        font-size: 6.25rem;
+        padding-right: 0.5rem;
+      }
+    }
+
+    .title {
+      font-size: 3rem;
+      line-height: 120%;
+      margin-bottom: 0;
+      font-weight: 700;
+      text-transform: uppercase;
+
+      @include forSmall {
+        font-size: 2rem;
+      }
+
+      .title-part {
+        @include textGradient(#b9a47d, #62798c);
+      }
+    }
+
+  }
+
+  .bottom-line-circle {
+    position: absolute;
+    width: 1.5rem;
+    height: 1.5rem;
+    bottom: -0.75rem;
+    @include borderRadius(0.75rem);
+
+    @include forSmall {
+      width: 1rem;
+      height: 1rem;
+      bottom: -0.5rem;
+    }
+
+    &.left {
+      left: 0;
+      background-color: $main-yellow;
+
+      @include forSmall {
+        left: 0.5rem;
+      }
+    }
+
+    &.right {
+      right: 0;
+      background-color: $main-blue;
+
+      @include forSmall {
+        right: 0.5rem;
+      }
+    }
+  }
+
+  .bottom-line {
+    @include bottomLineGradient($main-yellow, $main-blue);
+    @include forSmall {
+      left: 0.5rem;
+      right: 0.5rem;
+      width: initial;
     }
   }
 }
