@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Faker\Factory;
+use Carbon\Carbon;
 use Illuminate\Support\Collection;
 
 class HomeController extends RenderController
@@ -59,7 +60,11 @@ class HomeController extends RenderController
             $partners->push($partner);
         }
 
-        $this->viewData(compact('slider', 'about', 'story', 'features', 'feedbacks', 'partners'));
+        $publishDate = Carbon::create(2017, 6, 15, 12, 00);
+        $timeRemaining = Carbon::now()->diff($publishDate);
+        $timeRemaining->d = Carbon::now()->diffInDays($publishDate);
+
+        $this->viewData(compact('slider', 'about', 'story', 'features', 'feedbacks', 'partners', 'timeRemaining'));
 
         return $this->renderView('home.index');
     }
@@ -77,8 +82,11 @@ class HomeController extends RenderController
         $about->vision->body = $faker->text(10000);
         $about->mission->title = $faker->sentence(10);
         $about->mission->body = $faker->text(10000);
-        $this->viewData['about'] = $about;
 
-        return view('about.index', $this->viewData);
+        $this->viewData([
+            'about' => $about,
+        ]);
+
+        return $this->renderView('about.index');
     }
 }

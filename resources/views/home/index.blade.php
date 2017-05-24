@@ -13,13 +13,51 @@
 
 @push('script')
 <script>
+    //  Timer
+    let timerDay = $('#timer-day');
+    let timerHour = $('#timer-hour');
+    let timerMin = $('#timer-min');
+    let timerSec = $('#timer-sec');
+
+    let rmnDay = {{ $timeRemaining->d }};
+    let rmnHour = {{ $timeRemaining->h }};
+    let rmnMin = {{ $timeRemaining->m }};
+    let rmnSec = {{ $timeRemaining->s }};
+
+    let timerCounter = setInterval(function () {
+        rmnSec -= 1;
+        if (rmnSec < 0) {
+            rmnSec = 59;
+            rmnMin -= 1;
+
+            if (rmnMin < 0) {
+                rmnMin = 59;
+                rmnHour -= 1;
+
+                if (rmnHour < 0) {
+                    rmnHour = 23;
+                    rmnDay -= 1;
+
+                    if (rmnDay < 0) {
+                        rmnDay = 0;
+                        clearInterval(timerCounter);
+                    }
+                }
+            }
+        }
+
+        timerDay.html(makeStringTime(rmnDay));
+        timerHour.html(makeStringTime(rmnHour));
+        timerMin.html(makeStringTime(rmnMin));
+        timerSec.html(makeStringTime(rmnSec));
+    }, 1000);
+
     //  Toggle Info content
     let btnTglContent = $('.btn-tgl-content');
     btnTglContent.on('click', function () {
         let contentId = $(this).attr('data-toggle');
         let content = $(`#${contentId}`);
 
-        console.log(content,content.css('display'));
         if (content.css('display') === "none") {
             content.slideDown();
             btnTglContent.html("{{ trans('string.minimize') }}");
@@ -52,6 +90,10 @@
         clickSlide($(this));
     });
 
+    //  Run
+    clickSlide($(slideItems[0]));
+
+    //  Functions
     function clickSlide(slide) {
         let index = $(slideItems).index(slide);
         let leftIndex = index - 1;
@@ -69,7 +111,8 @@
         $(pointers[index]).addClass('active');
     }
 
-    //  Run
-    clickSlide($(slideItems[0]));
+    function makeStringTime(time) {
+        return time >= 10 ? `${time}` : `0${time}`;
+    }
 </script>
 @endpush
