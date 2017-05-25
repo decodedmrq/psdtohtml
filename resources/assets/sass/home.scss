@@ -279,6 +279,7 @@ body {
         top: 15%;
         z-index: 8;
         opacity: 0.25;
+        cursor: pointer;
         @include transition(width 1s, top 1s, left 1s, right 1s, z-index 1s);
 
         $activeWidth: 42%;
@@ -316,7 +317,7 @@ body {
 
       .pointer {
         display: inline-block;
-        margin: 0 0.5rem;
+        padding: 0 0.5rem;
         cursor: pointer;
 
         .content {
@@ -348,6 +349,7 @@ body {
       color: $dark-blue;
       padding-bottom: 2rem;
       text-align: justify;
+      cursor: pointer;
 
       .title {
         font-family: $sourceSansProSemibold;

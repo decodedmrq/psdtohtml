@@ -19,40 +19,29 @@
     let emailNotif = $('#email-notif');
 
     registerForm.on('submit', function (e) {
-       e.preventDefault();
-       let data = registerForm.serialize();
-       axios.post(registerForm.attr('action'), data)
-           .then(function (response) {
-               let message = response.data.message;
-               if (response.data.success) {
-                   emailNotif.removeClass('hidden-xs-up').addClass('text-green').html(message);
-               } else {
-                   emailInput.addClass('danger');
-                   emailNotif.removeClass('hidden-xs-up').addClass('text-red').html(message);
-               }
-           })
-           .catch(function (error) {
-               let message = error.response.data.email[0];
-               emailInput.addClass('danger');
-               emailNotif.removeClass('hidden-xs-up').addClass('text-red').html(message);
-           });
+        e.preventDefault();
+        let data = registerForm.serialize();
+        axios.post(registerForm.attr('action'), data)
+            .then(function (response) {
+                let message = response.data.message;
+                if (response.data.success) {
+                    emailNotif.removeClass('hidden-xs-up').addClass('text-green').html(message);
+                } else {
+                    emailInput.addClass('danger');
+                    emailNotif.removeClass('hidden-xs-up').addClass('text-red').html(message);
+                }
+            })
+            .catch(function (error) {
+                let message = error.response.data.email[0];
+                emailInput.addClass('danger');
+                emailNotif.removeClass('hidden-xs-up').addClass('text-red').html(message);
+            });
     });
 
     emailInput.on('click', function () {
         emailInput.removeClass('danger');
         resetNotif(emailNotif);
     });
-
-    function resetInput(block) {
-        block.removeClass('danger');
-        block.val('');
-    }
-
-    function resetNotif(block)
-    {
-        block.addClass('hidden-xs-up').removeClass('text-green text-red').html('');
-    }
-
 
     //  Timer
     let timerDay = $('#timer-day');
@@ -93,7 +82,6 @@
         timerSec.html(makeStringTime(rmnSec));
     }, 1000);
 
-
     //  Toggle Info content
     let btnTglContent = $('.btn-tgl-content');
     btnTglContent.on('click', function () {
@@ -109,10 +97,11 @@
         }
     });
 
-
     //  Slider
     let slideItems = $('.slide-item');
     let slideLength = slideItems.length;
+    let featureItems = $('.feature-item');
+    let intervalTime = 3000;
 
     ///  generate navigator
     let navigator = $('#slider-navigator');
@@ -125,39 +114,64 @@
     let pointers = $('.navigator .pointer');
     pointers.on('click', function () {
         let index = $(this).attr('data-index');
-        clickSlide($(slideItems[index]));
+        clickSlide(slideItems, $(slideItems[index]), featureItems);
     });
+
+    /// auto Slide
+    let autoIndex = 0;
+    let slideInterval = setInterval(autoSlide, intervalTime);
 
     ///  animate slider
     slideItems.on('click', function () {
-        clickSlide($(this));
+        clearInterval(slideInterval);
+        clickSlide(slideItems, $(this), featureItems);
+    });
+    featureItems.on('click', function () {
+        clearInterval(slideInterval);
+        let index = $(this).attr('data-index');
+        let slideItem = slideItems[index];
+        slideItem = slideItem !== undefined ? slideItem : slideItems[0];
+        slideItem = $(slideItem);
+        clickSlide(slideItems, slideItem, featureItems);
     });
 
-
     //  Run
-    clickSlide($(slideItems[0]));
-
+    clickSlide(slideItems, $(slideItems[0]), featureItems);
 
     //  Functions
-    function clickSlide(slide) {
-        let index = $(slideItems).index(slide);
+    function clickSlide(items, item, forcus = []) {
+        let index = $(items).index(item);
         let leftIndex = index - 1;
         let rightIndex = index + 1;
 
         leftIndex = leftIndex >= 0 ? leftIndex : slideLength + leftIndex;
         rightIndex = rightIndex < slideLength ? rightIndex : rightIndex - slideLength;
 
-        slideItems.removeClass('active left right');
-        $(slideItems[leftIndex]).addClass('left');
-        $(slideItems[rightIndex]).addClass('right');
-        slide.addClass('active');
+        items.removeClass('active left right');
+        $(items[leftIndex]).addClass('left');
+        $(items[rightIndex]).addClass('right');
+        item.addClass('active');
 
         pointers.removeClass('active');
         $(pointers[index]).addClass('active');
+
+        if (forcus[index] !== undefined) {
+            forcus.removeClass('active');
+            $(forcus[index]).addClass('active');
+        }
+    }
+
+    function autoSlide() {
+        clickSlide(slideItems, $(slideItems[autoIndex++]), featureItems);
+        autoIndex = autoIndex < slideItems.length ? autoIndex : 0;
     }
 
     function makeStringTime(time) {
         return time >= 10 ? `${time}` : `0${time}`;
+    }
+
+    function resetNotif(block) {
+        block.addClass('hidden-xs-up').removeClass('text-green text-red').html('');
     }
 </script>
 @endpush
