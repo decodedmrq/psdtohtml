@@ -4,7 +4,6 @@ namespace App\Models;
 
 class SocialAccount extends Model
 {
-    protected $guarded = ['id'];
     protected $table = 'user_social_accounts';
 
     const PROVIDER_FACEBOOK = 'facebook';

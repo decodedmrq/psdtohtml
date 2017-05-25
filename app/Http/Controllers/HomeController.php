@@ -2,8 +2,8 @@
 
 namespace App\Http\Controllers;
 
-use Faker\Factory;
 use Carbon\Carbon;
+use Faker\Factory;
 use Illuminate\Support\Collection;
 
 class HomeController extends RenderController

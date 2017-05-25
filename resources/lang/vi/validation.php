@@ -78,7 +78,7 @@ return [
     'required_without_all' => ':attribute bắt buộc khi không có tất cả :values.',
     'same' => ':attribute và :other phải khớp.',
     'size' => [
-        'numeric'=> ':attribute phải là :size.',
+        'numeric' => ':attribute phải là :size.',
         'file' => ':attribute phải là :size Kb.',
         'string' => ':attribute phải là :size ký tự.',
         'array' => ':attribute phải chứa :size mục.',
@@ -106,6 +106,8 @@ return [
         ],
         'email' => [
             'required' => 'Vui lòng nhập email',
+            'email' => 'Vui lòng nhập email',
+            'unique' => 'Email đã được sử dụng',
         ],
         'content' => [
             'required' => 'Vui lòng nhập nội dung',

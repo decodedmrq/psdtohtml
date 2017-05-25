@@ -9,6 +9,4 @@ class Degree extends Model
     const ADVANCED = 'advanced';
     const MASTER = 'master';
     const LEGEND = 'legend';
-
-    protected $guarded = ['id'];
 }

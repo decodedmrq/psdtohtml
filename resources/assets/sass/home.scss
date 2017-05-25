@@ -1,19 +1,6 @@
 @import "variables";
 @import "mixins";
-
-@mixin forSmall() {
-  @media (max-width: 575px) {
-    @content;
-  }
-}
-
-@mixin transition($attributes...) {
-  -webkit-transition: $attributes;
-  -moz-transition: $attributes;
-  -ms-transition: $attributes;
-  -o-transition: $attributes;
-  transition: $attributes;
-}
+@import "keyframes";
 
 body {
   font-size: 1.125rem;
@@ -124,6 +111,10 @@ body {
         font-size: 1.125rem;
         font-family: $sourceSansProItalic;
 
+        @include forSmall {
+          font-size: 1rem;
+        }
+
         .free-text {
           font-family: $sourceSansProBlackItalic;
           color: $light-blue;
@@ -154,6 +145,10 @@ body {
           &:focus {
             @include boxShadow(0 0 10px 0 $light-blue);
           }
+
+          &.danger {
+            color: $main-red;
+          }
         }
 
         .btn-submit {
@@ -169,6 +164,13 @@ body {
           font-size: 2rem;
           color: $dark-blue;
           background-color: $light-yellow;
+        }
+
+        .email-notif {
+          position: absolute;
+          left: 0;
+          right: 0;
+          bottom: -3rem;
         }
       }
     }
@@ -223,9 +225,18 @@ body {
       }
 
       &::after {
-        @include bottomLineGradient($main-yellow, $main-blue, 65%);
+        @include bottomLineGradient($main-yellow, $main-blue, 65%, 2px);
         @include forSmall {
           height: 0;
+        }
+      }
+    }
+
+    .intro-cover {
+      img {
+        margin-top: -15%;
+        @include forSmall {
+          margin-top: 0;
         }
       }
     }
@@ -273,7 +284,7 @@ body {
         $activeWidth: 42%;
         &.active {
           width: $activeWidth;
-          top: 11%;
+          top: 10.85%;
           left: (100% - $activeWidth) / 2;
           right: (100% - $activeWidth) / 2;
           z-index: 11;
@@ -485,6 +496,7 @@ body {
 
   .bottom-line {
     @include bottomLineGradient($main-yellow, $main-blue);
+
     @include forSmall {
       left: 0.5rem;
       right: 0.5rem;

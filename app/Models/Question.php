@@ -12,8 +12,6 @@ class Question extends Model
     const TYPE_YES_NO = 4;
 
     protected $casts = ['correct_answer_id' => 'array'];
-
-    protected $guarded = ['id'];
     protected $appends = ['correct_answers', 'media_link'];
 
     public function answers()

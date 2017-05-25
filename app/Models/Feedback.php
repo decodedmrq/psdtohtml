@@ -9,7 +9,6 @@ class Feedback extends Model
     const TYPE_FEEDBACK = 2;
 
     protected $table = 'feedback';
-    protected $guarded = ['id'];
     protected $perPage = 10;
     protected $appends = ['full_name'];
 
@@ -25,5 +24,4 @@ class Feedback extends Model
 
         return $user ? $user->first_name . ' ' . $user->last_name : '';
     }
-
 }

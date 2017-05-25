@@ -1,0 +1,61 @@
+@import "variables";
+
+@keyframes line-l2r {
+  0% {
+    width: 0;
+    left: 0;
+  }
+  50% {
+    width: 100%;
+    left: 0;
+  }
+  100% {
+    width: 0;
+    left: 0;
+  }
+}
+
+@keyframes line-r2l {
+  0% {
+    width: 0;
+    right: 0;
+  }
+  50% {
+    width: 100%;
+    right: 0;
+  }
+  100% {
+    width: 0;
+    right: 0;
+  }
+}
+
+@keyframes circle-l2r {
+  0% {
+    left: 0;
+    background-color: $main-yellow;
+  }
+  50% {
+    left: 100%;
+    background-color: $main-blue;
+  }
+  100% {
+    left: 0;
+    background-color: $main-yellow;
+  }
+}
+
+@keyframes circle-r2l {
+  0% {
+    right: 0;
+    background-color: $main-blue;
+  }
+  50% {
+    right: 100%;
+    background-color: $main-yellow;
+  }
+  100% {
+    right: 0;
+    background-color: $main-blue;
+  }
+}
