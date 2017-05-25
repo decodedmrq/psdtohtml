@@ -1,7 +1,7 @@
 <!-- Intro -->
 <section class="intro container-part row" name="content">
     <!-- Intro title -->
-    <div class="part-index col-sm-12">
+    <div class="part-index col-md-12">
         <div class="text-center">
             <div class="number d-inline-block">01</div>
             <h3 class="title d-inline-block">
@@ -11,18 +11,18 @@
     </div>
 
     <!-- Intro body -->
-    <div class="part-body col-sm-12">
+    <div class="part-body col-md-12">
         <article class="row">
-            <header class="col-sm-6">
+            <header class="col-md-6">
                 <h4 class="title"> Phương pháp học Nhân tướng tốt nhất hiện nay </h4>
             </header>
-            <div class="offset-sm-6"></div>
+            <div class="offset-md-6"></div>
 
-                <div class="intro-cover col-sm-6 text-right push-sm-6">
+                <div class="intro-cover col-md-6 text-right push-md-6">
                     <img src="/images/home/cover_intro.png" alt="Phương pháp học Nhân tướng tốt nhất hiện nay">
                 </div>
 
-                <div class="content col-sm-6 pull-sm-6">
+                <div class="content col-md-6 pull-md-6">
                     <p>
                         Quản trị con người luôn là yếu tố sống còn của mọi tổ chức. Tuy nhiên con người
                         rất phức tạp và khó lường, "tri nhân, tri diện, bất tri tâm". Nhiều doanh nghiệp

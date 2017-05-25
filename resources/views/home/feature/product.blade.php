@@ -1,7 +1,7 @@
 <!-- Features -->
 <section class="features container-part row" name="content">
     <!-- Features title -->
-    <div class="part-index col-sm-12">
+    <div class="part-index col-md-12">
         <div class="text-center">
             <div class="number d-inline-block">02</div>
             <h3 class="title d-inline-block">
@@ -11,12 +11,12 @@
     </div>
 
     <!-- Features body -->
-    <div class="part-body col-sm-12">
+    <div class="part-body col-md-12">
         <div class="row">
         @include('home.feature.slider')
 
         <!-- Feature list -->
-            <ul class="feature-list col-sm-7">
+            <ul class="feature-list col-md-7">
                 <!-- Feature item -->
                 <li class="feature-item active" data-index="0">
                     <h4 class="title">1. Danh sách khóa học </h4>

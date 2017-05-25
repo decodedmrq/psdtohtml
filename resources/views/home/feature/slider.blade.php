@@ -1,5 +1,5 @@
 <!-- Slider -->
-<div class="slider col-sm-5">
+<div class="slider col-md-5">
     <div class="list" id="slider-list">
         <div class="slide-frame">
             <img src="/images/home/slider/frame.png" alt="slide frame">
