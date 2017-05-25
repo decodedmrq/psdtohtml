@@ -13,6 +13,47 @@
 
 @push('script')
 <script>
+    //  Form
+    let registerForm = $('#register-form');
+    let emailInput = $('#form-email');
+    let emailNotif = $('#email-notif');
+
+    registerForm.on('submit', function (e) {
+       e.preventDefault();
+       let data = registerForm.serialize();
+       axios.post(registerForm.attr('action'), data)
+           .then(function (response) {
+               let message = response.data.message;
+               if (response.data.success) {
+                   emailNotif.removeClass('hidden-xs-up').addClass('text-green').html(message);
+               } else {
+                   emailInput.addClass('danger');
+                   emailNotif.removeClass('hidden-xs-up').addClass('text-red').html(message);
+               }
+           })
+           .catch(function (error) {
+               let message = error.response.data.email[0];
+               emailInput.addClass('danger');
+               emailNotif.removeClass('hidden-xs-up').addClass('text-red').html(message);
+           });
+    });
+
+    emailInput.on('click', function () {
+        emailInput.removeClass('danger');
+        resetNotif(emailNotif);
+    });
+
+    function resetInput(block) {
+        block.removeClass('danger');
+        block.val('');
+    }
+
+    function resetNotif(block)
+    {
+        block.addClass('hidden-xs-up').removeClass('text-green text-red').html('');
+    }
+
+
     //  Timer
     let timerDay = $('#timer-day');
     let timerHour = $('#timer-hour');
@@ -52,6 +93,7 @@
         timerSec.html(makeStringTime(rmnSec));
     }, 1000);
 
+
     //  Toggle Info content
     let btnTglContent = $('.btn-tgl-content');
     btnTglContent.on('click', function () {
@@ -67,11 +109,12 @@
         }
     });
 
+
     //  Slider
     let slideItems = $('.slide-item');
     let slideLength = slideItems.length;
 
-    //  generate navigator
+    ///  generate navigator
     let navigator = $('#slider-navigator');
     for (let i = 0; i < slideLength; i++) {
         navigator.append(`<div class="pointer" data-index="${i}">
@@ -85,13 +128,15 @@
         clickSlide($(slideItems[index]));
     });
 
-    //  animate slider
+    ///  animate slider
     slideItems.on('click', function () {
         clickSlide($(this));
     });
 
+
     //  Run
     clickSlide($(slideItems[0]));
+
 
     //  Functions
     function clickSlide(slide) {

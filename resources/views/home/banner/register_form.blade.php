@@ -2,7 +2,7 @@
 <div class="register-form row">
     <div class="col-sm-12">
         {{ Form::open([
-            'url' => '#',
+            'url' => route('guest.store'),
             'method' => 'post',
             'role' => 'form',
             'id' => 'register-form',
@@ -18,12 +18,16 @@
         <div class="form-email">
             {{ Form::email('email', null, [
                 'class' => 'email-input',
-                'placeholder' => 'Nhập email của bạn'
+                'placeholder' => 'Nhập email của bạn',
+                'required',
+                'id' => 'form-email',
             ]) }}
 
             <button class="btn-submit" type="submit">
                 <i class="fa fa-angle-right"></i>
             </button>
+
+            <div class="email-notif hidden-xs-up" id="email-notif"></div>
         </div>
 
         {{ Form::close() }}

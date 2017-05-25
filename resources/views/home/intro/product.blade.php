@@ -18,7 +18,7 @@
             </header>
             <div class="offset-sm-6"></div>
 
-                <div class="col-sm-6 text-right push-sm-6">
+                <div class="intro-cover col-sm-6 text-right push-sm-6">
                     <img src="/images/home/cover_intro.png" alt="Phương pháp học Nhân tướng tốt nhất hiện nay">
                 </div>
 

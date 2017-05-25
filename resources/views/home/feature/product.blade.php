@@ -18,7 +18,7 @@
         <!-- Feature list -->
             <ul class="feature-list col-sm-7">
                 <!-- Feature item -->
-                <li class="feature-item active">
+                <li class="feature-item active" data-index="1">
                     <h4 class="title">1. Danh sách khóa học </h4>
                     <p class="content">
                         Nhiều khóa học thú vị phục vụ cho công tác quản trị bao gồm: Nhân tướng
@@ -26,7 +26,7 @@
                     </p>
                 </li>
                 <!-- Feature item -->
-                <li class="feature-item">
+                <li class="feature-item" data-index="2">
                     <h4 class="title">2. Cộng đồng </h4>
                     <p class="content">
                         Nơi giao lưu, trao đổi, hỏi đáp với bạn học và các chuyên gia trong lĩnh vực
@@ -34,7 +34,7 @@
                     </p>
                 </li>
                 <!-- Feature item -->
-                <li class="feature-item">
+                <li class="feature-item" data-index="3">
                     <h4 class="title">3. Kho bí kíp </h4>
                     <p class="content">
                         Ngoài những bài học chính, ứng dụng còn cung cấp một kho bí kíp những kiến
@@ -42,7 +42,7 @@
                     </p>
                 </li>
                 <!-- Feature item -->
-                <li class="feature-item">
+                <li class="feature-item" data-index="4">
                     <h4 class="title">4. Thẻ ghi nhớ </h4>
                     <p class="content">
                         Giúp người học lưu trữ lại các kiến thức quan trọng để ôn lại bất cứ lúc

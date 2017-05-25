@@ -4,7 +4,6 @@ namespace App\Models;
 
 trait CloudLinkTrait
 {
-
     public function getMediaLinkAttribute()
     {
         $path = config('image.' . $this->getModelNamespace() . '.path');
@@ -27,5 +26,4 @@ trait CloudLinkTrait
     {
         return strtolower(class_basename($this));
     }
-
 }

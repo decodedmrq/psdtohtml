@@ -5,13 +5,16 @@
             <img src="/images/home/slider/frame.png" alt="slide frame">
         </div>
         <div class="slide-item">
-            <img src="/images/home/slider/slide_1.png" alt="slide image">
+            <img src="/images/home/feature/feature_1.jpg" alt="slide image">
         </div>
         <div class="slide-item">
-            <img src="/images/home/slider/slide_2.png" alt="slide image">
+            <img src="/images/home/feature/feature_2.jpg" alt="slide image">
         </div>
         <div class="slide-item">
-            <img src="/images/home/slider/slide_3.png" alt="slide image">
+            <img src="/images/home/feature/feature_3.jpg" alt="slide image">
+        </div>
+        <div class="slide-item">
+            <img src="/images/home/feature/feature_4.jpg" alt="slide image">
         </div>
     </div>
 

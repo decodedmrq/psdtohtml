@@ -5,7 +5,6 @@ namespace App\Models;
 class Lesson extends Model
 {
     use CloudLinkTrait;
-    protected $guarded = ['id'];
 
     protected $appends = ['is_unlocked', 'media_link'];
 
@@ -51,6 +50,4 @@ class Lesson extends Model
 
         return boolval($hasPaid);
     }
-
-
 }

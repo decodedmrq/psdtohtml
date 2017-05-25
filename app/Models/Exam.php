@@ -8,9 +8,7 @@ class Exam extends Model
     const TYPE_PAID = 1;
 
     protected $table = 'lesson_exams';
-    protected $guarded = ['id'];
     protected $appends = ['is_unlocked', 'is_learned'];
-
 
     public function learnedUsers()
     {

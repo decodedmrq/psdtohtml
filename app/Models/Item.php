@@ -16,7 +16,6 @@ class Item extends Model
     const LEVEL_LEGEND = 3;
 
     protected $table = 'items';
-    protected $guarded = ['id'];
     protected $appends = ['media_link'];
 
     public function scopeUsed($query)
