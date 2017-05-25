@@ -1,6 +1,6 @@
 <!-- Time remaining -->
 <div class="time-remaining row">
-    <div class="col-sm-12">
+    <div class="col-md-12">
         <h6 class="title"> Thời gian đăng ký còn </h6>
         <div class="d-inline-flex">
             <!-- Days -->

@@ -1,6 +1,6 @@
 <!-- Register form -->
 <div class="register-form row">
-    <div class="col-sm-12">
+    <div class="col-md-12">
         {{ Form::open([
             'url' => route('guest.store'),
             'method' => 'post',

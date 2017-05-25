@@ -1,7 +1,7 @@
 <!-- Benefits -->
 <section class="benefits container-part row">
     <!-- Benefits title -->
-    <div class="part-index col-sm-12">
+    <div class="part-index col-md-12">
         <div class="text-center">
             <div class="number d-inline-block">03</div>
             <h3 class="title d-inline-block">
@@ -11,11 +11,11 @@
     </div>
 
     <!-- Benefits body -->
-    <div class="part-body col-sm-12">
+    <div class="part-body col-md-12">
         <!-- Benefit list -->
         <ul class="benefit-list row">
             <!-- Benefit item -->
-            <li class="benefit-item col-sm-6">
+            <li class="benefit-item col-md-6">
                 <div class="wrapper">
                     <div class="cover">
                         <img src="/images/home/benefit/i_book.png" alt="">
@@ -28,7 +28,7 @@
                 </div>
             </li>
             <!-- Benefit item -->
-            <li class="benefit-item col-sm-6">
+            <li class="benefit-item col-md-6">
                 <div class="wrapper">
                     <div class="cover">
                         <img src="/images/home/benefit/i_practice.png" alt="">
@@ -40,7 +40,7 @@
                 </div>
             </li>
             <!-- Benefit item -->
-            <li class="benefit-item col-sm-6">
+            <li class="benefit-item col-md-6">
                 <div class="wrapper">
                     <div class="cover">
                         <img src="/images/home/benefit/i_picture.png" alt="">
@@ -52,7 +52,7 @@
                 </div>
             </li>
             <!-- Benefit item -->
-            <li class="benefit-item col-sm-6">
+            <li class="benefit-item col-md-6">
                 <div class="wrapper">
                     <div class="cover">
                         <img src="/images/home/benefit/i_book_online.png" alt="">

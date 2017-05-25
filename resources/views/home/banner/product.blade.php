@@ -7,7 +7,7 @@
         <div class="container">
             <!-- Title head -->
             <div class="title-head row hidden-xs-down">
-                <div class="col-sm-12">
+                <div class="col-md-12">
                     <div class="app-name row align-items-center justify-content-center">
                         <img class="logo" src="/images/logo.png"
                              alt="S.E.E Nhân Tướng Trong Quản Trị">
@@ -21,7 +21,7 @@
 
             <!-- Badges -->
             <div class="app-badges row">
-                <div class="col-sm-12">
+                <div class="col-md-12">
                     {!! make_break_line(
                         'Ứng dụng học Nhân tướng Duy nhất tại Việt Nam',
                          5,
