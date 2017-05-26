@@ -18,7 +18,7 @@ form.on('submit', function (event) {
             if (response.data.success) {
                 let notify = response.data.message;
                 $('#notify').html(notify).removeClass('hidden-xs-up');
-                setInterval(function() {
+                setTimeout(function() {
                     $('#notify').html('').addClass('hidden-xs-up');
                 }, 2000);
                 form[0].reset();

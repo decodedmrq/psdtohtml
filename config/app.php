@@ -12,14 +12,16 @@ return [
     | any other location as required by the application or its packages.
     */
 
-    'name' => 'Học Nhân Tướng',
+    'name' => 'SEE: Nhân tướng trong quản trị',
     'version' => 1.0,
-    'description' => 'Tu hoc nhan tuong',
+    'description' => 'SEE: Nhân tướng trong quản trị',
     'keywords' => [
-        'tu-hoc-nhan-tuong'
+        'tự học nhân tướng',
+        'nhân tướng học',
+        'nhân tướng trong quản trị',
     ],
     'website' => 'HocNhanTuong.com',
-    'facebook' => 'https://www.facebook.com/SEE-T%E1%BB%B1-h%E1%BB%8Dc-Nh%C3%A2n-t%C6%B0%E1%BB%9Bng-174130296433321/',
+    'facebook' => 'https://www.facebook.com/nhantuongsee/',
 
     /*
     |--------------------------------------------------------------------------

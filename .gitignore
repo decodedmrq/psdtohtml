@@ -24,3 +24,4 @@ _ide_helper.php
 /ubuntu-xenial-16.04-cloudimg-console.log
 /public/admin/*
 /public/mix-manifest.json
+/public/mix.js

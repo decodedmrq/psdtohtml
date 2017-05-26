@@ -49,7 +49,9 @@ return [
     ],
 
     'content' => 'Nội dung',
+    'content...' => 'Nội dung...',
     'email' => 'Email',
+    'email_address' => 'Địa chỉ email',
     'full_name' => 'Họ và tên',
     'name' => 'Tên',
     'submit' => 'Gửi',
@@ -64,5 +66,6 @@ return [
     'header_about_us' => 'Về chúng tôi',
     'introduce' => 'Giới thiệu',
     'vision' => 'Tầm nhìn',
-    'mission' => 'Xứ mệnh'
+    'mission' => 'Xứ mệnh',
+    'join_now' => 'Tham gia ngay',
 ];

@@ -1,1 +1,60 @@
 require('./bootstrap');
+
+let footerForm = $('#footer-feedback-form');
+let footerFormUrl = footerForm.attr('action');
+let inputFields = footerForm.find('input, textarea');
+let footerNotif = $('#footer-notify');
+
+footerForm.on('submit', function (event) {
+    event.preventDefault();
+    clearError();
+
+    let formData = footerForm.serialize();
+    disableInput(inputFields);
+
+    axios.post(footerFormUrl, formData)
+        .then(function (response) {
+            if (response.data.success) {
+                let notify = response.data.message;
+                footerNotif.html(notify).removeClass('hidden-xs-up');
+                setTimeout(function() {
+                    footerNotif.html('').addClass('hidden-xs-up');
+                }, 2000);
+                footerForm[0].reset();
+            } else {
+                let messages = response.data.message;
+                let keys = Object.keys(messages);
+                let values = Object.values(messages);
+
+                keys.map(function (key, index) {
+                    let inputElement = $(`#${key}`);
+                    inputElement.addClass('error');
+                    inputElement.before(`<div class="error-message text-right float-right"><span>${values[index]}</span></div>`);
+                });
+            }
+
+            enableInput(inputFields);
+        })
+        .catch(function (error) {
+            console.log('error: ' + error);
+        });
+
+
+});
+
+inputFields.on('change keyup mousedown', function (event) {
+    clearError($(this));
+});
+
+function clearError(input = inputFields) {
+    return input.removeClass('error').parent().find('div.error-message').remove();
+}
+
+// Object.prototype
+function disableInput(e) {
+    return e.attr('disabled', 'disabled');
+}
+
+function enableInput(e) {
+    return e.removeAttr('disabled');
+}
