@@ -144,6 +144,10 @@ body {
             font-size: 1.5rem;
             color: #828f94;
             font-weight: 300;
+
+            @include forSmall {
+              font-size: 1.25rem;
+            }
           }
 
           &:focus {
@@ -560,6 +564,7 @@ body {
       margin-bottom: 0;
       font-weight: 700;
       text-transform: uppercase;
+      text-align: left;
 
       @include forSmall {
         font-size: 2rem;
