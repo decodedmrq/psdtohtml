@@ -30,7 +30,7 @@ mix.sass(sourceSassFolder + 'home.scss', publicCssDir);
 
 mix.sass(sourceSassFolder + 'app.scss', publicCssDir).options({processCssUrls: false});
 // mix.sass(sourceSassFolder + 'library.scss', publicCssDir).options({processCssUrls: false});
-// mix.js(sourceJsFolder + 'app.js', publicJsDir);
+mix.js(sourceJsFolder + 'app.js', publicJsDir);
 
 //
 // //Admin

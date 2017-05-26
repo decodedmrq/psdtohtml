@@ -8,6 +8,7 @@
         @include('home.intro.product')
         @include('home.feature.product')
         @include('home.benefit.product')
+        @include('home.join_facebook')
     </div>
 @endsection
 

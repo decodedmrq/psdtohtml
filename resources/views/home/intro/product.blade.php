@@ -13,7 +13,7 @@
     <!-- Intro body -->
     <div class="part-body col-md-12">
         <article class="row">
-            <header class="col-md-6">
+            <header class="col-md-5 pr-0">
                 <h4 class="title"> Phương pháp học Nhân tướng tốt nhất hiện nay </h4>
             </header>
             <div class="offset-md-6"></div>
@@ -28,11 +28,11 @@
                         rất phức tạp và khó lường, "tri nhân, tri diện, bất tri tâm". Nhiều doanh nghiệp
                         phá sản, nhiều người tiền mất tật mang, khuynh gia bại sản chỉ vì NHÌN SAI NGƯỜI
                         và DÙNG NGƯỜI SAI VIỆC.
-                        Nhân tướng học từ hàng nghìn năm nay là công cụ hiệu quả trong việc nhìn thấu
-                        cái tâm của con người. “Tướng tự tâm sinh – Tướng tùy tâm diệt”.
                     </p>
                     <div class="toggle-content" id="info-tgl-content">
                         <p>
+                            Nhân tướng học từ hàng nghìn năm nay là công cụ hiệu quả trong việc nhìn thấu
+                            cái tâm của con người. “Tướng tự tâm sinh – Tướng tùy tâm diệt”.
                             Tuy nhiên hiện nay, người muốn học Nhân tướng đều mắc phải một tình cảnh chung
                             là không biết bắt đầu từ đâu, tài liệu thì nhiều nhưng chỉ mô tả chung chung,
                             thiếu hình ảnh minh họa, thiếu tính hệ thống, thật giả, đúng sai lẫn lộn thiếu

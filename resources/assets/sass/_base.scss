@@ -110,6 +110,36 @@ ul {
       font-weight: 700;
     }
   }
+
+  .feedback {
+    padding: 0.5rem 0;
+  }
+
+  .feedback-form {
+    .input-field {
+      padding: 10px 20px;
+      border: 0;
+      background-color: #f4f4f4;
+
+      &::placeholder {
+        font-family: $sourceSansPro;
+        font-style: italic;
+        font-size: 1.125rem;
+        color: #888888;
+        font-weight: 300;
+      }
+    }
+
+    .btn-feedback-submit {
+      padding: 0.875rem 3rem;
+      background-color: $dark-blue;
+      color: $light-yellow;
+      font-size: 1.125rem;
+      font-family: $sourceSansPro;
+      font-weight: 400;
+    }
+  }
+
 }
 
 .text-red {

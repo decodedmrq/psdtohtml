@@ -13,21 +13,27 @@
                 <ul class="footer-contact row">
                     <li class="contact-item col-md-12">
                         <i class="icon fa fa-map-marker"></i>
-                        <span>
-                            Tầng 4, tòa nhà số 137, Hoàng Quốc Việt, Cầu Giấy, Hà Nội.
-                        </span>
+                        <a href="{{ config('contact.address.gg_map') }}"
+                           title="{{ config('contact.address.text') }}"
+                           target="_blank">
+                            {{ config('contact.address.text') }}
+                        </a>
                     </li>
                     <li class="contact-item col-md-12">
                         <i class="icon fa fa-envelope"></i>
-                        <span>
-                            Mail: Lienhe@wikiedu.vn
-                        </span>
+                        <a href="mailto:{{ config('contact.mail.real') }}"
+                           title="{{ config('contact.mail.text') }}"
+                           target="_blank">
+                            {{ config('contact.mail.text') }}
+                        </a>
                     </li>
                     <li class="contact-item col-md-12">
                         <i class="icon fa fa-phone"></i>
-                        <span>
-                            SĐT: 0969 393 901
-                        </span>
+                        <a href="tel:{{ config('contact.tel.real') }}"
+                           title="{{ config('contact.tel.text') }}"
+                           target="_blank">
+                            {{ config('contact.tel.text') }}
+                        </a>
                     </li>
                 </ul>
             </div>
@@ -62,19 +68,7 @@
             </div>
 
             <div class="col-md-4">
-                <div style="width: 100%;" class="fb-page"
-                     data-href="https://www.facebook.com/nhantuongsee/"
-                     data-small-header="false"
-                     data-width="500"
-                     data-adapt-container-width="true" data-hide-cover="false"
-                     data-show-facepile="true">
-                    <blockquote cite="https://www.facebook.com/nhantuongsee/"
-                                class="fb-xfbml-parse-ignore">
-                        <a href="https://www.facebook.com/nhantuongsee/">
-                            SEE: Nhân tướng trong quản trị
-                        </a>
-                    </blockquote>
-                </div>
+                @include("layouts.includes.footer_feedback")
             </div>
         </div>
     </div>

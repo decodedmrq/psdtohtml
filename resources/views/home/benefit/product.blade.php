@@ -66,4 +66,7 @@
             </li>
         </ul>
     </div>
+
+    <div class="bottom-line"></div>
+    <div class="bottom-line-circle left"></div>
 </section>
