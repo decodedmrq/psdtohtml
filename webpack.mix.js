@@ -54,4 +54,7 @@ mix.js(sourceJsFolder + 'app.js', publicJsDir);
 //     sourceVendor + 'owl.carousel/dist/owl.carousel.min.js',
 //     publicVendor + 'owl.carousel/owl.carousel.min.js'
 // );
-mix.sass(sourceSassFolder + 'about.scss', publicCssDir);
+// mix.sass(sourceSassFolder + 'about.scss', publicCssDir);
+mix.sass(sourceSassFolder + 'article.scss', publicCssDir)
+    .js(sourceJsFolder + 'articles/index', publicJsDir + 'articles/')
+    .js(sourceJsFolder + 'articles/show', publicJsDir + 'articles/');

@@ -1,44 +1,4 @@
 @import "variables";
-.header {
-  font-family: 'Source Sans Pro', sans-serif;
-  height: 80px;
-  background-color: #374957;
-  display: flex;
-  color: #e9d9c0;
-  .container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-  .logo {
-    flex: 0 0 80px;
-  }
-  .right-menu {
-    display: flex;
-    align-items: center;
-    .menu-item {
-      margin-right: 25px;
-      .fa-facebook {
-        color: #374957;
-      }
-      &:last-child {
-        margin-right: 0;
-      }
-    }
-  }
-  @media screen and (max-width: $xs-width) {
-    height: 68px;
-    .container {
-      flex: 1 1 auto;
-    }
-    .menu-item {
-      margin-right: 15px !important;
-      &:last-child {
-        margin-right: 0 !important;
-      }
-    }
-  }
-}
 .content {
   height: 780px;
   background: url("/images/about-background.jpg");

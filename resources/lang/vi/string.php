@@ -68,4 +68,16 @@ return [
     'vision' => 'Tầm nhìn',
     'mission' => 'Xứ mệnh',
     'join_now' => 'Tham gia ngay',
+    'readmore' => 'Đọc tiếp',
+    'search_3_dot' => 'Tìm kiếm...',
+    'enter_email_three_dot' => 'Nhập email của bạn...',
+    'hot_article' => 'Bài nổi bật',
+    'read_article' => 'Bài đã đọc',
+    'like' => 'Like',
+    'comment' => 'Comment',
+    'share' => 'Share',
+    'loadmore' => 'Xem thêm',
+    'first_and_last_name' => 'Họ và tên',
+    'send_comment' => 'Gửi bình luận',
+    'enter_comment' => 'Nhập bình luận...'
 ];
