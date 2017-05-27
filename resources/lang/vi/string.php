@@ -79,5 +79,7 @@ return [
     'loadmore' => 'Xem thêm',
     'first_and_last_name' => 'Họ và tên',
     'send_comment' => 'Gửi bình luận',
-    'enter_comment' => 'Nhập bình luận...'
+    'enter_comment' => 'Nhập bình luận...',
+    'article_head_title' => 'Nhân tướng trong quản trị',
+    'article_head_description' => 'nhìn đúng người, dùng đúng việc',
 ];

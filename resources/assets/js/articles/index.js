@@ -14,7 +14,7 @@ class Article extends React.Component {
     }
 
     componentWillMount() {
-        axios.get(window.location.href).then((response) => {
+        axios.get(routes.article.load).then((response) => {
             this.setState({
                 articles: response.data,
                 isLoading: false,
@@ -64,6 +64,14 @@ class Article extends React.Component {
 
     like(article, event) {
         event.preventDefault();
+    }
+
+    getLikeClassName(article) {
+        if(article.is_like) {
+            return 'action-item active';
+        }
+
+        return 'action-item';
     }
 
     getLoadMoreButton() {
@@ -117,7 +125,7 @@ class Article extends React.Component {
                                 </div>
                             </div>
                             <div className="card-footer actions">
-                                <div className="action-item active">
+                                <div className={this.getLikeClassName(article)}>
                                     <a onClick={this.like.bind(this)} href="#">
                                         <i className="fa fa-thumbs-up" aria-hidden="true"/> {trans('string.like')}
                                     </a>

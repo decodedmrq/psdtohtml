@@ -6,20 +6,8 @@ class Article extends React.Component {
     constructor() {
         super();
         this.state = {
-            isLoading: true,
-            article: {},
+            article: article,
         }
-    }
-
-    componentWillMount() {
-        axios.get(window.location.href).then((response) => {
-            this.setState({
-                article: response.data,
-                isLoading: false,
-            });
-        }).catch((error) => {
-            console.log(error);
-        });
     }
 
     share(event) {
@@ -36,12 +24,15 @@ class Article extends React.Component {
         event.preventDefault();
     }
 
-    render() {
-        if (this.state.isLoading) {
-            return (
-                <div></div>
-            );
+    getLikeClassName(article) {
+        if(article.is_like) {
+            return 'action-item active';
         }
+
+        return 'action-item';
+    }
+
+    render() {
         return (
             <div>
                 <div className="search hidden-sm-up">
@@ -65,7 +56,7 @@ class Article extends React.Component {
                         <p className="card-text article-description">{this.state.article.content}</p>
                     </div>
                     <div className="card-footer actions">
-                        <div className="action-item active">
+                        <div className={this.getLikeClassName(this.state.article)}>
                             <a onClick={this.like.bind(this)} href="#">
                                 <i className="fa fa-thumbs-up" aria-hidden="true"/> {trans('string.like')}
                             </a>
