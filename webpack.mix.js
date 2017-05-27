@@ -19,15 +19,14 @@ const publicJsDir = 'public/js/';
 const publicFontDir = 'public/fonts/';
 const storageFontDir = 'storage/app/public/fonts/';
 
-mix.copy(storageFontDir, publicFontDir);
-
+// mix.copy(storageFontDir, publicFontDir);
+//
 mix.sass(sourceSassFolder + 'home.scss', publicCssDir);
 // mix.sass(sourceSassFolder + 'contact.scss', publicCssDir);
-// mix.sass(sourceSassFolder + 'article.scss', publicCssDir);
 // mix.sass(sourceSassFolder + 'knowledge.scss', publicCssDir);
 // mix.js(sourceJsFolder + 'contact.js', publicJsDir);
 // mix.js(sourceJsFolder + 'home.js', publicJsDir);
-
+//
 mix.sass(sourceSassFolder + 'app.scss', publicCssDir).options({processCssUrls: false});
 // mix.sass(sourceSassFolder + 'library.scss', publicCssDir).options({processCssUrls: false});
 mix.js(sourceJsFolder + 'app.js', publicJsDir);
@@ -54,7 +53,9 @@ mix.js(sourceJsFolder + 'app.js', publicJsDir);
 //     sourceVendor + 'owl.carousel/dist/owl.carousel.min.js',
 //     publicVendor + 'owl.carousel/owl.carousel.min.js'
 // );
-// mix.sass(sourceSassFolder + 'about.scss', publicCssDir);
-mix.sass(sourceSassFolder + 'article.scss', publicCssDir)
-    .js(sourceJsFolder + 'articles/index', publicJsDir + 'articles/')
-    .js(sourceJsFolder + 'articles/show', publicJsDir + 'articles/');
+// mix.sass(sourceSassFolder + 'about.scss', publicCssDir)
+//     .options({processCssUrls: false});
+// mix.sass(sourceSassFolder + 'article.scss', publicCssDir)
+//     .js(sourceJsFolder + 'articles/index.js', publicJsDir + 'articles/')
+//     .js(sourceJsFolder + 'articles/show.js', publicJsDir + 'articles/')
+//     .options({processCssUrls: false});

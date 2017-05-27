@@ -12,7 +12,7 @@
                         <img class="logo" src="/images/logo.png"
                              alt="S.E.E Nhân Tướng Trong Quản Trị">
 
-                        <h1 class="app-full-name">Nhân Tướng Trong Quản Trị</h1>
+                        <h1 class="app-full-name">: Nhân Tướng Trong Quản Trị</h1>
                     </div>
 
                     <h6 class="app-slogan">{{ trans('fixed_data.slogan') }}</h6>
