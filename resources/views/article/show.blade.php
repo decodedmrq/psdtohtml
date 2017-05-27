@@ -4,6 +4,9 @@
 <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,900&amp;subset=vietnamese" rel="stylesheet">
 @endpush
 @push('js')
+<script>
+    var article = {!! json_encode($article) !!};
+</script>
 <script src="{{ asset('js/articles/show.js') }}"></script>
 @endpush
 @section('content')

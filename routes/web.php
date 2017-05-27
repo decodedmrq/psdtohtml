@@ -17,6 +17,7 @@ Route::get('/about', 'HomeController@about')->name('about_us');
 
 Route::get('contact', 'ContactController@index')->name('contact');
 Route::resource('feedback', 'FeedbackController');
+Route::get('article/load', 'ArticleController@load')->name('article.load');
 Route::resource('article', 'ArticleController');
 Route::resource('knowledge', 'KnowledgeController');
 Route::post('article/load_more', 'ArticleController@loadMore')->name('article.load_more');

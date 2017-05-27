@@ -13,10 +13,15 @@ class ArticleController extends RenderController
     /**
      * Display a listing of the resource.
      *
-     * @param Request $request
      * @return \Illuminate\Http\Response
+     * @internal param Request $request
      */
-    public function index(Request $request)
+    public function index()
+    {
+        return $this->renderView('article.index');
+    }
+
+    public function load(Request $request)
     {
         $page = $request->get('page', 1);
         //Create fake data
@@ -39,23 +44,21 @@ class ArticleController extends RenderController
             'current_page' => $page,
             'last_page' => $page + 5,
             'data' => $data,
-            'next_page_url' => route('article.index', ['page' => $page + 1]),
+            'next_page_url' => route('article.load', ['page' => $page + 1]),
         ];
-        if ($request->ajax()) {
-            return response()->json($articles);
-        }
 
-        return $this->renderView('article.index');
+        return response()->json($articles);
     }
 
     /**
      * Display the specified resource.
      *
+     * @param Request $request
      * @param string $alias
      * @return \Illuminate\Http\Response
      * @internal param int $id
      */
-    public function show(Request $request, string $alias)
+    public function show(string $alias)
     {
         $faker = Factory::create();
         $article = [
@@ -70,11 +73,11 @@ class ArticleController extends RenderController
             'content' => $faker->text(1000),
             'is_like' => !!rand(0, 1),
         ];
-        if($request->ajax()) {
-            return response()->json($article);
-        }
+        $this->viewData([
+            'article' => $article,
+        ]);
 
-        return view('article.show');
+        return $this->renderView('article.show');
     }
 
     public function tag($slug)
