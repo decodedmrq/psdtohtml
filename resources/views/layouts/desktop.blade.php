@@ -7,6 +7,7 @@
 {!! facebook_sdk() !!}
 {!! js_structured_data() !!}
 <div id="wrap">
+    @yield('header')
     <div id="main-body">
         <div class="container-fluid px-0">
             @yield('content')

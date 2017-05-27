@@ -2,6 +2,10 @@
 @push('css')
 {{ html()->style('/css/home.css') }}
 @endpush
+@section('header')
+    @include('home.header')
+@endsection
+
 @section('content')
     @include('home.banner.product')
     <div class="container">
