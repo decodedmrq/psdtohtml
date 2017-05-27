@@ -52,28 +52,6 @@ class Article extends React.Component {
         });
     }
 
-    share(article, event) {
-        event.preventDefault();
-        FB.ui({
-            method: 'share',
-            display: 'popup',
-            href: window.location.origin + routes.article.show(article.alias),
-        }, function (response) {
-        });
-    }
-
-    like(article, event) {
-        event.preventDefault();
-    }
-
-    getLikeClassName(article) {
-        if(article.is_like) {
-            return 'action-item active';
-        }
-
-        return 'action-item';
-    }
-
     getLoadMoreButton() {
         let {articles} = this.state;
         if (articles.current_page >= articles.last_page) return;
@@ -117,27 +95,10 @@ class Article extends React.Component {
                                     </div>
                                 </div>
                                 <p className="card-text article-description">{article.short_description}</p>
-                                <div className="float-right readmore">
+                                <div className="readmore">
                                     <a href={routes.article.show(article.alias)}>
                                         {trans('string.readmore')}
                                         <i className="fa fa-long-arrow-right" aria-hidden="true"/>
-                                    </a>
-                                </div>
-                            </div>
-                            <div className="card-footer actions">
-                                <div className={this.getLikeClassName(article)}>
-                                    <a onClick={this.like.bind(this)} href="#">
-                                        <i className="fa fa-thumbs-up" aria-hidden="true"/> {trans('string.like')}
-                                    </a>
-                                </div>
-                                <div className="action-item">
-                                    <a href={routes.article.show(article.alias) + '#comment'}>
-                                        <i className="fa fa-comment" aria-hidden="true"/> {trans('string.comment')}
-                                    </a>
-                                </div>
-                                <div className="action-item">
-                                    <a onClick={this.share.bind(this)} href="#">
-                                        <i className="fa fa-share" aria-hidden="true"/> {trans('string.share')}
                                     </a>
                                 </div>
                             </div>

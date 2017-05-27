@@ -68,7 +68,7 @@ return [
     'vision' => 'Tầm nhìn',
     'mission' => 'Xứ mệnh',
     'join_now' => 'Tham gia ngay',
-    'readmore' => 'Đọc tiếp',
+    'readmore' => 'Xem thêm',
     'search_3_dot' => 'Tìm kiếm...',
     'enter_email_three_dot' => 'Nhập email của bạn...',
     'hot_article' => 'Bài nổi bật',
@@ -81,5 +81,8 @@ return [
     'send_comment' => 'Gửi bình luận',
     'enter_comment' => 'Nhập bình luận...',
     'article_head_title' => 'Nhân tướng trong quản trị',
-    'article_head_description' => 'nhìn đúng người, dùng đúng việc',
+    'article_head_description' => 'Nhìn đúng người, dùng đúng việc',
+    'subscribe_for_article' => 'Đăng ký nhận bài viết',
+    'subscribe_description' => 'Nhập email của bạn để chúng tôi có thể gửi cho bạn những thông tin và bài viết mới nhất của SEE',
+    'follow_fb' => 'Theo dõi SEE trên Facebook',
 ];
