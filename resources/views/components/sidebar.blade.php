@@ -71,7 +71,4 @@
             </div>
         </div>
     </div>
-    <div class="sidebar-item">
-        <img src="{{ asset('images/ads.png') }}"/>
-    </div>
 </div>
