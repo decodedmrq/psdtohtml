@@ -82,7 +82,6 @@ class HomeController extends RenderController
         $about->vision->body = $faker->text(10000);
         $about->mission->title = $faker->sentence(10);
         $about->mission->body = $faker->text(10000);
-
         $this->viewData([
             'about' => $about,
         ]);
