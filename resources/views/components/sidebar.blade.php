@@ -8,7 +8,8 @@
     </div>
     <div class="sidebar-item card">
         <div class="card-header">
-            Đăng ký nhận bài viết
+            {{ trans('string.subscribe_for_article') }}
+            <div class="sidebar-head-text">{{ trans('string.subscribe_description') }}</div>
         </div>
         <div class="card-block">
             <form class="subscribe" action="" method="post">
@@ -60,14 +61,13 @@
 
     <div class="sidebar-item card">
         <div class="card-header">
-            Follow us on
+            {{ trans('string.follow_fb') }}
         </div>
         <div class="card-block">
-            <div class="fb-page" data-href="https://www.facebook.com/nhantuongsee" data-small-header="false"
-                 data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="false">
-                <blockquote cite="https://www.facebook.com/nhantuongsee" class="fb-xfbml-parse-ignore"><a
-                            href="https://www.facebook.com/nhantuongsee">SEE: Nhân tướng trong quản trị</a>
-                </blockquote>
+            <div class="fb-page" data-href="https://www.facebook.com/nhantuongsee/" data-tabs="timeline" data-small-header="false"
+                 data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true">
+                <blockquote cite="https://www.facebook.com/nhantuongsee/" class="fb-xfbml-parse-ignore"><a
+                            href="https://www.facebook.com/nhantuongsee/">SEE: Nhân tướng trong quản trị</a></blockquote>
             </div>
         </div>
     </div>
