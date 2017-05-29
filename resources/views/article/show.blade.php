@@ -15,7 +15,7 @@
         <div class="container">
             <div class="slogan text-center">
                 <h2 class="title">{{ trans('string.article_head_title') }}</h2>
-                <div class="description">{{ trans('string.article_head_description') }}</div>0
+                <div class="description">{{ trans('string.article_head_description') }}</div>
             </div>
             <div class="row">
                 <div id="articles" class="col-xl-8 articles pr-xl-5">
