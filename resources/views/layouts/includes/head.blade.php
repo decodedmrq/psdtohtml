@@ -19,7 +19,7 @@
     <meta name="copyright" content="{{ config('app.name') }}">
     <meta name="keywords"
           content="{{ isset($keywords) ? implode(',', $keywords) : implode(',', config('app.keywords')) }}">
-    <meta property="og:image" content="{!! asset('logo.png') !!}"/>
+    <meta property="og:image" content="{!! asset('favicon.png') !!}"/>
     <link rel="shortcut icon" href="{!! asset('favicon.ico') !!}">
     <link rel="stylesheet" href="{!! asset('css/library.css') !!}">
     <link rel="stylesheet" href="{!! asset('css/app.css?') . config('app.version') !!}">
