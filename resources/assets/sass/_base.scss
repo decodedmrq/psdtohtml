@@ -342,11 +342,10 @@ ul {
   .wrapper {
     position: relative;
     font-family: $quickSand;
-    font-size: 0.875rem;
+    font-size: 1.125rem;
 
     .mobile-logo {
-      display: inline-block;
-      padding-left: 15px;
+      display: inline-flex;
       height: 1.5rem;
 
       .logo {
