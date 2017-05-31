@@ -1,7 +1,7 @@
 <footer id="footer" class="footer">
     <div class="container footer-container">
         <div class="row">
-            <div class="col-md-5">
+            <div class="footer-col col-md-5">
                 <div class="footer-logo">
                     <a href="/" lang="vi" title="{{ config('app.name') }}">
                         <img src="/images/footer_logo.png" alt="{{ config('app.name') }}">
@@ -38,7 +38,7 @@
                 </ul>
             </div>
 
-            <div class="col-md-3">
+            <div class="footer-col col-md-3">
                 <ul class="row">
                     <li class="footer-link col-md-12 active">
                         {!! make_a_tag("#", "SEE: Nhân Tướng Trong Quản Trị") !!}
@@ -67,7 +67,7 @@
                 </ul>
             </div>
 
-            <div class="col-md-4">
+            <div class="footer-col col-md-4">
                 @include("layouts.includes.footer_feedback")
             </div>
         </div>

@@ -33,6 +33,10 @@ img {
   max-width: 100%;
 }
 
+ul {
+  margin: 0;
+}
+
 .w-full {
   width: 100%;
 }
@@ -71,6 +75,10 @@ ul {
   font-size: 1rem;
   color: $dark-blue;
   background-color: #e5e5e5;
+
+  .footer-col {
+    margin-bottom: 1.5rem;
+  }
 
   .footer-logo {
     padding: 0.75rem 0;
