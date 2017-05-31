@@ -49,15 +49,20 @@
     });
 
     //  Timer
-    let timerDay = $('#timer-day');
-    let timerHour = $('#timer-hour');
-    let timerMin = $('#timer-min');
-    let timerSec = $('#timer-sec');
+    let $timerDay = $('#timer-day');
+    let $timerHour = $('#timer-hour');
+    let $timerMin = $('#timer-min');
+    let $timerSec = $('#timer-sec');
 
     let rmnDay = {{ $timeRemaining->d }};
     let rmnHour = {{ $timeRemaining->h }};
     let rmnMin = {{ $timeRemaining->m }};
     let rmnSec = {{ $timeRemaining->s }};
+
+    fixedWH($timerDay);
+    fixedWH($timerHour);
+    fixedWH($timerMin);
+    fixedWH($timerSec);
 
     let timerCounter = setInterval(function () {
         rmnSec -= 1;
@@ -77,14 +82,14 @@
                         rmnDay = 0;
                         clearInterval(timerCounter);
                     }
+                    animateTimer($timerDay, makeStringTime(rmnDay));
                 }
+                animateTimer($timerHour, makeStringTime(rmnHour));
             }
+            animateTimer($timerMin, makeStringTime(rmnMin));
         }
 
-        timerDay.html(makeStringTime(rmnDay));
-        timerHour.html(makeStringTime(rmnHour));
-        timerMin.html(makeStringTime(rmnMin));
-        timerSec.html(makeStringTime(rmnSec));
+        animateTimer($timerSec, makeStringTime(rmnSec));
     }, 1000);
 
     //  Toggle Info content
@@ -177,6 +182,43 @@
 
     function resetNotif(block) {
         block.addClass('hidden-xs-up').removeClass('text-green text-red').html('');
+    }
+
+    function fixedWH($element) {
+        console.log($element.outerWidth());
+        $element.css({
+            'width':$element.outerWidth() + 'px',
+            'height':$element.outerHeight() + 'px'
+        });
+
+        return $element;
+    }
+
+    function animateTimer($timer, newContent) {
+        let timerId = $timer.attr('id');
+        timerId = timerId ? timerId : "timer-running-";
+
+        let oldContent = $timer.html();
+        let oldId = timerId + oldContent;
+        let newId = timerId + newContent;
+
+        let oldContentHtml = `<div id="${oldId}" class="timer-animate old">${oldContent}</div>`;
+        let newContentHtml = `<div id="${newId}" class="timer-animate new">${newContent}</div>`;
+        let contentHtml = oldContentHtml + newContentHtml;
+
+        $timer.html(contentHtml);
+
+        $(`#${oldId}`).animate({
+            top: '100%',
+            opacity: 0,
+        }, 500);
+
+        $(`#${newId}`).animate({
+            top: '0',
+            opacity: 1,
+        }, 500, function () {
+            $timer.html(newContent);
+        });
     }
 </script>
 @endpush

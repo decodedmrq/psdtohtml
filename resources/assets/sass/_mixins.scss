@@ -35,12 +35,13 @@
 }
 
 
-@mixin bgGradient($fromColor: $main-yellow, $toColor: $main-blue)
+@mixin bgLinearGradient($fromColor: $main-yellow, $toColor: $main-blue)
 {
-  background-image: -webkit-linear-gradient(left, $fromColor 0%, $toColor 100%);
-  background-image: -moz-linear-gradient(left, $fromColor 0%, $toColor 100%);
-  background-image: -o-linear-gradient(left, $fromColor 0%, $toColor 100%);
-  background-image: linear-gradient(to right, $fromColor 0%, $toColor 100%);
+  background: $toColor;
+  background: -webkit-linear-gradient(left, $fromColor 0%, $toColor 100%);
+  background: -moz-linear-gradient(left, $fromColor 0%, $toColor 100%);
+  background: -o-linear-gradient(left, $fromColor 0%, $toColor 100%);
+  background: linear-gradient(to right, $fromColor 0%, $toColor 100%);
 }
 
 @mixin bottomLineGradient($fromColor: $main-yellow, $toColor: $main-blue, $width: 100%, $height: 1px) {
@@ -50,7 +51,16 @@
   display: block;
   width: $width;
   height: $height;
-  @include bgGradient($fromColor, $toColor);
+  @include bgLinearGradient($fromColor, $toColor);
+}
+
+@mixin bgCircleGradient($from: $main-yellow, $to: $main-blue)
+{
+  background: $to;
+  background: -webkit-radial-gradient(circle, $from, $to); /* Safari */
+  background: -o-radial-gradient(circle, $from, $to); /* Opera 11.6 to 12.0 */
+  background: -moz-radial-gradient(circle, $from, $to); /* Firefox 3.6 to 15 */
+  background: radial-gradient(circle, $from, $to); /* Standard syntax */
 }
 
 @mixin hover-focus-active {
@@ -85,4 +95,10 @@
   -o-animation-duration: $duration;
   animation-duration: $duration;
   animation-iteration-count: $count;
+}
+
+@mixin bgImage($url)
+{
+  background-size: cover;
+  background: $url no-repeat center center;
 }
