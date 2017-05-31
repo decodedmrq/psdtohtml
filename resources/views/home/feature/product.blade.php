@@ -3,9 +3,8 @@
     <!-- Features title -->
     <div class="part-index col-md-12">
         <div class="text-center">
-            <div class="number d-inline-block">02</div>
             <h3 class="title d-inline-block">
-                {!! make_break_line('Tính năng sản phẩm', 2, 'div', 'd-block title-part') !!}
+                <div class="title-part">Tính năng sản phẩm</div>
             </h3>
         </div>
     </div>
