@@ -19,12 +19,12 @@
             </header>
             <div class="offset-md-6"></div>
 
-            <div class="intro-cover col-md-6 text-right push-md-6">
+            <div class="intro-cover col-md-5 text-right push-md-7">
                 <img src="/images/home/cover_intro.png"
                      alt="Phương pháp học Nhân tướng tốt nhất hiện nay">
             </div>
 
-            <div class="content col-md-6 pull-md-6">
+            <div class="content col-md-7 pull-md-5">
                 <p>
                     Quản trị con người luôn là yếu tố sống còn của mọi tổ chức. Tuy nhiên con người
                     rất phức tạp và khó lường, "tri nhân, tri diện, bất tri tâm". Nhiều doanh nghiệp
@@ -34,24 +34,20 @@
                 <div class="toggle-content" id="info-tgl-content">
                     <p>
                         Nhân tướng học từ hàng nghìn năm nay là công cụ hiệu quả trong việc nhìn
-                        thấu
-                        cái tâm của con người. “Tướng tự tâm sinh – Tướng tùy tâm diệt”.
+                        thấu cái tâm của con người. “Tướng tự tâm sinh – Tướng tùy tâm diệt”.
                         Tuy nhiên hiện nay, người muốn học Nhân tướng đều mắc phải một tình cảnh
-                        chung
-                        là không biết bắt đầu từ đâu, tài liệu thì nhiều nhưng chỉ mô tả chung
-                        chung,
-                        thiếu hình ảnh minh họa, thiếu tính hệ thống, thật giả, đúng sai lẫn lộn
-                        thiếu
-                        kiểm chứng nên gặp rất nhiều khó khăn.
+                        chung là không biết bắt đầu từ đâu, tài liệu thì nhiều nhưng chỉ mô tả chung
+                        chung, thiếu hình ảnh minh họa, thiếu tính hệ thống, thật giả, đúng sai lẫn
+                        lộn
+                        thiếu kiểm chứng nên gặp rất nhiều khó khăn.
                         “SEE: Nhân Tướng Trong Quản Trị” là ứng dụng mobile học Nhân tướng đầu tiên
-                        tại
-                        Việt Nam. Với hướng tiếp cận trực quan, sinh động, dễ hiểu chắc chắn "SEE:
-                        Nhân
-                        Tướng Trong Quản Trị" sẽ là công cụ đắc lực trong công tác quản trị của các
-                        cấp
-                        quản lý lãnh đạo, người làm nhân sự hay những người yêu thích bộ môn nhân
-                        tướng
-                        nói chung.
+                        tại Việt Nam. Với hướng tiếp cận trực quan, sinh động, dễ hiểu chắc chắn
+                        "SEE:
+                        Nhân Tướng Trong Quản Trị" sẽ là công cụ đắc lực trong công tác quản trị của
+                        các
+                        cấp quản lý lãnh đạo, người làm nhân sự hay những người yêu thích bộ môn
+                        nhân
+                        tướng nói chung.
                     </p>
                 </div>
                 <div class="text-center">

@@ -185,7 +185,6 @@
     }
 
     function fixedWH($element) {
-        console.log($element.outerWidth());
         $element.css({
             'width':$element.outerWidth() + 'px',
             'height':$element.outerHeight() + 'px'
@@ -196,11 +195,11 @@
 
     function animateTimer($timer, newContent) {
         let timerId = $timer.attr('id');
-        timerId = timerId ? timerId : "timer-running-";
+        timerId = timerId ? timerId : "timer-running";
 
         let oldContent = $timer.html();
-        let oldId = timerId + oldContent;
-        let newId = timerId + newContent;
+        let oldId = timerId + '-old';
+        let newId = timerId + '-new';
 
         let oldContentHtml = `<div id="${oldId}" class="timer-animate old">${oldContent}</div>`;
         let newContentHtml = `<div id="${newId}" class="timer-animate new">${newContent}</div>`;
@@ -211,12 +210,12 @@
         $(`#${oldId}`).animate({
             top: '100%',
             opacity: 0,
-        }, 500);
+        }, 300);
 
         $(`#${newId}`).animate({
             top: '0',
             opacity: 1,
-        }, 500, function () {
+        }, 300, function () {
             $timer.html(newContent);
         });
     }
