@@ -16,6 +16,5 @@
     @include('layouts.includes.footer')
 </div>
 @include('layouts.includes.script')
-{!! js_ga() !!}
 </body>
 </html>
