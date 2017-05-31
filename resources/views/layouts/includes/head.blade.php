@@ -37,4 +37,6 @@
     {{ html()->script('js/bootstrap.js') }}
     @stack('script-head')
     @stack('js-head')
+    {!! js_ga() !!}
+    {!! js_crazyegg() !!}
 </head>
