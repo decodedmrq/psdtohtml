@@ -3,9 +3,8 @@
     <!-- Intro title -->
     <div class="part-index col-md-12">
         <div class="text-center">
-            <div class="number d-inline-block">01</div>
             <h3 class="title d-inline-block">
-                {!! make_break_line('Giới thiệu ứng dụng', 2, 'div', 'd-block title-part') !!}
+                <d class="title-part">Giới thiệu ứng dụng</d>
             </h3>
         </div>
     </div>

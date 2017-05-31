@@ -39,21 +39,23 @@
             </div>
 
             <div class="footer-col col-md-3">
-                <ul class="row">
-                    <li class="footer-link col-md-12 active">
-                        {!! make_a_tag("#", "SEE: Nhân Tướng Trong Quản Trị") !!}
+                <ul class="row mb-3">
+                    <li class="footer-title col-md-12">
+                        SEE: Nhân Tướng Trong Quản Trị
                     </li>
                     <li class="footer-link col-md-12">
                         {!! make_a_tag(route('home'), trans('string.home_page')) !!}
                     </li>
                     <li class="footer-link col-md-12">
-                        {!! make_a_tag(route('about_us'), trans('string.about_us')) !!}
+                        {!! make_a_tag('#', trans('string.about_us')) !!}
                     </li>
                     <li class="footer-link col-md-12">
                         {!! make_a_tag("#", trans('string.blog')) !!}
                     </li>
-                    <li class="footer-link col-md-12">
-                        {!! make_a_tag("#", trans('string.support')) !!}
+                </ul>
+                <ul class="row">
+                    <li class="footer-title col-md-12">
+                        {{ trans('string.support') }}
                     </li>
                     <li class="footer-link col-md-12">
                         {!! make_a_tag("#", trans('string.terms_of_use')) !!}

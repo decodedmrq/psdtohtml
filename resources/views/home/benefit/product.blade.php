@@ -3,9 +3,8 @@
     <!-- Benefits title -->
     <div class="part-index col-md-12">
         <div class="text-center">
-            <div class="number d-inline-block">03</div>
             <h3 class="title d-inline-block">
-                {!! make_break_line('Lợi ích đem lại', 2, 'div', 'd-block title-part') !!}
+                <div class="title-part">Lợi ích đem lại</div>
             </h3>
         </div>
     </div>
