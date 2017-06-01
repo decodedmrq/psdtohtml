@@ -1,5 +1,5 @@
 <!-- Features -->
-<section class="features container-part row" name="content">
+<section class="features container-part row" name="content" id="features-block">
     <!-- Features title -->
     <div class="part-index col-md-12">
         <div class="text-center">

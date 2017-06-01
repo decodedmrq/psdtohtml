@@ -1,5 +1,5 @@
 <!-- Intro -->
-<section class="intro container-part row" name="content">
+<section class="intro container-part row" name="content" id="intro-block">
     <!-- Intro title -->
     <div class="part-index col-md-12">
         <div class="text-center">

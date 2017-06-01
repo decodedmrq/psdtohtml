@@ -1,5 +1,5 @@
 <!-- Banner -->
-<div class="banner">
+<div class="banner" id="banner-block">
     @include('home.banner.background')
 <!-- Banner main content -->
     <div class="banner-main">
