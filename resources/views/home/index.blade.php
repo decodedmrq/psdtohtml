@@ -5,10 +5,6 @@
 @push('js')
 {{ html()->script('/js/home.js') }}
 @endpush
-@section('header')
-    @include('home.header')
-@endsection
-
 @section('content')
     @include('home.banner.product')
     <div class="container">
@@ -21,6 +17,7 @@
 
 @push('script')
 <script>
+    //  Define timeRemaining for timer countdown
     var timeRemaining = {
         d: {{ $timeRemaining->d }},
         h: {{ $timeRemaining->h }},

@@ -3,9 +3,7 @@
     <!-- Features title -->
     <div class="part-index col-md-12">
         <div class="text-center">
-            <h3 class="title d-inline-block">
-                <div class="title-part">Tính năng sản phẩm</div>
-            </h3>
+            <h3 class="title"> Tính năng sản phẩm </h3>
         </div>
     </div>
 
@@ -29,7 +27,8 @@
                     <li class="feature-item" data-index="1">
                         <h4 class="title">2. Cộng đồng </h4>
                         <p class="content">
-                            Nơi giao lưu, trao đổi, hỏi đáp với bạn học và các chuyên gia trong lĩnh vực
+                            Nơi giao lưu, trao đổi, hỏi đáp với bạn học và các chuyên gia trong lĩnh
+                            vực
                             Nhân tướng học và Quản trị nhân sự.
                         </p>
                     </li>
@@ -37,7 +36,8 @@
                     <li class="feature-item" data-index="2">
                         <h4 class="title">3. Kho bí kíp </h4>
                         <p class="content">
-                            Ngoài những bài học chính, ứng dụng còn cung cấp một kho bí kíp những kiến
+                            Ngoài những bài học chính, ứng dụng còn cung cấp một kho bí kíp những
+                            kiến
                             thức bổ trợ hay và độc đáo.
                         </p>
                     </li>

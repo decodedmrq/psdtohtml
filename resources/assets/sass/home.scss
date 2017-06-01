@@ -5,6 +5,7 @@
 body {
   font-size: 1.125rem;
   font-family: $sourceSansPro;
+  color: $dark-blue;
 }
 
 .text-gradient {
@@ -85,12 +86,19 @@ body {
     }
 
     .title-head {
+      @include forSmall {
+        margin-bottom: 1rem;
+      }
 
       .app-name {
-
         .logo {
           margin-right: 10px;
           height: 45px;
+
+          @include forSmall {
+            display: inline-flex;
+            height: 1.5rem;
+          }
         }
 
         .app-full-name {
@@ -98,6 +106,13 @@ body {
           display: inline-block;
           margin-bottom: 0;
           font-size: 2rem;
+
+          @include forSmall {
+            position: relative;
+            font-weight: 500;
+            font-size: 1.125rem;
+            color: $light-yellow;
+          }
         }
       }
 
@@ -105,6 +120,12 @@ body {
         font-family: $quickSand;
         font-size: 1.125rem;
         font-weight: 300;
+
+        @include forSmall {
+          position: relative;
+          font-weight: 100;
+          color: $light-yellow;
+        }
       }
     }
 
@@ -113,7 +134,7 @@ body {
 
       .app-badge {
         font-family: $sourceSansProBlack;
-        font-size: 3.25rem;
+        font-size: 2.75rem;
         line-height: 1.2;
         margin-bottom: 0;
         @include textGradient();
@@ -203,7 +224,24 @@ body {
           position: absolute;
           left: 0;
           right: 0;
-          bottom: -3rem;
+          bottom: 0;
+          top: 0;
+          padding: 1rem;
+          background: #eeeeee;
+          border-radius: 5px;
+
+          &::before {
+            display: inline-block;
+            position: absolute;
+            right: 7px;
+            top: 5px;
+            font: normal normal normal 14px/1 FontAwesome;
+            font-size: inherit;
+            text-rendering: auto;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            content: "";
+          }
         }
       }
     }
@@ -314,6 +352,8 @@ body {
   .slider {
     position: relative;
     text-align: center;
+    padding-left: 30px;
+    padding-right: 30px;
 
     @include forSmall {
       margin-bottom: 1.5rem;
@@ -322,7 +362,6 @@ body {
     .list {
       position: relative;
       margin-bottom: 1.5rem;
-      padding: 0 1rem;
 
       img {
         width: 100%;
@@ -330,8 +369,9 @@ body {
 
       .slide-frame {
         position: relative;
-        width: 61%;
+        width: 60%;
         left: 20%;
+        right: 20%;
         z-index: 10;
       }
 
@@ -348,9 +388,10 @@ body {
         @include transition(width 1s, top 1s, left 1s, right 1s, z-index 1s);
 
         &.active {
-          width: 39%;
-          top: 10.85%;
-          left: 30.35%;
+          width: 42%;
+          left: 29%;
+          right: 29%;
+          top: 11.5%;
           z-index: 11;
           opacity: 1;
           @include transition(width 1s, top 1s, left 1s, right 1s, opacity 0.25s);
@@ -633,13 +674,10 @@ body {
       font-weight: 700;
       text-transform: uppercase;
       text-align: left;
+      @include textGradient(#b9a47d, #62798c);
 
       @include forSmall {
-        font-size: 2rem;
-      }
-
-      .title-part {
-        @include textGradient(#b9a47d, #62798c);
+        font-size: 1.75rem;
       }
     }
 

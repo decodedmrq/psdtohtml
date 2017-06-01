@@ -3,9 +3,7 @@
     <!-- Intro title -->
     <div class="part-index col-md-12">
         <div class="text-center">
-            <h3 class="title d-inline-block">
-                <d class="title-part">Giới thiệu ứng dụng</d>
-            </h3>
+            <h3 class="title"> Giới thiệu ứng dụng </h3>
         </div>
     </div>
 

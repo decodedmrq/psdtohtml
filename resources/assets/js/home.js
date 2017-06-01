@@ -3,36 +3,50 @@
  */
 
 //1  Form
-let registerForm = $('#register-form');
-let emailInput = $('#form-email');
-let emailNotif = $('#email-notif');
+let $registerForm = $('#register-form');
+let $fieldsetEmail = $registerForm.find('fieldset');
+let $emailInput = $('#form-email');
+let $emailNotif = $('#email-notif');
 
-registerForm.on('submit', function (e) {
+$registerForm.on('submit', function (e) {
     e.preventDefault();
-    let data = registerForm.serialize();
-    axios.post(registerForm.attr('action'), data)
+    let data = $registerForm.serialize();
+    $fieldsetEmail.attr('disabled', 'disabled');
+    axios.post($registerForm.attr('action'), data)
         .then(function (response) {
             let message = response.data.message;
             if (response.data.success) {
-                emailNotif.removeClass('hidden-xs-up').addClass(
-                    'text-green').html(message);
+                $emailNotif.removeClass('hidden-xs-up')
+                    .addClass('text-green').html(message);
+
             } else {
-                emailInput.addClass('danger');
-                emailNotif.removeClass('hidden-xs-up').addClass(
-                    'text-red').html(message);
+                $emailInput.addClass('danger');
+                $emailNotif.removeClass('hidden-xs-up')
+                    .addClass('text-red').html(message);
             }
+            setTimeout(function () {
+                $fieldsetEmail.removeAttr('disabled');
+            }, 3000);
         })
         .catch(function (error) {
             let message = error.response.data.email[0];
-            emailInput.addClass('danger');
-            emailNotif.removeClass('hidden-xs-up').addClass('text-red').html(
-                message);
+            $emailInput.addClass('danger');
+            $emailNotif.removeClass('hidden-xs-up')
+                .addClass('text-red').html(message)
+                .removeAttr('disabled');
+            setTimeout(function () {
+                $fieldsetEmail.removeAttr('disabled');
+            }, 3000);
         });
 });
 
-emailInput.on('click', function () {
-    emailInput.removeClass('danger');
-    resetNotif(emailNotif);
+$emailNotif.on('click', function () {
+    resetNotif($emailNotif);
+});
+
+$emailInput.on('click', function () {
+    $emailInput.removeClass('danger');
+    resetNotif($emailNotif);
 });
 
 //2  Timer
@@ -91,10 +105,10 @@ btnTglContent.on('click', function () {
 
     if (content.css('display') === "none") {
         content.slideDown();
-        btnTglContent.html("{{ trans('string.minimize') }}");
+        btnTglContent.html('Thu gọn');
     } else {
         content.slideUp();
-        btnTglContent.html("{{ trans('string.view_more') }}");
+        btnTglContent.html('Xem thêm');
     }
 });
 
@@ -107,7 +121,9 @@ let intervalTime = 3000;
 ///  generate navigator
 let navigator = $('#slider-navigator');
 for (let i = 0; i < slideLength; i++) {
-    navigator.append(`<div class="pointer" data-index="${i}"><span class="content">${i + 1}</span></div>`);
+    navigator.append(
+        `<div class="pointer" data-index="${i}"><span class="content">${i
+        + 1}</span></div>`);
 }
 
 let pointers = $('.navigator .pointer');
