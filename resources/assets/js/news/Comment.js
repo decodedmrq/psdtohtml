@@ -52,7 +52,6 @@ class Comment extends React.Component {
             }
         } else if (errorIndex !== -1) {
             errors = errors.filter(error => error.field !== field);
-            console.log(errors);
         }
         this.setState({errors});
     }

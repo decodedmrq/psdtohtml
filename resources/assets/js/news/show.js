@@ -2,11 +2,11 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import Comment from './Comment';
 import routes from '../components/routes';
-class Article extends React.Component {
+class News extends React.Component {
     constructor() {
         super();
         this.state = {
-            article: article,
+            news: news,
         }
     }
 
@@ -20,12 +20,12 @@ class Article extends React.Component {
         });
     }
 
-    like(article, event) {
+    like(news, event) {
         event.preventDefault();
     }
 
-    getLikeClassName(article) {
-        if(article.is_like) {
+    getLikeClassName(news) {
+        if (news.is_like) {
             return 'action-item active';
         }
 
@@ -43,20 +43,24 @@ class Article extends React.Component {
                     </form>
                 </div>
                 <div className="card article-item">
-                    <img className="card-img-top img-responsive" src={this.state.article.cover_image}/>
+                    <img className="card-img-top img-responsive" src={this.state.news.media_link}/>
                     <div className="card-block">
-                        <h2><a href={routes.article.show(this.state.article.alias)}
-                               className="card-title article-title">{this.state.article.title}</a></h2>
+                        <h2><a href="#"
+                               className="card-title article-title">{this.state.news.title}</a></h2>
                         <div className="article-meta">
-                            <div className="time meta-item">{this.state.article.updated_at}</div>
+                            <div className="time meta-item">{this.state.news.updated_at}</div>
                             <div className="tag meta-item">
-                                <div className="tag-item"><a href="#">{this.state.article.category.name}</a></div>
+                                <div className="tag-item">
+                                    {news.tagged.map((tag, index) => {
+                                        return <div key={index} className="tag-item"><a href="#">{tag.tag_name}</a></div>
+                                    })}
+                                </div>
                             </div>
                         </div>
-                        <p className="card-text article-description">{this.state.article.content}</p>
+                        <p dangerouslySetInnerHTML={{__html: this.state.news.content}} className="card-text article-description"/>
                     </div>
                     <div className="card-footer actions">
-                        <div className={this.getLikeClassName(this.state.article)}>
+                        <div className={this.getLikeClassName(this.state.news)}>
                             <a onClick={this.like.bind(this)} href="#">
                                 <i className="fa fa-thumbs-up" aria-hidden="true"/> {trans('string.like')}
                             </a>
@@ -80,6 +84,6 @@ class Article extends React.Component {
 }
 
 ReactDOM.render(
-    <Article/>,
-    document.getElementById('articles'),
+    <News/>,
+    document.getElementById('news'),
 );

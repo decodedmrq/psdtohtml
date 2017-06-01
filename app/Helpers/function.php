@@ -210,3 +210,14 @@ a.async=true;a.type=\"text/javascript\";b.parentNode.insertBefore(a,b)}, 1);
 </script>";
     }
 }
+
+if (!function_exists('get_name_by_size')) {
+    function get_name_by_size($fileName, $width, $height)
+    {
+        $baseName = pathinfo($fileName, PATHINFO_FILENAME);
+        $extension = pathinfo($fileName, PATHINFO_EXTENSION);
+
+        return $baseName . '_' . $width . '_' . $height . '.' . $extension; //filename_320_240.jpg
+    }
+}
+

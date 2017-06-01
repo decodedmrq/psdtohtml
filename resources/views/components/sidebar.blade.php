@@ -1,25 +1,13 @@
 <div class="sidebar col-xl-4">
     <div class="search hidden-xs-down">
-        <form>
-            <input placeholder="{{ trans('string.search_3_dot') }}" type="text" name="keyword"
+        <form action="{{ route('news.index') }}">
+            <input placeholder="{{ trans('string.search_3_dot') }}" value="{{ $keyword }}" type="text" name="keyword"
                    class="form-control"/>
             <input type="submit" value=""/>
         </form>
     </div>
-    <div class="sidebar-item card">
-        <div class="card-header">
-            {{ trans('string.subscribe_for_article') }}
-            <div class="sidebar-head-text">{{ trans('string.subscribe_description') }}</div>
-        </div>
-        <div class="card-block">
-            <form class="subscribe" action="" method="post">
-                <input placeholder="{{ trans('string.enter_email_three_dot') }}" type="text" name="email"
-                       class="form-control"/>
-                <button type="submit" class="button-subscribe">
-                    <i class="fa fa-long-arrow-right" aria-hidden="true"></i>
-                </button>
-            </form>
-        </div>
+    <div id="subscribe" class="sidebar-item card">
+
     </div>
 
     <div class="sidebar-item card">
@@ -42,18 +30,18 @@
             <!-- Tab panes -->
             <div class="tab-content">
                 <div class="tab-pane active" id="hot" role="tabpanel">
-                    @for($i = 1; $i < 6; $i++)
-                        <div class="article-title {{ $i%2 == 0?'active':'' }}">
-                            <a href="#">{{ \Faker\Factory::create()->sentence() }}</a>
+                    @foreach($popularNews as $news)
+                        <div class="article-title">
+                            <a href="{{ route('news.show', $news) }}">{{ $news->title }}</a>
                         </div>
-                    @endfor
+                    @endforeach
                 </div>
                 <div class="tab-pane" id="read" role="tabpanel">
-                    @for($i = 1; $i < 6; $i++)
-                        <div class="article-title {{ $i%2 == 0?'active':'' }}">
-                            <a href="#">{{ \Faker\Factory::create()->sentence() }}</a>
+                    @foreach($newestNews as $news)
+                        <div class="article-title">
+                            <a href="{{ route('news.show', $news) }}">{{ $news->title }}</a>
                         </div>
-                    @endfor
+                    @endforeach
                 </div>
             </div>
         </div>

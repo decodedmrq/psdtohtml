@@ -31,6 +31,14 @@ mix.sass(sourceSassFolder + 'app.scss', publicCssDir).options({processCssUrls: f
 // mix.sass(sourceSassFolder + 'library.scss', publicCssDir).options({processCssUrls: false});
 mix.js(sourceJsFolder + 'app.js', publicJsDir);
 
+// mix.sass(sourceSassFolder + 'about.scss', publicCssDir)
+//     .options({processCssUrls: false});
+// mix.sass(sourceSassFolder + 'news.scss', publicCssDir)
+//     .js(sourceJsFolder + 'news/index.js', publicJsDir + 'news/')
+//     .js(sourceJsFolder + 'news/show.js', publicJsDir + 'news/')
+//     .js(sourceJsFolder + 'news/subscribe.js', publicJsDir + 'news/')
+//     .options({processCssUrls: false});
+
 //
 // //Admin
 // const publicAdminDir = 'public/admin/';
@@ -53,9 +61,3 @@ mix.js(sourceJsFolder + 'app.js', publicJsDir);
 //     sourceVendor + 'owl.carousel/dist/owl.carousel.min.js',
 //     publicVendor + 'owl.carousel/owl.carousel.min.js'
 // );
-// mix.sass(sourceSassFolder + 'about.scss', publicCssDir)
-//     .options({processCssUrls: false});
-// mix.sass(sourceSassFolder + 'article.scss', publicCssDir)
-//     .js(sourceJsFolder + 'articles/index.js', publicJsDir + 'articles/')
-//     .js(sourceJsFolder + 'articles/show.js', publicJsDir + 'articles/')
-//     .options({processCssUrls: false});

@@ -17,10 +17,9 @@ Route::get('/about', 'HomeController@about')->name('about_us');
 
 Route::get('contact', 'ContactController@index')->name('contact');
 Route::resource('feedback', 'FeedbackController');
-Route::get('article/load', 'ArticleController@load')->name('article.load');
-Route::resource('article', 'ArticleController');
+Route::get('news/load', 'NewsController@load')->name('article.load');
+Route::resource('news', 'NewsController');
 Route::resource('knowledge', 'KnowledgeController');
-Route::post('article/load_more', 'ArticleController@loadMore')->name('article.load_more');
 Route::get('tag/{slug}', 'ArticleController@tag')->name('article.tag');
 
 Route::group(['prefix' => 'admin-nhantuong', 'namespace' => 'Admin', 'as' => 'admin.', 'middleware' => ['auth']], function () {
