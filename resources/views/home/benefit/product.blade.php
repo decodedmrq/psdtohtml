@@ -1,11 +1,9 @@
 <!-- Benefits -->
-<section class="benefits container-part row">
+<section class="benefits container-part row" id="benefits-block">
     <!-- Benefits title -->
     <div class="part-index col-md-12">
         <div class="text-center">
-            <h3 class="title d-inline-block">
-                <div class="title-part">Lợi ích đem lại</div>
-            </h3>
+            <h3 class="title"> Lợi ích đem lại </h3>
         </div>
     </div>
 

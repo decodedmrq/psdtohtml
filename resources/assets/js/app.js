@@ -17,7 +17,7 @@ footerForm.on('submit', function (event) {
             if (response.data.success) {
                 let notify = response.data.message;
                 footerNotif.html(notify).removeClass('hidden-xs-up');
-                setTimeout(function() {
+                setTimeout(function () {
                     footerNotif.html('').addClass('hidden-xs-up');
                 }, 2000);
                 footerForm[0].reset();
@@ -38,8 +38,6 @@ footerForm.on('submit', function (event) {
         .catch(function (error) {
             console.log('error: ' + error);
         });
-
-
 });
 
 inputFields.on('change keyup mousedown', function (event) {
@@ -47,7 +45,8 @@ inputFields.on('change keyup mousedown', function (event) {
 });
 
 function clearError(input = inputFields) {
-    return input.removeClass('error').parent().find('div.error-message').remove();
+    return input.removeClass('error').parent().find(
+        'div.error-message').remove();
 }
 
 // Object.prototype
@@ -58,3 +57,30 @@ function disableInput(e) {
 function enableInput(e) {
     return e.removeAttr('disabled');
 }
+
+
+//  Global functions
+window.windowScroll = function (to = 1000, time = 100, from = window.scrollY) {
+    let pxPerMs = Math.abs(to - from) / time;
+
+    let scrollTo = from;
+    let i = 0;
+    let scrollDown = from < to;
+    let interval = setInterval(function () {
+        scrollTo += scrollDown ? pxPerMs : -pxPerMs;
+        window.scrollTo(0, scrollTo);
+
+        if (i++ === time) {
+            clearInterval(interval);
+        }
+    }, 1);
+};
+
+window.fixedWH = function ($element) {
+    $element.css({
+        'width': $element.outerWidth() + 'px',
+        'height': $element.outerHeight() + 'px'
+    });
+
+    return $element;
+};

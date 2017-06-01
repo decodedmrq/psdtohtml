@@ -15,7 +15,7 @@
             </em>
         </div>
 
-        <div class="form-email">
+        <fieldset class="form-email">
             {{ Form::email('email', null, [
                 'class' => 'email-input',
                 'placeholder' => 'Nhập email của bạn',
@@ -27,8 +27,8 @@
                 <i class="fa fa-angle-right"></i>
             </button>
 
-            <div class="email-notif hidden-xs-up" id="email-notif"></div>
-        </div>
+            <div class="email-notif hidden-xs-up fa fa-close" id="email-notif"></div>
+        </fieldset>
 
         {{ Form::close() }}
     </div>
