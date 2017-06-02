@@ -15,20 +15,23 @@
             </em>
         </div>
 
-        <fieldset class="form-email">
-            {{ Form::email('email', null, [
-                'class' => 'email-input',
-                'placeholder' => 'Nhập email của bạn',
-                'required',
-                'id' => 'form-email',
-            ]) }}
+        <div class="form-email">
+            <fieldset>
+                {{ Form::email('email', null, [
+                    'class' => 'email-input',
+                    'placeholder' => 'Nhập email của bạn',
+                    'required',
+                    'id' => 'form-email',
+                ]) }}
 
-            <button class="btn-submit" type="submit">
-                <i class="fa fa-angle-right"></i>
-            </button>
+                <button class="btn-submit" type="submit">
+                    <i class="fa fa-angle-right"></i>
+                </button>
 
+            </fieldset>
             <div class="email-notif hidden-xs-up fa fa-close" id="email-notif"></div>
-        </fieldset>
+        </div>
+
 
         {{ Form::close() }}
     </div>

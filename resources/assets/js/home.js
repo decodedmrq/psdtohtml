@@ -11,7 +11,7 @@ let $emailNotif = $('#email-notif');
 $registerForm.on('submit', function (e) {
     e.preventDefault();
     let data = $registerForm.serialize();
-    $fieldsetEmail.attr('disabled', 'disabled');
+    $fieldsetEmail.attr('disabled', 'disabled').addClass('disabled');
     axios.post($registerForm.attr('action'), data)
         .then(function (response) {
             let message = response.data.message;
@@ -41,6 +41,7 @@ $registerForm.on('submit', function (e) {
 });
 
 $emailNotif.on('click', function () {
+    $fieldsetEmail.removeClass('disabled');
     resetNotif($emailNotif);
 });
 
