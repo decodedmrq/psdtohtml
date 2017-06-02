@@ -1,6 +1,6 @@
 <?php
 
-return array(
+return [
 
     /*
     |--------------------------------------------------------------------------
@@ -15,5 +15,18 @@ return array(
     |
     */
 
-    'driver' => 'gd'
-);
+    'driver' => 'gd',
+    'news' => [
+        'path' => 'news' . DIRECTORY_SEPARATOR,
+        'thumbnail' => [
+            [
+                'width' => \App\Models\News::SMALL_THUMBNAIL_WIDTH,
+                'height' => \App\Models\News::SMALL_THUMBNAIL_HEIGHT,
+            ],
+            [
+                'width' => \App\Models\News::MEDIUM_THUMBNAIL_WIDTH,
+                'height' => \App\Models\News::MEDIUM_THUMBNAIL_HEIGHT,
+            ],
+        ],
+    ],
+];

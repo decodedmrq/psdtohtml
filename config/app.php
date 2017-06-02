@@ -180,6 +180,7 @@ return [
         Intervention\Image\ImageServiceProvider::class,
         // Barryvdh\Debugbar\ServiceProvider::class,
         Collective\Html\HtmlServiceProvider::class,
+        \Conner\Tagging\Providers\TaggingServiceProvider::class,
 
         /*
          * Application Service Providers...

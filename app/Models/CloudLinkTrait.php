@@ -7,19 +7,12 @@ trait CloudLinkTrait
     public function getMediaLinkAttribute()
     {
         $path = config('image.' . $this->getModelNamespace() . '.path');
-        $default = config('image.default');
-        $media = null;
-        if ($this->image) {
-            $media = $this->image;
-        }
-        if ($this->media) {
-            $media = $this->media;
-        }
-        if (!is_null($media)) {
-            return cloud_link($path . $this->id . DIRECTORY_SEPARATOR . $media);
+        $mediaLink = cloud_link('default_image.jpg');
+        if ($this->{$this->mediaAttribute}) {
+            $mediaLink = cloud_link($path . $this->id . DIRECTORY_SEPARATOR . $this->{$this->mediaAttribute});
         }
 
-        return cloud_link($default);
+        return $mediaLink;
     }
 
     public function getModelNamespace()
