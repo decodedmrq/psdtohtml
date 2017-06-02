@@ -1,8 +1,11 @@
 module.exports = {
-    article: {
+    news: {
         show(alias) {
-            return '/article/' + alias;
+            return '/news/' + alias;
         },
-        load: '/article/load',
-    }
+        load: '/news/load',
+    },
+    guest: {
+        store: '/guest',
+    },
 };
