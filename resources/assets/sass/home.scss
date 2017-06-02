@@ -176,6 +176,13 @@ body {
         height: 60px;
         max-width: 100%;
 
+        fieldset {
+          &.disabled {
+            -webkit-filter: brightness(35%) blur(5px);
+            @include transition(filter .5s ease-out);
+          }
+        }
+
         .email-input {
           height: 60px;
           width: 550px;
@@ -227,7 +234,7 @@ body {
           bottom: 0;
           top: 0;
           padding: 1rem;
-          background: #eeeeee;
+          background: transparent;
           border-radius: 5px;
 
           &::before {
