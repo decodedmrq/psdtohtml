@@ -1,21 +1,23 @@
 <!-- Feedback -->
 <div class="feedback row">
     <h5 class="title col-sm-12">Gửi thư cho chúng tôi</h5>
-    {{ Form::open([
-        'url' => route('feedback.store'),
-        'method' => 'POST',
-        'role' => 'form',
-        'class' => 'feedback-form col-sm-12',
-        'id' => 'footer-feedback-form'
-    ]) }}
-    <div class="form-body row">
-        <!-- Notify -->
-        <div class="col-md-12">
-            <div class="alert alert-success text-center hidden-xs-up"
-                 id="footer-notify"></div>
-        </div>
-        <!-- /Notify -->
+{{ Form::open([
+    'url' => route('feedback.store'),
+    'method' => 'POST',
+    'role' => 'form',
+    'class' => 'feedback-form col-sm-12',
+    'id' => 'footer-feedback-form'
+]) }}
 
+<!-- Notify -->
+    <div class="footer-notify hidden-xs-up" id="footer-notify">
+        <div>
+            <div class="col-12">Cảm ơn bạn đã gửi thư cho chúng tôi.</div>
+            <div class="col-12">Chúng tôi sẽ phản hồi bạn sớm nhất có thể.</div>
+        </div>
+    </div>
+
+    <div class="form-body row">
         <div class="form-group col-sm-12">
             {{ Form::text('author', null, [
                 'class' => 'input-field form-control',

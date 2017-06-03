@@ -178,7 +178,7 @@ body {
 
         fieldset {
           &.disabled {
-            -webkit-filter: brightness(35%) blur(5px);
+            @include webkitFilter(blur(5px) brightness(35%));
             @include transition(filter .5s ease-out);
           }
         }

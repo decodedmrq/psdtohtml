@@ -125,10 +125,33 @@ ul {
   }
 
   .feedback {
+    position: relative;
     padding: 0.5rem 0;
+
+    .footer-notify {
+      position: absolute;
+      top: 0;
+      bottom: 1.5rem;
+      left: 0;
+      right: 0;
+      z-index: 5;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: $main-green;
+      text-align: center;
+      font-size: 18px;
+    }
   }
 
   .feedback-form {
+    .form-body {
+      &.fade-out {
+        @include webkitFilter(blur(5px) brightness(150%));
+        @include transition(filter .5s ease-out);
+      }
+    }
+
     .input-field {
       padding: 10px 20px;
       border: 0;

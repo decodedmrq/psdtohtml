@@ -1,6 +1,8 @@
 require('./bootstrap');
 
+//  Footer feedback
 let footerForm = $('#footer-feedback-form');
+let footerFormBody = footerForm.find('.form-body');
 let footerFormUrl = footerForm.attr('action');
 let inputFields = footerForm.find('input, textarea');
 let footerNotif = $('#footer-notify');
@@ -16,10 +18,8 @@ footerForm.on('submit', function (event) {
         .then(function (response) {
             if (response.data.success) {
                 let notify = response.data.message;
-                footerNotif.html(notify).removeClass('hidden-xs-up');
-                setTimeout(function () {
-                    footerNotif.html('').addClass('hidden-xs-up');
-                }, 2000);
+                footerNotif.removeClass('hidden-xs-up');
+                footerFormBody.addClass('fade-out');
                 footerForm[0].reset();
             } else {
                 let messages = response.data.message;
@@ -29,7 +29,8 @@ footerForm.on('submit', function (event) {
                 keys.map(function (key, index) {
                     let inputElement = $(`#${key}`);
                     inputElement.addClass('error');
-                    inputElement.before(`<div class="error-message text-right float-right"><span>${values[index]}</span></div>`);
+                    inputElement.before(
+                        `<div class="error-message text-right float-right"><span>${values[index]}</span></div>`);
                 });
             }
 
@@ -38,6 +39,11 @@ footerForm.on('submit', function (event) {
         .catch(function (error) {
             console.log('error: ' + error);
         });
+});
+
+footerNotif.on('click', function () {
+    footerNotif.addClass('hidden-xs-up');
+    footerFormBody.removeClass('fade-out');
 });
 
 inputFields.on('change keyup mousedown', function (event) {
@@ -57,7 +63,6 @@ function disableInput(e) {
 function enableInput(e) {
     return e.removeAttr('disabled');
 }
-
 
 //  Global functions
 window.windowScroll = function (to = 1000, time = 100, from = window.scrollY) {
