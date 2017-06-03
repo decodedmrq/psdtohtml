@@ -1,6 +1,6 @@
 <div class="sidebar col-xl-4">
     <div class="search hidden-xs-down">
-        <form action="{{ route('news.index') }}">
+        <form action="{{ route('blog.index') }}">
             <input placeholder="{{ trans('string.search_3_dot') }}" value="{{ $keyword??'' }}" type="text"
                    name="keyword"
                    class="form-control"/>
@@ -33,14 +33,14 @@
                 <div class="tab-pane active" id="hot" role="tabpanel">
                     @foreach($popularNews as $news)
                         <div class="article-title">
-                            <a href="{{ route('news.show', $news) }}">{{ $news->title }}</a>
+                            <a href="{{ route('blog.show', $news) }}">{{ $news->title }}</a>
                         </div>
                     @endforeach
                 </div>
                 <div class="tab-pane" id="read" role="tabpanel">
                     @foreach($newestNews as $news)
                         <div class="article-title">
-                            <a href="{{ route('news.show', $news) }}">{{ $news->title }}</a>
+                            <a href="{{ route('blog.show', $news) }}">{{ $news->title }}</a>
                         </div>
                     @endforeach
                 </div>
