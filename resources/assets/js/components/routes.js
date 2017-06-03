@@ -1,7 +1,7 @@
 module.exports = {
     news: {
         show(slug) {
-            return '/news/' + slug;
+            return '/blog/' + slug;
         },
         load: '/news/load',
     },
