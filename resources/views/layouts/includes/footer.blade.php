@@ -50,7 +50,7 @@
                         {!! make_a_tag('#', trans('string.about_us')) !!}
                     </li>
                     <li class="footer-link col-md-12">
-                        {!! make_a_tag(route('news.index'), trans('string.blog')) !!}
+                        {!! make_a_tag(route('blog.index'), trans('string.blog')) !!}
                     </li>
                 </ul>
                 <ul class="row">

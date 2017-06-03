@@ -18,7 +18,7 @@ Route::get('/about', 'HomeController@about')->name('about_us');
 Route::get('contact', 'ContactController@index')->name('contact');
 Route::resource('feedback', 'FeedbackController');
 Route::get('news/load', 'NewsController@load')->name('article.load');
-Route::resource('news', 'NewsController');
+Route::resource('blog', 'NewsController');
 Route::resource('knowledge', 'KnowledgeController');
 Route::get('category/{slug}', 'NewsController@category')->name('news.category');
 Route::get('category/{slug}/load_news', 'NewsController@loadNewsCategory')->name('news.load_news_category');
