@@ -1,7 +1,8 @@
 <div class="sidebar col-xl-4">
     <div class="search hidden-xs-down">
         <form action="{{ route('news.index') }}">
-            <input placeholder="{{ trans('string.search_3_dot') }}" value="{{ $keyword }}" type="text" name="keyword"
+            <input placeholder="{{ trans('string.search_3_dot') }}" value="{{ $keyword??'' }}" type="text"
+                   name="keyword"
                    class="form-control"/>
             <input type="submit" value=""/>
         </form>

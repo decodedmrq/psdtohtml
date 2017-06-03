@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\News;
+use App\Models\Tag as Category;
 use Illuminate\Http\Request;
 
 class NewsController extends RenderController
@@ -56,6 +57,31 @@ class NewsController extends RenderController
         ]);
 
         return $this->renderView('news.show');
+    }
+
+    public function category($slug)
+    {
+        $category = Category::whereSlug($slug)->first();
+        if (!$category) {
+            return redirect()->route('news.index');
+        }
+        $this->viewData['category'] = $category;
+
+        return $this->renderView('category.show');
+    }
+
+    public function loadNewsCategory($slug)
+    {
+        $category = Category::whereSlug($slug)->first();
+        if (!$category) {
+            return redirect()->route('news.index');
+        }
+
+        $news = $this->instance()
+            ->withAllTags([$category->name])
+            ->with(['tagged'])->paginate();
+
+        return response()->json($news);
     }
 
     private function dataShare()

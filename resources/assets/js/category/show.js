@@ -14,11 +14,7 @@ class News extends React.Component {
     }
 
     componentWillMount() {
-        axios.get(routes.news.load, {
-            params: {
-                keyword: keyword,
-            }
-        }).then((response) => {
+        axios.get(routes.category.load_news(category.slug)).then((response) => {
             this.setState({
                 news: response.data,
                 isLoading: false,
@@ -40,11 +36,7 @@ class News extends React.Component {
         this.setState({
             isLoadingMore: true,
         });
-        axios.get(news.next_page_url, {
-            params: {
-                keyword: keyword,
-            }
-        }).then((response) => {
+        axios.get(news.next_page_url).then((response) => {
             let data = news.data.concat(response.data.data);
             news = response.data;
             news.data = data;

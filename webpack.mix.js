@@ -33,11 +33,12 @@ mix.js(sourceJsFolder + 'app.js', publicJsDir);
 
 // mix.sass(sourceSassFolder + 'about.scss', publicCssDir)
 //     .options({processCssUrls: false});
-// mix.sass(sourceSassFolder + 'news.scss', publicCssDir)
-//     .js(sourceJsFolder + 'news/index.js', publicJsDir + 'news/')
-//     .js(sourceJsFolder + 'news/show.js', publicJsDir + 'news/')
-//     .js(sourceJsFolder + 'news/subscribe.js', publicJsDir + 'news/')
-//     .options({processCssUrls: false});
+mix.sass(sourceSassFolder + 'news.scss', publicCssDir)
+    .js(sourceJsFolder + 'news/index.js', publicJsDir + 'news/')
+    .js(sourceJsFolder + 'news/show.js', publicJsDir + 'news/')
+    .js(sourceJsFolder + 'news/subscribe.js', publicJsDir + 'news/')
+    .js(sourceJsFolder + 'category/show.js', publicJsDir + 'category/')
+    .options({processCssUrls: false});
 
 //
 // //Admin
