@@ -102,3 +102,9 @@
   background-size: cover;
   background: $url no-repeat center center;
 }
+
+@mixin webkitFilter($attr...)
+{
+  -webkit-filter: $attr;
+  filter: $attr
+}

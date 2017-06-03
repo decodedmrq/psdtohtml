@@ -61,7 +61,7 @@ class News extends React.Component {
                                 </div>
                             </div>
                         </div>
-                        <p dangerouslySetInnerHTML={{__html: this.state.news.content}} className="card-text article-description"/>
+                        <div dangerouslySetInnerHTML={{__html: this.state.news.content}} className="card-text article-content"/>
                     </div>
                     <div className="card-footer actions">
                         <div className={this.getLikeClassName(this.state.news)}>
