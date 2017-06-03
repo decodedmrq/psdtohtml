@@ -52,7 +52,11 @@ class News extends React.Component {
                             <div className="tag meta-item">
                                 <div className="tag-item">
                                     {news.tagged.map((tag, index) => {
-                                        return <div key={index} className="tag-item"><a href="#">{tag.tag_name}</a></div>
+                                        return (
+                                            <div key={index} className="tag-item">
+                                                <a href={routes.category.show(tag.tag_slug)}>{tag.tag_name}</a>
+                                            </div>
+                                        )
                                     })}
                                 </div>
                             </div>
