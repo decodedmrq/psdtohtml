@@ -47,4 +47,9 @@ class News extends Model
 
         return cloud_link($path . $this->id . DIRECTORY_SEPARATOR . $fileName);
     }
+
+    public function getRouteKeyName()
+    {
+        return 'slug';
+    }
 }
