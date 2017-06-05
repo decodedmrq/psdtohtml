@@ -34,7 +34,7 @@ class News extends React.Component {
 
     render() {
         return (
-            <div>
+            <div className="show-news">
                 <div className="search hidden-sm-up">
                     <form>
                         <input placeholder={trans('string.search_3_dot')} type="text" name="keyword"

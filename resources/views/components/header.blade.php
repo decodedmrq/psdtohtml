@@ -5,6 +5,9 @@
         </div>
         <div class="right-menu">
             <div class="menu-item">
+                <a href="{{ route('blog.index') }}">{{ trans('string.blog') }}</a>
+            </div>
+            <div class="menu-item">
                 <a href="/">{{ trans('string.home') }}</a>
             </div>
             <div class="menu-item">
