@@ -1,4 +1,4 @@
-<div class="sidebar col-xl-4">
+<div class="sidebar col-xl-4 mt-5">
     <div class="search hidden-xs-down">
         <form action="{{ route('blog.index') }}">
             <input placeholder="{{ trans('string.search_3_dot') }}" value="{{ $keyword??'' }}" type="text"
