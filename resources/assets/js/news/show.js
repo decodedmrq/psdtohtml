@@ -43,7 +43,6 @@ class News extends React.Component {
                     </form>
                 </div>
                 <div className="card article-item">
-                    <img className="card-img-top img-responsive" src={this.state.news.media_link}/>
                     <div className="card-block">
                         <h2><a href="#"
                                className="card-title article-title">{this.state.news.title}</a></h2>
