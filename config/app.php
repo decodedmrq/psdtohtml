@@ -22,6 +22,7 @@ return [
     ],
     'website' => 'HocNhanTuong.com',
     'facebook' => 'https://www.facebook.com/nhantuongsee/',
+    'facebook_group' => 'https://www.facebook.com/groups/195763474123664/',
 
     /*
     |--------------------------------------------------------------------------

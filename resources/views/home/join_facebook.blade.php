@@ -4,7 +4,7 @@
             <div class="main">
                 <h3 class="title">Gia nhập cộng đồng học Nhân Tướng</h3>
                 <div class="text-center">
-                    <a class="btn-joint-fb" href="{{ config('app.facebook') }}"
+                    <a class="btn-joint-fb" href="{{ config('app.facebook_group') }}"
                        target="_blank"
                        title="{{ config('app.name') }}">
                         <i class="icon fa fa-facebook"></i>
