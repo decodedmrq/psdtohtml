@@ -13,9 +13,10 @@
 @section('content')
     @include('components.header')
     <div class="content">
+        <div class="news-margin"></div>
         <div class="container">
             <div class="row">
-                <div id="news" class="col-xl-8 articles pr-xl-5 mt-5">
+                <div id="news" class="col-xl-8 articles pr-xl-5">
 
                 </div>
                 @include('components.sidebar')

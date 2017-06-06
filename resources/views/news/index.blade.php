@@ -18,7 +18,7 @@
                 <h2 class="title">{{ trans('string.article_head_title') }}</h2>
                 <div class="description">{{ trans('string.article_head_description') }}</div>
             </div>
-            <div class="row">
+            <div class="row blog">
                 <div id="news" class="col-xl-8 articles">
 
                 </div>
