@@ -3,6 +3,13 @@
 .content {
   font-family: 'Source Sans Pro', sans-serif;
   background-color: #F1F0EC;
+  .news-margin {
+    height: 3rem;
+  }
+  .blog {
+    margin-left: 0;
+    margin-right: 0;
+  }
   .slogan {
     height: 200px;
     display: flex;
@@ -24,9 +31,6 @@
       border-radius: 0;
       margin-bottom: 40px;
       border: 0;
-      .row {
-        background-color: #ffffff;
-      }
       .thumbnail {
         display: flex;
         align-items: center;
