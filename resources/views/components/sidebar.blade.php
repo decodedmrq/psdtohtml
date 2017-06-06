@@ -7,9 +7,7 @@
             <input type="submit" value=""/>
         </form>
     </div>
-    <div id="subscribe" class="sidebar-item card">
-
-    </div>
+    <div id="subscribe" class="sidebar-item card"></div>
 
     <div class="sidebar-item card">
         <div class="card-block tab">
@@ -33,6 +31,7 @@
                 <div class="tab-pane active" id="hot" role="tabpanel">
                     @foreach($popularNews as $news)
                         <div class="article-title">
+                            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
                             <a href="{{ route('blog.show', $news) }}">{{ $news->title }}</a>
                         </div>
                     @endforeach
@@ -40,23 +39,11 @@
                 <div class="tab-pane" id="read" role="tabpanel">
                     @foreach($newestNews as $news)
                         <div class="article-title">
+                            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
                             <a href="{{ route('blog.show', $news) }}">{{ $news->title }}</a>
                         </div>
                     @endforeach
                 </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="sidebar-item card">
-        <div class="card-header">
-            {{ trans('string.follow_fb') }}
-        </div>
-        <div class="card-block">
-            <div class="fb-page" data-href="https://www.facebook.com/nhantuongsee/" data-tabs="timeline" data-small-header="false"
-                 data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true">
-                <blockquote cite="https://www.facebook.com/nhantuongsee/" class="fb-xfbml-parse-ignore"><a
-                            href="https://www.facebook.com/nhantuongsee/">SEE: Nhân tướng trong quản trị</a></blockquote>
             </div>
         </div>
     </div>

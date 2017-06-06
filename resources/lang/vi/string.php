@@ -85,4 +85,5 @@ return [
     'subscribe_for_article' => 'Đăng ký nhận bài viết',
     'subscribe_description' => 'Nhập email của bạn để chúng tôi có thể gửi cho bạn những thông tin và bài viết mới nhất của SEE',
     'follow_fb' => 'Theo dõi SEE trên Facebook',
+    'facebook_page' => 'Facebook Fanpage'
 ];

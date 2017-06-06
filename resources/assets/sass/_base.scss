@@ -227,6 +227,18 @@ ul {
   }
 }
 
+#collapseMenu {
+  font-weight: 600;
+  li {
+    &:last-child {
+      border-radius: 0;
+    }
+    &:active {
+      background-color: #e9d9c0;
+    }
+  }
+}
+
 .search {
   margin-bottom: 65px;
   background-color: #ffffff;
