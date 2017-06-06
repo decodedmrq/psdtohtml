@@ -89,3 +89,11 @@ window.fixedWH = function ($element) {
 
     return $element;
 };
+
+//Collapse menu
+$('.collapse-button').click(function () {
+    var content = $($(this).data('target'));
+    content.collapse('toggle');
+    
+    return false;
+});
