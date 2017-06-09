@@ -8,6 +8,9 @@ module.exports = {
     guest: {
         store: '/guest',
     },
+    newsletter: {
+        store: '/newsletter'
+    },
     category: {
         show(slug) {
             return '/category/' + slug;

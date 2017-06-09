@@ -30,3 +30,4 @@ Route::group(['prefix' => 'admin-nhantuong', 'namespace' => 'Admin', 'as' => 'ad
 });
 
 Route::resource('guest', 'GuestController');
+Route::resource('newsletter', 'NewsLetterController');

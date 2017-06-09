@@ -7,5 +7,6 @@ return [
     'guest' => [
         'mail_register_success' => 'Đăng ký thành công',
         'mail_register_failed' => 'Đăng ký không thành công',
+        'email_exist' => 'Email đã được sử dụng'
     ],
 ];
