@@ -3,6 +3,12 @@
 <link rel="stylesheet" href="{!! asset('css/news.css') !!}">
 <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,900&amp;subset=vietnamese" rel="stylesheet">
 @endpush
+@push('style')
+<style>
+    /*.fb_iframe_widget span[style]{width:100% !important;}*/
+</style>
+@endpush
+
 @push('js')
 <script>
     var news = {!! json_encode($news) !!};
