@@ -16,7 +16,7 @@ class Subscribe extends React.Component {
         this.setState({
             isLoading: true,
         });
-        axios.post(routes.guest.store, {email: this.refs.email.value.trim()}).then((response) => {
+        axios.post(routes.newsletter.store, {email: this.refs.email.value.trim()}).then((response) => {
             this.setState({
                 message: response.data.message,
                 isLoading: false,
