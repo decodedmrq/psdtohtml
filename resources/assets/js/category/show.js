@@ -85,7 +85,7 @@ class News extends React.Component {
                     return (
                         <div key={index} className="card article-item">
                             <div className="row">
-                                <div className="thumbnail col-md-4 pl-0">
+                                <div className="thumbnail col-md-4">
                                     <img className="card-img-top img-responsive w-100" src={item.small_thumbnail}/>
                                 </div>
                                 <div className="card-block col-md-8 pl-0">
