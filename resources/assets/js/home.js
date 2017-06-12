@@ -3,16 +3,18 @@
  */
 
 //1  Form
-let $registerForm = $('#register-form');
+let $registerForm = $('.register-form');
 let $fieldsetEmail = $registerForm.find('fieldset');
-let $emailInput = $('#form-email');
-let $emailNotif = $('#email-notif');
+let $emailInput = $('.form-email');
+let $emailNotif = $('.email-notif');
 
 $registerForm.on('submit', function (e) {
+    let $this= $(this);
+
     e.preventDefault();
-    let data = $registerForm.serialize();
+    let data = $this.serialize();
     $fieldsetEmail.attr('disabled', 'disabled').addClass('disabled');
-    axios.post($registerForm.attr('action'), data)
+    axios.post($this.attr('action'), data)
         .then(function (response) {
             let message = response.data.message;
             if (response.data.success) {
@@ -42,19 +44,19 @@ $registerForm.on('submit', function (e) {
 
 $emailNotif.on('click', function () {
     $fieldsetEmail.removeClass('disabled');
-    resetNotif($emailNotif);
+    resetNotif($(this));
 });
 
 $emailInput.on('click', function () {
-    $emailInput.removeClass('danger');
+    $(this).removeClass('danger');
     resetNotif($emailNotif);
 });
 
 //2  Timer
-let $timerDay = $('#timer-day');
-let $timerHour = $('#timer-hour');
-let $timerMin = $('#timer-min');
-let $timerSec = $('#timer-sec');
+let $timerDay = $('.timer-day');
+let $timerHour = $('.timer-hour');
+let $timerMin = $('.timer-min');
+let $timerSec = $('.timer-sec');
 
 if (timeRemaining === undefined) {
     let timeRemaining = {d: 0, h: 0, m: 0, s: 0};
@@ -197,29 +199,32 @@ function resetNotif(block) {
     block.addClass('hidden-xs-up').removeClass('text-green text-red').html('');
 }
 
-function animateTimer($timer, newContent) {
-    let timerId = $timer.attr('id');
-    timerId = timerId ? timerId : "timer-running";
+function animateTimer($timers, newContent) {
+    let length = $timers.length;
+    for(let i = 0; i < length; i++) {
+        let $timer = $($timers[i]);
+        let timerId = 'timer-running-' + i;
 
-    let oldContent = $timer.html();
-    let oldId = timerId + '-old';
-    let newId = timerId + '-new';
+        let oldContent = $timer.html();
+        let oldId = timerId + '-old';
+        let newId = timerId + '-new';
 
-    let oldContentHtml = `<div id="${oldId}" class="timer-animate old">${oldContent}</div>`;
-    let newContentHtml = `<div id="${newId}" class="timer-animate new">${newContent}</div>`;
-    let contentHtml = oldContentHtml + newContentHtml;
+        let oldContentHtml = `<div id="${oldId}" class="timer-animate old">${oldContent}</div>`;
+        let newContentHtml = `<div id="${newId}" class="timer-animate new">${newContent}</div>`;
+        let contentHtml = oldContentHtml + newContentHtml;
 
-    $timer.html(contentHtml);
+        $timer.html(contentHtml);
 
-    $(`#${oldId}`).animate({
-        top: '100%',
-        opacity: 0,
-    }, 300);
+        $(`#${oldId}`).animate({
+            top: '100%',
+            opacity: 0,
+        }, 300);
 
-    $(`#${newId}`).animate({
-        top: '0',
-        opacity: 1,
-    }, 300, function () {
-        $timer.html(newContent);
-    });
+        $(`#${newId}`).animate({
+            top: '0',
+            opacity: 1,
+        }, 300, function () {
+            $timer.html(newContent);
+        });
+    }
 }

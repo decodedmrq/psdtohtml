@@ -81,19 +81,22 @@ window.windowScroll = function (to = 1000, time = 100, from = window.scrollY) {
     }, 1);
 };
 
-window.fixedWH = function ($element) {
-    $element.css({
-        'width': $element.outerWidth() + 'px',
-        'height': $element.outerHeight() + 'px'
-    });
-
-    return $element;
+window.fixedWH = function ($elements) {
+    let length = $elements.length;
+    for (let i = 0; i < length; i++) {
+        let $element = $($elements[i]);
+        $element.css({
+            'width': $element.outerWidth() + 'px',
+            'height': $element.outerHeight() + 'px'
+        });
+    }
+    return $elements;
 };
 
 //Collapse menu
 $('.collapse-button').click(function () {
     var content = $($(this).data('target'));
     content.collapse('toggle');
-    
+
     return false;
 });

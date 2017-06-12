@@ -13,6 +13,7 @@
         @include('home.benefit.product')
         @include('home.join_facebook')
     </div>
+    @include('home.register_fixed')
 @endsection
 
 @push('script')

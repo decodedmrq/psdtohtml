@@ -6,6 +6,7 @@
             'method' => 'post',
             'role' => 'form',
             'id' => 'register-form',
+            'class' => 'register-form',
         ]) }}
 
         <div class="title">

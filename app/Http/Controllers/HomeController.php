@@ -60,7 +60,7 @@ class HomeController extends RenderController
             $partners->push($partner);
         }
 
-        $publishDate = Carbon::create(2017, 6, 15, 12, 00);
+        $publishDate = Carbon::create(2017, 6, 30, 12, 00);
         $timeRemaining = Carbon::now()->diff($publishDate);
         $timeRemaining->d = Carbon::now()->diffInDays($publishDate);
 
