@@ -41,6 +41,20 @@ class News extends React.Component {
                         <div dangerouslySetInnerHTML={{__html: this.state.news.content}} className="card-text article-content"/>
                     </div>
                     <Related news={this.state.news}/>
+                </div>
+                <div className="card article-item mt-1">
+                    <div className="newsletter-bottom text-center">
+                        <div className="mt-4 mb-3">Đăng ký Email để nhận bài viết mới nhất</div>
+                        <div className="row mb-4">
+                            <div className="col-xl-2"/>
+                            <div className="col-xl-8">
+                                <input type="text" className="email" placeholder="Nhập email của bạn"/>
+                            </div>
+                            <div className="col-xl-2"/>
+                        </div>
+                    </div>
+                </div>
+                <div className="card article-item mt-1">
                     <div className="article-comment">
                         <div className="fb-comments" data-href="https://www.facebook.com/nhantuongsee/" data-width="100%"
                              data-numposts="5"/>
