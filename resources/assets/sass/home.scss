@@ -732,3 +732,189 @@ body {
     }
   }
 }
+
+//  Fixed Register bottom
+.register-fixed {
+  padding: .75rem 0;
+  background-color: #364956;
+
+  .content-left {
+    color: $light-yellow;
+
+    .line-one {
+      font-family: $sourceSansProBold;
+      font-size: 1.5rem;
+      font-weight: 700;
+    }
+
+    .line-two {
+      font-size: 1.125rem;
+    }
+  }
+
+  .form {
+    text-align: center;
+    .title {
+      margin-bottom: .5rem;
+      font-size: 1.125rem;
+      font-family: $sourceSansPro;
+      color: $light-yellow;
+
+      @include forSmall {
+        font-size: 1rem;
+      }
+
+      .free-text {
+        font-family: $sourceSansProBlack;
+      }
+    }
+
+    .form-email {
+      display: inline-block;
+      position: relative;
+      width: 345px;
+      max-width: 100%;
+
+      fieldset {
+        position: relative;
+
+        &.disabled {
+          @include webkitFilter(blur(5px) brightness(35%));
+          @include transition(filter .5s ease-out);
+        }
+      }
+
+      .email-input {
+        height: 40px;
+        width: 550px;
+        max-width: 100%;
+        padding: 0.5rem;
+        padding-right: 40px;
+        border-radius: 5px;
+        border: 0;
+        background-color: $light-yellow;
+
+        &::placeholder {
+          font-family: $sourceSansPro;
+          font-style: italic;
+          font-size: 1rem;
+          color: #828f94;
+          font-weight: 300;
+
+          @include forSmall {
+            font-size: 1.25rem;
+          }
+        }
+
+        &:focus {
+          @include boxShadow(0 0 10px 0 $light-blue);
+        }
+
+        &.danger {
+          color: $main-red;
+        }
+      }
+
+      .btn-submit {
+        border-top-right-radius: 3px;
+        border-bottom-right-radius: 3px;
+
+        cursor: pointer;
+        position: absolute;
+        top: 0;
+        right: 0;
+        height: 40px;
+        width: 40px;
+        border: 0;
+        font-size: 1.5rem;
+        color: $light-yellow;
+        background-color: #2c4f68;
+        line-height: 1;
+      }
+
+      .email-notif {
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        top: 0;
+        padding: .5rem;
+        background: transparent;
+        border-radius: 5px;
+
+        &::before {
+          display: inline-block;
+          position: absolute;
+          right: 7px;
+          top: 5px;
+          font: normal normal normal 14px/1 FontAwesome;
+          font-size: inherit;
+          text-rendering: auto;
+          -webkit-font-smoothing: antialiased;
+          -moz-osx-font-smoothing: grayscale;
+          content: "";
+        }
+      }
+    }
+  }
+
+  .time-remaining {
+    color: $light-yellow;
+    text-align: center;
+
+    .title {
+      padding-bottom: .75rem;
+      font-weight: 300;
+      margin-bottom: 0;
+      font-size: 1.125rem;
+    }
+
+    .time-block {
+      display: inline-block;
+      font-size: 0.875rem;
+
+      @include forSmall {
+        padding: 0 0.5rem;
+      }
+
+      .timer {
+        @include borderRadius(4px);
+
+        position: relative;
+        width: 100%;
+        padding: .5rem;
+        border: 1px solid $light-yellow;
+        font-size: 1.5rem;
+        line-height: 1;
+        margin-bottom: 0.5rem;
+
+        @include forSmall {
+          font-size: 1.5rem;
+          padding: 0.5rem;
+        }
+
+        .timer-animate {
+          position: absolute;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          padding: 0.5rem;
+
+          @include forSmall {
+            padding: 0.5rem;
+          }
+
+          &.old {
+            top: 0;
+            opacity: 1;
+          }
+
+          &.new {
+            top: -100%;
+            opacity: 0;
+          }
+        }
+      }
+    }
+  }
+}
