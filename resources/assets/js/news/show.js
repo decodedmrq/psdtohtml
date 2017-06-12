@@ -1,6 +1,5 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Comment from './Comment';
 import routes from '../components/routes';
 class News extends React.Component {
     constructor() {
@@ -8,28 +7,6 @@ class News extends React.Component {
         this.state = {
             news: news,
         }
-    }
-
-    share(event) {
-        event.preventDefault();
-        FB.ui({
-            method: 'share',
-            display: 'popup',
-            href: window.location.href,
-        }, function (response) {
-        });
-    }
-
-    like(news, event) {
-        event.preventDefault();
-    }
-
-    getLikeClassName(news) {
-        if (news.is_like) {
-            return 'action-item active';
-        }
-
-        return 'action-item';
     }
 
     render() {
@@ -63,23 +40,13 @@ class News extends React.Component {
                         <div dangerouslySetInnerHTML={{__html: this.state.news.content}} className="card-text article-content"/>
                     </div>
                     <div className="card-footer actions">
-                        <div className={this.getLikeClassName(this.state.news)}>
-                            <a onClick={this.like.bind(this)} href="#">
-                                <i className="fa fa-thumbs-up" aria-hidden="true"/> {trans('string.like')}
-                            </a>
-                        </div>
-                        <div className="action-item">
-                            <a href="#comment">
-                                <i className="fa fa-comment" aria-hidden="true"/> {trans('string.comment')}
-                            </a>
-                        </div>
-                        <div className="action-item">
-                            <a onClick={this.share.bind(this)} href="#">
-                                <i className="fa fa-share" aria-hidden="true"/> {trans('string.share')}
-                            </a>
-                        </div>
+                        <div className="fb-like" data-href={window.location.href} data-layout="standard"
+                             data-action="like" data-size="small" data-show-faces="false" data-share="true"/>
                     </div>
-                    <Comment/>
+                    <div className="comment pl-3 pr-3">
+                        <div className="fb-comments" data-width="100%" data-href={window.location.href}
+                             data-numposts="10"/>
+                    </div>
                 </div>
             </div>
         )
