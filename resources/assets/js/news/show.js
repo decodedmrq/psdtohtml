@@ -39,13 +39,8 @@ class News extends React.Component {
                         </div>
                         <div dangerouslySetInnerHTML={{__html: this.state.news.content}} className="card-text article-content"/>
                     </div>
-                    <div className="card-footer actions">
-                        <div className="fb-like" data-href={window.location.href} data-layout="standard"
-                             data-action="like" data-size="small" data-show-faces="false" data-share="true"/>
-                    </div>
-                    <div className="comment pl-3 pr-3">
-                        <div className="fb-comments" data-width="100%" data-href={window.location.href}
-                             data-numposts="10"/>
+                    <div className="article-comment">
+                        <div className="fb-comments" data-href="https://www.facebook.com/nhantuongsee/" data-width="100%" data-numposts="5"></div>
                     </div>
                 </div>
             </div>
