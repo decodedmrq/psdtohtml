@@ -5,9 +5,15 @@ namespace App\Http\Controllers;
 use App\Models\News;
 use App\Models\Tag as Category;
 use Illuminate\Http\Request;
+use Illuminate\Http\Response;
+use Illuminate\Support\Facades\Cookie;
+use Illuminate\Support\Facades\DB;
+use phpDocumentor\Reflection\Types\Self_;
 
 class NewsController extends RenderController
 {
+    const VIEWED_NEWS = 'viewed_news';
+    
     protected $model = News::class;
     protected $numSidebarItem = 5;
 
@@ -25,6 +31,8 @@ class NewsController extends RenderController
      */
     public function index()
     {
+        $this->setRecentViewed();
+
         return $this->renderView('news.index');
     }
 
@@ -55,6 +63,9 @@ class NewsController extends RenderController
         $this->viewData([
             'news' => $news,
         ]);
+        $news->view_count += 1;
+        $news->save();
+        $this->setRecentViewed($news);
 
         return $this->renderView('news.show');
     }
@@ -88,6 +99,40 @@ class NewsController extends RenderController
     {
         $this->viewData['keyword'] = \request()->get('keyword', '');
         $this->viewData['popularNews'] = $this->instance()->orderBy('view_count', 'desc')->take($this->numSidebarItem)->get();
-        $this->viewData['newestNews'] = $this->instance()->orderBy('view_count', 'desc')->take($this->numSidebarItem)->get();
+    }
+
+    private function setRecentViewed($news = null)
+    {
+        $recentViewedId = Cookie::get(Self::VIEWED_NEWS);
+        if ($news) {
+            $recentViewedId = $this->getRecentViewed($news);
+        }
+        $recentViewed = [];
+        if ($recentViewedId) {
+            $recentViewedIdString = implode(',', array_reverse($recentViewedId));
+            $recentViewed = $this->instance()->whereIn('id', $recentViewedId)
+                ->orderByRaw(DB::raw("FIELD(id, $recentViewedIdString)"))->get();
+        }
+
+        $this->viewData['recentViewed'] = $recentViewed;
+        Cookie::queue(Cookie::forever(Self::VIEWED_NEWS, $recentViewedId));
+    }
+
+    private function getRecentViewed($news)
+    {
+        $viewedNews = Cookie::get(Self::VIEWED_NEWS);
+        if (!$viewedNews) {
+            $viewedNews = [$news->id];
+        }
+        $newsIndex = array_search($news->id, $viewedNews);
+
+        if (!in_array($news->id, $viewedNews) && count($viewedNews) <= $this->numSidebarItem) {
+            $viewedNews[] = $news->id;
+        } else if (count($viewedNews) <= $this->numSidebarItem) { //Move news Id to top of array
+            unset($viewedNews[$newsIndex]);
+            $viewedNews[] = $news->id;
+        }
+
+        return $viewedNews;
     }
 }
