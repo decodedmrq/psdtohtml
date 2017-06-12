@@ -1,4 +1,4 @@
-<div class="register-fixed fixed-bottom hidden-md-down">
+<div class="register-fixed fixed-bottom hidden-md-down" id="register-fixed">
   <div class="container">
     <div class="row">
       <div class="content-left col-md-4">

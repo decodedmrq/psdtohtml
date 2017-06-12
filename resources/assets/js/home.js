@@ -153,6 +153,22 @@ featureItems.on('click', function () {
     clickSlide(slideItems, slideItem, featureItems);
 });
 
+//5 Toggle fixed Register
+let $fixedRegister = $('#register-fixed');
+setTimeout(function() {
+    $fixedRegister.css('display', 'none');
+    $('#footer').css('margin-bottom', $fixedRegister.outerHeight());
+}, 1);
+let windowH = $(window).outerHeight();
+$(window).scroll(function() {
+    let scrollTop = $(this).scrollTop();
+    if (scrollTop > windowH) {
+        $fixedRegister.fadeIn();
+    } else {
+        $fixedRegister.fadeOut();
+    }
+});
+
 //  Run
 clickSlide(slideItems, $(slideItems[0]), featureItems);
 
