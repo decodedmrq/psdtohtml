@@ -19,7 +19,7 @@
                 <div class="description">{{ trans('string.article_head_description') }}</div>
             </div>
             <div class="row">
-                <div id="news" class="col-xl-8 articles">
+                <div id="news" class="col-xl-8 articles pr-4">
 
                 </div>
                 @include('components.sidebar')

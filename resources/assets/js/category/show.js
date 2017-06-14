@@ -68,7 +68,22 @@ class News extends React.Component {
     render() {
         if (this.state.isLoading) {
             return (
-                <div></div>
+                <div>
+                    <div className="search hidden-sm-up">
+                        <form>
+                            <input placeholder={trans('string.search_3_dot')} type="text" name="keyword"
+                                   className="form-control"/>
+                            <input type="submit" value=""/>
+                        </form>
+                    </div>
+                    {[...Array(3)].map((item, index) => {
+                        return (
+                            <div key={index} className="mb-3">
+                                <img src="/images/pre-loader-news.jpg"/>
+                            </div>
+                        );
+                    })}
+                </div>
             );
         }
         return (

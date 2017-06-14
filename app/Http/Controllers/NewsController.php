@@ -8,14 +8,14 @@ use Illuminate\Http\Request;
 use Illuminate\Http\Response;
 use Illuminate\Support\Facades\Cookie;
 use Illuminate\Support\Facades\DB;
-use phpDocumentor\Reflection\Types\Self_;
 
 class NewsController extends RenderController
 {
     const VIEWED_NEWS = 'viewed_news';
-    
+
     protected $model = News::class;
     protected $numSidebarItem = 5;
+    protected $numRelatedItem = 5;
 
     public function __construct()
     {
@@ -25,8 +25,8 @@ class NewsController extends RenderController
     /**
      * Display a listing of the resource.
      *
-     * @param Request $request
-     * @return \Illuminate\Http\Response
+     * @return Response
+     * @internal param Request $request
      * @internal param Request $request
      */
     public function index()
@@ -70,6 +70,13 @@ class NewsController extends RenderController
         return $this->renderView('news.show');
     }
 
+
+    /**
+     * show category
+     *
+     * @param $slug
+     * @return \Illuminate\Contracts\View\Factory|\Illuminate\Http\RedirectResponse|\Illuminate\View\View
+     */
     public function category($slug)
     {
         $category = Category::whereSlug($slug)->first();
@@ -77,10 +84,17 @@ class NewsController extends RenderController
             return redirect()->route('news.index');
         }
         $this->viewData['category'] = $category;
+        $this->setRecentViewed();
 
         return $this->renderView('category.show');
     }
 
+    /**
+     * Paginate news in category
+     *
+     * @param $slug
+     * @return \Illuminate\Http\JsonResponse|\Illuminate\Http\RedirectResponse
+     */
     public function loadNewsCategory($slug)
     {
         $category = Category::whereSlug($slug)->first();
@@ -93,6 +107,32 @@ class NewsController extends RenderController
             ->with(['tagged'])->paginate();
 
         return response()->json($news);
+    }
+
+    /**
+     *
+     * @param Request $request
+     * @return \Illuminate\Http\JsonResponse
+     */
+
+    public function related(Request $request)
+    {
+        $this->validate($request, [
+            'id' => 'required|numeric',
+        ]);
+        $id = $request->get('id');
+        $news = $this->instance()->with(['tagged'])->find($id);
+        if (!$news) {
+            return response()->json([], Response::HTTP_BAD_REQUEST);
+        }
+        $tags = $news->tags->pluck('name')->toArray();
+        $related = $this->instance()
+            ->select('title', 'slug', 'id', 'preview_image')
+            ->withAnyTag($tags)
+            ->inRandomOrder()
+            ->take($this->numRelatedItem)->get();
+
+        return response()->json($related);
     }
 
     private function dataShare()
