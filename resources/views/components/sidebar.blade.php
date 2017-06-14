@@ -37,7 +37,7 @@
                     @endforeach
                 </div>
                 <div class="tab-pane" id="read" role="tabpanel">
-                    @foreach($newestNews as $news)
+                    @foreach($recentViewed as $news)
                         <div class="article-title">
                             <i class="fa fa-angle-double-right" aria-hidden="true"></i>
                             <a href="{{ route('blog.show', $news) }}">{{ $news->title }}</a>
