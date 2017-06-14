@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import routes from '../components/routes';
+import Related from "./Related";
 class News extends React.Component {
     constructor() {
         super();
@@ -39,8 +40,10 @@ class News extends React.Component {
                         </div>
                         <div dangerouslySetInnerHTML={{__html: this.state.news.content}} className="card-text article-content"/>
                     </div>
+                    <Related news={this.state.news}/>
                     <div className="article-comment">
-                        <div className="fb-comments" data-href="https://www.facebook.com/nhantuongsee/" data-width="100%" data-numposts="5"></div>
+                        <div className="fb-comments" data-href="https://www.facebook.com/nhantuongsee/" data-width="100%"
+                             data-numposts="5"/>
                     </div>
                 </div>
             </div>

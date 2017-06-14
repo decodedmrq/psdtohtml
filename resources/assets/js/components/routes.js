@@ -4,6 +4,7 @@ module.exports = {
             return '/blog/' + slug;
         },
         load: '/news/load',
+        related: '/news/related',
     },
     guest: {
         store: '/guest',
