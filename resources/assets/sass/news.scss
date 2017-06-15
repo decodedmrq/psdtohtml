@@ -185,8 +185,13 @@
         color: #364956;
         font-family: sans-serif;
       }
+      .sidebar-head-text {
+        font-size: 16px;
+        font-weight: 300;
+        font-family: 'Source Sans Pro', sans-serif;
+      }
       .email {
-        font-family: inherit;
+        font-family: 'Source Sans Pro', sans-serif;
         padding-left: 22px;
         background-color: #F1F0EC;
         color: #888888;
@@ -196,6 +201,9 @@
         width: 100%;
         height: 50px;
         font-style: italic;
+        &:focus {
+          outline: 0;
+        }
       }
     }
   }
@@ -272,4 +280,27 @@
       }
     }
   }
+}
+
+.button-subscribe {
+  font-family: inherit;
+  position: absolute;
+  cursor: pointer;
+  border: 0;
+  right:15px;
+  top: 0;
+  height: 50px;
+  width: 50px;
+  background-color: #EBDDC6;
+  color: #364956;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  font-size: 35px;
 }
