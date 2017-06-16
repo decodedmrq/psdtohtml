@@ -13,7 +13,9 @@
             @yield('content')
         </div>
     </div>
-    @include('layouts.includes.footer')
+    @section('footer')
+        @include('layouts.includes.footer')
+    @show
 </div>
 @include('layouts.includes.script')
 </body>

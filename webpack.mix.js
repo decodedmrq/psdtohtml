@@ -22,6 +22,7 @@ const storageFontDir = 'storage/app/public/fonts/';
 // mix.copy(storageFontDir, publicFontDir);
 //
 mix.sass(sourceSassFolder + 'home.scss', publicCssDir);
+mix.sass(sourceSassFolder + 'thanks_page.scss', publicCssDir);
 // mix.sass(sourceSassFolder + 'contact.scss', publicCssDir);
 // mix.sass(sourceSassFolder + 'knowledge.scss', publicCssDir);
 // mix.js(sourceJsFolder + 'contact.js', publicJsDir);

@@ -14,6 +14,9 @@ Auth::routes();
 
 Route::get('/', 'HomeController@index')->name('home');
 Route::get('/about', 'HomeController@about')->name('about_us');
+Route::get('/thanks_for_registered', function () {
+    return view('single.thanks_for_registered');
+})->name('thanks_for_registered');
 
 Route::get('contact', 'ContactController@index')->name('contact');
 Route::resource('feedback', 'FeedbackController');
