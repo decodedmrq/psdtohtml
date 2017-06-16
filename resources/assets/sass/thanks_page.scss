@@ -1,0 +1,88 @@
+@import "variables";
+@import "mixins";
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+
+$blue: #364956;
+$yellow: #ebddc6;
+
+#main-body {
+  background-color: #f6f3ea;
+  color: #364956;
+  font-size: 1.125rem;
+  font-family: "Open Sans", sans-serif;
+}
+
+.text-black {
+  color: #333333;
+}
+
+.btn-back-home {
+  display: inline-block;
+  padding: 0.5rem 1.75rem 0.65rem 2.5rem;
+  border: 1px solid;
+  border-radius: 5px;
+  font-size: 1rem;
+  @include transition(all .25s ease);
+
+  &:hover {
+    background: $blue;
+    color: $yellow;
+
+    .yellow-icon {
+      display: inline-block;
+    }
+  }
+
+  &:hover .blue-icon, .yellow-icon {
+    display: none;
+  }
+}
+
+.title {
+  font-family: "Open Sans Extrabold", sans-serif;
+  font-size: 2rem;
+
+  img {
+    height: 2rem;
+  }
+
+  @include forSmall {
+    font-size: 1.25rem;
+
+    img {
+      height: 1.25rem;
+    }
+  }
+}
+
+strong {
+  font-family: "Open Sans Semibold", sans-serif;
+}
+
+.description {
+  position: relative;
+  margin-bottom: 1rem;
+  padding: 1rem;
+
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    width: 50%;
+    left: 25%;
+    height: 1px;
+    background: $blue;
+  }
+
+  @include forSmall {
+    font-size: 1rem;
+  }
+}
+
+.content {
+  font-size: 1rem;
+
+  .bigger {
+    font-size: 1.125rem;
+  }
+}

@@ -27,6 +27,8 @@ return [
     'privacy_policy' => 'Chính sách bảo mật',
     'support' => 'Hỗ trợ',
     'terms_of_use' => 'Điều khoản sử dụng',
+    'no_image' => 'Không có hình ảnh',
+    'image' => 'Hình ảnh',
 
 
     'story' => [

@@ -18,8 +18,9 @@ $registerForm.on('submit', function (e) {
         .then(function (response) {
             let message = response.data.message;
             if (response.data.success) {
-                $emailNotif.removeClass('hidden-xs-up')
-                    .addClass('text-green').html(message);
+                // $emailNotif.removeClass('hidden-xs-up')
+                //     .addClass('text-green').html(message);
+                window.location = gRoutes.thanks_for_registered;
 
             } else {
                 $emailInput.addClass('danger');
