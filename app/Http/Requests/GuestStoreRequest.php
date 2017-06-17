@@ -37,9 +37,9 @@ class GuestStoreRequest extends FormRequest
     public function response(array $errors)
     {
         if ($this->expectsJson()) {
-            return new JsonResponse($errors, 422);
+            return response_json(null, false, $errors);
         }
 
-        return response_json(null, false, $errors);
+        return new JsonResponse($errors, 422);
     }
 }

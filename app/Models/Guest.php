@@ -2,8 +2,12 @@
 
 namespace App\Models;
 
+use Illuminate\Notifications\Notifiable;
+
 class Guest extends Model
 {
+    use Notifiable;
+
     const GENDER_MALE = 1;
     const GENDER_FEMALE = 2;
 

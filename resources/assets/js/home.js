@@ -23,6 +23,7 @@ $registerForm.on('submit', function (e) {
                 window.location = gRoutes.thanks_for_registered;
 
             } else {
+                message = message.email[0];
                 $emailInput.addClass('danger');
                 $emailNotif.removeClass('hidden-xs-up')
                     .addClass('text-red').html(message);
@@ -32,14 +33,7 @@ $registerForm.on('submit', function (e) {
             }, 3000);
         })
         .catch(function (error) {
-            let message = error.response.data.email[0];
-            $emailInput.addClass('danger');
-            $emailNotif.removeClass('hidden-xs-up')
-                .addClass('text-red').html(message)
-                .removeAttr('disabled');
-            setTimeout(function () {
-                $fieldsetEmail.removeAttr('disabled');
-            }, 3000);
+            console.log(error);
         });
 });
 
