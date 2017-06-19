@@ -27,10 +27,10 @@ class GuestStoreRequest extends FormRequest
     {
         return [
             'email' => 'required|email|unique:guests,email',
-            'name' => 'string|max:50',
-            'gender' => 'numeric|in:' . Guest::getGendersString(),
-            'phone' => 'string',
-            'dob' => 'datetime',
+            'name' => 'nullable|string|max:50',
+            'gender' => 'nullable|numeric|in:' . Guest::getGendersString(),
+            'phone' => 'nullable|string',
+            'dob' => 'nullable|datetime',
         ];
     }
 
