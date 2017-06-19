@@ -1,6 +1,6 @@
 <div style="background: #eeeeee; padding: 30px 0;">
     <div style="font-family: 'Open Sans', sans-serif; width: 600px; max-width: 100%; margin: 0 auto; background: #ffffff; padding: 45px 30px; -webkit-box-sizing: border-box;-moz-box-sizing: border-box;box-sizing: border-box;">
-        <div style="margin-bottom: 20px; height: 48px;">
+        <div style="margin-bottom: 20px; height: 40px;">
             <img style="height: 100%;" src="{{ asset('/images/mails/image_logo.png') }}"
                  alt="{{ trans('string.image') }}">
             <div style="float: right; height: 100%; width: 50px; align-content: space-around !important;">
@@ -12,7 +12,7 @@
         <div style="overflow: auto; margin-bottom: 60px;">
             <div style="display: block; width: 100%; color: #666666; font-size: 14px; text-align: justify; clear: both;">
                 {{--Title--}}
-                <h1 style="font-size: 24px; font-weight: 700; line-height: 1.41; color: #333333; margin-bottom: 35px; margin-top: 5px;">
+                <h1 style="font-size: 20px; font-weight: 700; line-height: 1.41; color: #333333; margin-bottom: 35px; margin-top: 5px;">
                     Chào mừng gia nhập
                     <br>
                     Cộng đồng Nhân tướng SEE
