@@ -182,6 +182,7 @@ return [
         // Barryvdh\Debugbar\ServiceProvider::class,
         Collective\Html\HtmlServiceProvider::class,
         \Conner\Tagging\Providers\TaggingServiceProvider::class,
+        \App\Providers\ReCaptchaServiceProvider::class,
 
         /*
          * Application Service Providers...

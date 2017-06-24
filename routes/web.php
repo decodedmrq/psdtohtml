@@ -12,6 +12,9 @@
 */
 Auth::routes();
 
+Route::get('/register_trial', 'GuestController@register_trial')->name('register_trial');
+Route::post('captcha', 'GuestController@captcha');
+
 Route::get('/', 'HomeController@index')->name('home');
 Route::get('/about', 'HomeController@about')->name('about_us');
 Route::get('/thanks_for_registered', function () {
@@ -35,6 +38,7 @@ Route::group(['prefix' => 'admin-nhantuong', 'namespace' => 'Admin', 'as' => 'ad
 
 Route::resource('guest', 'GuestController');
 Route::resource('newsletter', 'NewsLetterController');
+Route::get('/register_trial', 'GuestController@register_trial')->name('register_trial');
 Route::get('/test_mail', function() {
     return view('emails.thanks_for_registered');
 });

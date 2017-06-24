@@ -12,7 +12,7 @@
         </div>
       </div>
 
-      <div class="form col-md-4">
+      <div class="form col-md-4 pt-4">
         {{ Form::open([
           'url' => route('guest.store'),
           'method' => 'post',
@@ -23,24 +23,7 @@
 
         <div class="title col-md-12">
           <span> Đăng ký dùng thử</span>
-          <strong class="free-text"> MIỄN PHÍ </strong>
-        </div>
-
-        <div class="form-email col-md-12">
-          <fieldset>
-            {{ Form::email('email', null, [
-                'class' => 'email-input',
-                'placeholder' => 'Nhập email của bạn',
-                'required',
-                'id' => 'form-email-2',
-            ]) }}
-
-            <button class="btn-submit" type="submit">
-              <i class="fa fa-angle-right"></i>
-            </button>
-
-          </fieldset>
-          <div class="email-notif hidden-xs-up fa fa-close" id="email-notif-2"></div>
+          <strong class="free-text"> {!! html()->linkRoute('register_trial', 'Tại Đây') !!}</strong>
         </div>
         {{ Form::close() }}
       </div>

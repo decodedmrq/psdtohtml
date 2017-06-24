@@ -112,6 +112,9 @@ return [
         'content' => [
             'required' => 'Vui lòng nhập nội dung',
         ],
+        'g-recaptcha-response' => [
+            'captcha' => 'Bạn chưa xác nhận Captcha',
+        ],
     ],
 
     /*
