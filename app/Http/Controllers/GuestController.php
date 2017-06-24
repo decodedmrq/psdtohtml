@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Events\NewMailRegisteredEvent;
 use App\Http\Requests\GuestStoreRequest;
 use App\Models\Guest;
+use App\Modules\Recaptcha;
 
 class GuestController extends RenderController
 {
@@ -23,4 +24,17 @@ class GuestController extends RenderController
         return $stored ? response_json(null, true, trans('messages.guest.mail_register_success'))
             : response_json(null, false, trans('messages.guest.mail_register_failed'));
     }
+
+    public function register_trial()
+    {
+        $captcha = new Recaptcha(1,1);
+
+        return view()->make('guest.register_trial')->with(compact('captcha'));
+    }
+
+    public function captcha()
+    {
+
+    }
+
 }
