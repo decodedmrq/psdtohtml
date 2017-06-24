@@ -65,17 +65,30 @@ class Recaptcha
         return $lang ? static::CLIENT_API . '?hl=' . $lang : static::CLIENT_API;
     }
 
-    public function verifyResponse(Request $request)
+    /**
+     * Verify no-captcha response by Symfony Request.
+     *
+     * @param Request $request
+     *
+     * @return bool
+     */
+    public function verifyRequest(Request $request)
     {
-        $reCaptchaResponse = $request->get('g-recaptcha-response');
-        if (!$request->has('g-recaptcha-response') && empty($reCaptchaResponse)) {
+        return $this->verifyResponse(
+            $request->get('g-recaptcha-response'),
+            $request->getClientIp()
+        );
+    }
+
+    public function verifyResponse($response, $clientIp = null)
+    {
+        if (empty($response)) {
             return false;
         }
-
         $response = $this->sendRequestVerify([
             'secret' => $this->secret,
-            'response' => $reCaptchaResponse,
-            'remoteip' => $request->getClientIp(),
+            'response' => $response,
+            'remoteip' => $clientIp,
         ]);
 
         return isset($response['success']) && $response['success'] === true;

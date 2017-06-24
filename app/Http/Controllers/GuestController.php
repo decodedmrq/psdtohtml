@@ -17,7 +17,7 @@ class GuestController extends RenderController
      */
     public function store(GuestStoreRequest $request)
     {
-        $stored = Guest::create($request->all());
+        $stored = Guest::create($request->only(['email', 'age', 'job', 'content']));
 
         if ($stored) event(new NewMailRegisteredEvent($stored));
 
@@ -27,14 +27,9 @@ class GuestController extends RenderController
 
     public function register_trial()
     {
-        $captcha = new Recaptcha(1,1);
+        $captcha = app('captcha');
 
         return view()->make('guest.register_trial')->with(compact('captcha'));
-    }
-
-    public function captcha()
-    {
-
     }
 
 }
