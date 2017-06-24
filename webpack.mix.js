@@ -26,7 +26,8 @@ mix.sass(sourceSassFolder + 'thanks_page.scss', publicCssDir);
 // mix.sass(sourceSassFolder + 'contact.scss', publicCssDir);
 // mix.sass(sourceSassFolder + 'knowledge.scss', publicCssDir);
 // mix.js(sourceJsFolder + 'contact.js', publicJsDir);
-mix.js(sourceJsFolder + 'home.js', publicJsDir);
+mix.js(sourceJsFolder + 'home.js', publicJsDir)
+mix.js(sourceJsFolder + 'register_trial.js', publicJsDir);
 //
 mix.sass(sourceSassFolder + 'app.scss', publicCssDir).options({processCssUrls: false});
 // mix.sass(sourceSassFolder + 'library.scss', publicCssDir).options({processCssUrls: false});

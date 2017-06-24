@@ -31,6 +31,7 @@ class GuestStoreRequest extends FormRequest
             'gender' => 'nullable|numeric|in:' . Guest::getGendersString(),
             'phone' => 'nullable|string',
             'dob' => 'nullable|datetime',
+            'g-recaptcha-response' => 'required|captcha'
         ];
     }
 
