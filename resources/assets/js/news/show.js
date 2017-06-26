@@ -90,7 +90,7 @@ class News extends React.Component {
                 </div>
                 <div className="card article-item mt-1">
                     <div className="article-comment">
-                        <div className="fb-comments" data-href="https://www.facebook.com/nhantuongsee/" data-width="100%" data-numposts="5"/>
+                        <div className="fb-comments" data-width="100%" data-numposts="5"/>
                     </div>
                 </div>
             </div>
