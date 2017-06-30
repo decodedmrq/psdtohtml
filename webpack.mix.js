@@ -19,28 +19,11 @@ const publicJsDir = 'public/js/';
 const publicFontDir = 'public/fonts/';
 const storageFontDir = 'storage/app/public/fonts/';
 
-// mix.copy(storageFontDir, publicFontDir);
 //
-mix.sass(sourceSassFolder + 'home.scss', publicCssDir);
-mix.sass(sourceSassFolder + 'thanks_page.scss', publicCssDir);
-// mix.sass(sourceSassFolder + 'contact.scss', publicCssDir);
-// mix.sass(sourceSassFolder + 'knowledge.scss', publicCssDir);
-// mix.js(sourceJsFolder + 'contact.js', publicJsDir);
-mix.js(sourceJsFolder + 'home.js', publicJsDir)
-mix.js(sourceJsFolder + 'register_trial.js', publicJsDir);
-//
-mix.sass(sourceSassFolder + 'app.scss', publicCssDir).options({processCssUrls: false});
-// mix.sass(sourceSassFolder + 'library.scss', publicCssDir).options({processCssUrls: false});
-mix.js(sourceJsFolder + 'app.js', publicJsDir);
-
-// mix.sass(sourceSassFolder + 'about.scss', publicCssDir)
-//     .options({processCssUrls: false});
-mix.sass(sourceSassFolder + 'news.scss', publicCssDir)
-    .js(sourceJsFolder + 'news/index.js', publicJsDir + 'news/')
-    .js(sourceJsFolder + 'news/show.js', publicJsDir + 'news/')
-    .js(sourceJsFolder + 'news/subscribe.js', publicJsDir + 'news/')
-    .js(sourceJsFolder + 'category/show.js', publicJsDir + 'category/')
-    .options({processCssUrls: false});
+mix.sass(sourceSassFolder + 'app.scss', publicCssDir)
+ .sass(sourceSassFolder + 'home.scss', publicCssDir).options({processCssUrls: false});
+mix.js(sourceJsFolder + 'app.js', publicJsDir)
+.js(sourceJsFolder + 'home.js', publicJsDir);
 
 //
 // //Admin

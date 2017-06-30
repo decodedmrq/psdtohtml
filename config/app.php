@@ -177,12 +177,7 @@ return [
          * Package Service Providers...
          */
         Laravel\Tinker\TinkerServiceProvider::class,
-        Barryvdh\LaravelIdeHelper\IdeHelperServiceProvider::class,
-        Intervention\Image\ImageServiceProvider::class,
-        // Barryvdh\Debugbar\ServiceProvider::class,
         Collective\Html\HtmlServiceProvider::class,
-        \Conner\Tagging\Providers\TaggingServiceProvider::class,
-        \App\Providers\ReCaptchaServiceProvider::class,
 
         /*
          * Application Service Providers...

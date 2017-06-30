@@ -21,7 +21,6 @@
           content="{{ isset($keywords) ? implode(',', $keywords) : implode(',', config('app.keywords')) }}">
     <meta property="og:image" content="{!! asset('favicon.png') !!}"/>
     <link rel="shortcut icon" href="{!! asset('favicon.ico') !!}">
-    <link rel="stylesheet" href="{!! asset('css/library.css') !!}">
     <link rel="stylesheet" href="{!! asset('css/app.css?') . config('app.version') !!}">
     @stack('css')
     @stack('style')
@@ -46,6 +45,4 @@
     @include('layouts.includes.routes')
     @stack('script-head')
     @stack('js-head')
-    {!! js_ga() !!}
-    {!! js_crazyegg() !!}
 </head>
