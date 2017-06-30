@@ -12,7 +12,7 @@ return [
     | any other location as required by the application or its packages.
     */
 
-    'name' => 'SEE: Nhân tướng trong quản trị',
+    'name' => 'Design PSD to Bootstrapt',
     'version' => 1.0,
     'description' => 'SEE: Nhân tướng trong quản trị',
     'keywords' => [

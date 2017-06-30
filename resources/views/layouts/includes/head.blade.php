@@ -42,7 +42,6 @@
     {!! html()->script('vendor/respond/respond.min.js') !!}
     <![endif]-->
     {{ html()->script('js/bootstrap.js') }}
-    @include('layouts.includes.routes')
     @stack('script-head')
     @stack('js-head')
 </head>

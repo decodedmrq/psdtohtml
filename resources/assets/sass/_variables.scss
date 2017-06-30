@@ -1,40 +1,21 @@
 
-$default-color: #fafafa;
+$font-family-sans-serif: 'Quicksand', "Helvetica Neue", Arial, sans-serif;
 
-//Button for crud
-$button-create: #00B393;
-$button-create-hover: #80CBC4;
-$button-update: #569CEB;
-$button-update-hover: #4FC3F7;
-$button-delete: #FD5B5C;
-$button-delete-hover: #E57373;
+$font-size-root: 16px !default;
+$font-size-base: 1rem !default; // Assumes the browser default, typically `16px`
+$font-size-lg: 1.25rem !default;
+$font-size-xxl: 1.5rem !default;
+$font-size-sm: .875rem !default;
+$font-size-xs: .75rem !default;
 
-$bg-body: #fafafa;
-$color-body: #575757;
+$input-line-height: 1.25 !default;
 
-$fontHelvetica: 'Helvetica Neue Light', sans-serif;
-$fontHelveticaRegular: 'Helvetica Neue Regular', sans-serif;
-$fontRoboto: 'Roboto', sans-serif;
-$placeholderColor: #999999;
-$quickSand: "QuickSand", sans-serif;
-$sourceSansPro: 'Source Sans Pro', sans-serif;
-$sourceSansProBold: 'Source Sans Pro Bold', sans-serif;
-$sourceSansProSemibold: 'Source Sans Pro Semibold', sans-serif;
-$sourceSansProItalic: 'Source Sans Pro Italic', sans-serif;
-$sourceSansProLightItalic: 'Source Sans Pro LightItalic', sans-serif;
-$sourceSansProBlack: 'Source Sans Pro Black', sans-serif;
-$sourceSansProBlackItalic: 'Source Sans Pro BlackItalic', sans-serif;
+//Color
+$gray-dark: #292b2c !default;
 
-$main-blue: #748da3;
-$dark-blue: #364956;
-$light-blue: #b3bfc9;
+// Body
+$body-bg: #f9f9fa;
+$body-color: $gray-dark;
 
-$main-yellow: #f0cb8d;
-$dark-yellow: #d8b478;
-$light-yellow: #ebddc6;
 
-$main-white: #ffffff;
-$xs-width: 576px;
-$main-red: #F44336;
-$main-green: #4CAF50;
-$md-width: 960px;
+
